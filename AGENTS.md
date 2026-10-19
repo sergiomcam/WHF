@@ -23,6 +23,7 @@ Hearing Notion is an offline hearing-health and noise-awareness prototype for th
 - Active artwork: `Assets/_HearingNotion/Resources/Artwork/`.
 - Vendor reference: `Assets/Mobile App UI Templates Pro Assets/`. Preserve the package; adapt selected components into app-owned assets. Home derives from Menu Template 1.
 - Design and implementation notes: `Docs/`. Start with AppArchitecture.md, HomeScene.md, ExposureExplorer.md, SpanishQuestionnaire.md, and Artwork.md as relevant.
+- Feature inventory and review entry point: `Docs/FEATURES.md`. Maintain it alongside modification reports.
 - `Tools/build_home_scene.py` reconstructs Main and rewrites Build Settings. It is a destructive regeneration tool for authored scene changes: do not run it as a routine build or validation command. Preserve manual changes and explicitly account for regeneration before use.
 - Do not hand-edit generated solution/project files or cache folders: Library, Temp, obj, Logs, .vs. Do not treat tmp compiler output as production assets.
 
@@ -114,6 +115,31 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Source educational claims and numeric exposure guidance from current authoritative references before publication. Keep citations/provenance in content or documentation.
 - Do not collect personally identifying data, persist responses, add analytics, or export visitor data by default.
 
+## Feature documentation
+
+`Docs/FEATURES.md` is the central catalog of what the app contains and what is still planned. Update it in the same task whenever a feature is added, changed, fixed in a user-visible way, deprecated or removed. This includes navigation, content, questionnaire behavior, accessibility and visual/animation features.
+
+- Assign a stable feature ID (F-001, F-002, etc.); do not reuse IDs after removal.
+- Record purpose, entry point, behavior, implementation status, validation status, limitations, relevant source/module documentation, last-updated date and related modification report.
+- Distinguish implemented code from runtime-verified behavior, partial features and planned modules. Never call a placeholder, enum entry or design proposal a finished feature.
+- Add a dated feature-history entry linking the task's report and listing affected IDs. Preserve earlier history and removed/deprecated entries so reviewers can trace changes.
+- Record current behavior in the feature description; keep detailed task history in Docs/Changes rather than copying entire reports into the catalog.
+- For infrastructure-only work with no feature impact, state that in the modification report; a catalog edit is not required. Feature-documentation maintenance does not imply a new runtime feature.
+- Before delivery, check that catalog links resolve and statuses match source and actual verification. Include the catalog among changed files in the task's report.
+
+## GitHub documentation publication
+
+The user authorizes ongoing publication of project documentation to `sergiomcam/WHF` when features are added or changed. Complete this as part of the same feature task; do not ask again for routine documentation publication.
+
+- Update `Docs/FEATURES.md`, its feature history, the task report, `Docs/Changes/README.md`, and affected module/architecture guides. Update AGENTS.md when conventions or architecture decisions change.
+- Publish changed documentation to the repository's current default branch using a descriptive commit after relevant validation. The documentation set is root `AGENTS.md` and project-authored Markdown under `Docs/`, including its navigation README, catalog, guides, reports and template.
+- This standing authorization covers documentation only. It does not authorize uploading Unity assets/source, paid vendor content, raw participant data, private research inputs, credentials, builds or unrelated local changes.
+- Inspect the latest remote state first; preserve unrelated files and concurrent edits. Use fast-forward updates or an expected-head check; never force-push to bypass a conflict. Inspect and reconcile conflicts rather than overwriting newer remote work.
+- Prefer one coherent documentation commit per feature task. Verify published files match the intended local content and provide the commit or documentation link in the final response.
+- If publication fails because of authentication, network, conflicts or branch protection, keep local documentation, record the actual failure and report that publication remains pending. Do not claim a push succeeded. Network/authentication approvals imposed by tools still apply.
+- GitHub connector commits do not synchronize local Git history automatically. Account for the remote history before a later local Git push; do not create unrelated initial histories or overwrite it.
+- Keep publication evidence in the report where practical. Do not create recursive follow-up commits merely to insert the report's own commit SHA; a final verified commit link is sufficient.
+
 ## Modification reports
 
 Every future task that changes code, scenes, assets, content, project settings, tools or project instructions must include a saved modification report before the final response. Documentation-only changes count. Read-only investigation does not require a report unless requested.
@@ -139,6 +165,8 @@ Every future task that changes code, scenes, assets, content, project settings, 
 6. Source compilation, static reference checks and image generation previews do not prove Unity rendering or animation works. If Play Mode/device verification was unavailable, say exactly what remains unverified. Never report a visual or interaction fix as confirmed solely from compilation.
 7. Keep documentation consistent when changing data paths, scope or architecture. Record known limits without marking unfinished modules complete.
    Save and index the task's modification report under Docs/Changes before delivery.
+   Update Docs/FEATURES.md and its feature history whenever app features change.
+   Publish and verify the changed documentation in sergiomcam/WHF under the standing documentation authorization.
 8. Deliver a concise account of changes, validation and material limitations. Reference the real changed files. Do not create commits, pull requests, deployment, or unrelated cleanup without task context authorizing them.
 
 No default agent delegation is required. Keep changes focused, preserve the user's project work, and proceed autonomously with authorized implementation rather than repeatedly requesting routine confirmation.
