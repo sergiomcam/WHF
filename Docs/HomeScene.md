@@ -17,3 +17,7 @@ Source compilation and scene reference validation are automated. Unity Play Mode
 ResponsiveScreenLayout on Canvas updates home cards and destination panels when the viewport changes, including Edit Mode previews. The camera uses a solid matching background. Source compilation, local scene references and fit calculations at six viewport sizes were checked; Unity visual and interaction checks remain required.
 
 The visual refresh uses white outlined module cards, yellow primary actions and an isolated transparent headphone header. Home includes Ondas: activas/pausadas, controlling all background waves for the current session. See VisualRefresh.md.
+
+## Optional Flappy Cloud section
+
+Welcome and Home now include a seventh module card, Flappy Cloud. FlappyCloudController creates its template-derived cards and game panel at startup; these runtime objects appear after pressing Play. The first six options retain their order and HNAI remains first. Portrait uses seven 136-unit cards spaced 150 units apart; landscape uses four rows of 112-unit cards spaced 128 apart, followed by Takeaways/footer. The responsive controller is invalidated after card creation. The game owns its anchored layout and excludes generic module artwork/layout; its simulation uses normalized coordinates. The six-stage guided route and serialized Main scene/build settings are unchanged. See [game guide](FlappyCloud.md).

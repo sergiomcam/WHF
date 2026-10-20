@@ -43,6 +43,7 @@ Use a single scene with modular screen-panel roots. Application Managers stays o
 | AppTheme | Shared white/yellow/charcoal palette. |
 | RuntimeArtworkController / AppArtwork | Explicit Play Mode artwork initialization and screen artwork. |
 | GuidedJourney / GuidedExperienceController | Ordered guided stages, continuation bindings, introductions and informational meter panel. |
+| FlappyCloudController / FlappyCloudRun / FlappyCloudSettings | Optional menu game, deterministic fixed-step simulation and reserved distraction-audio slot. |
 | AmbientWaveAnimation / TravelingWaveGraphic / WaveTravel | Timed traveling UI wave contours and reduced-motion control; no wave texture dependency. |
 
 AudioSimulationManager, AudioSafetyManager, ContentManager, NoiseMeterManager and DataExportManager are design responsibilities, not necessarily implemented components. Check source before claiming they exist.
@@ -100,6 +101,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Long activity/questionnaire content uses ScrollRect regions. Wrapped text must grow through layout sizing instead of overflowing neighboring rows. Keep navigation outside those scroll regions.
 - Check mouse wheel, drag/touch scrolling and pointer/keyboard operation as applicable. Preserve selected state with a visible marker in addition to color.
 - Keep motion decorative and subtle. Wave contours must not move text or buttons or intercept input. Home exposes Ondas: activas/pausadas as a session-wide reduced-motion switch; it is not a persistent app setting. Current waves sweep for 10 seconds, rest 4 seconds, and are staggered 7 seconds. Preserve explicit startup and texture-independent rendering.
+- Flappy Cloud is an optional free-exploration game, outside the six-stage guided route. Keep game results temporary and descriptive. Its noise clip slot is reserved only: no audio plays and no noise comparison is available yet. Do not infer noise effects from silent practice scores. Preserve reference-art provenance and avoid importing the full Infinite Runner Engine/FMOD dependencies.
 - Avoid automatic audio playback. Provide stop, pause, optional skip and text explanations before enabling auditory demonstrations.
 
 ## Research and audio rules

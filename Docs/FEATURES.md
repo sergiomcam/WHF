@@ -26,6 +26,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | Partial content; settings planned | Spanish HNAI and mostly English modules; no complete language/settings UI | 2026-10-19 inventory |
 | F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): Start guided experience | Implemented | Route checks passed; popup interaction/layout verification pending | 2026-10-19 |
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment): Explorer activity details | Implemented | Editor/Windows code compiles; format/catalog tests pass; picker, persistence and UI tests pending | 2026-10-19 |
+| F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): Welcome/Home | Partial: playable silent game and reserved noise slot | Model checks and Editor/Windows compilation passed; Unity gameplay/layout verification pending; no noise playback/comparison | 2026-10-19 |
 
 ## Feature details
 
@@ -97,6 +98,10 @@ Six Spanish popups briefly explain the purpose, controls and limitations of each
 
 Each activity can receive a local WAV, OGG or MP3 (50 MB limit). The Editor file picker, Windows native dialog or local-path fallback assigns a copied file to that stable activity ID. A local versioned manifest and copied content persist across app restarts and visitor reset; reimport replaces only the activity mapping. Imported files are unreviewed, do not autoplay, are not decoded/played by this feature and are never uploaded to GitHub. Basic header checks do not prove complete audio validity or licensing/safety approval. Replacement retains old files; cleanup UI is pending. Source: LocalSoundSourceLibrary, LocalAudioFilePicker, SoundSourceImportRules and ExposureManager. See [catalog, storage and verification](SoundscapeCatalog.md).
 
+### F-017 Flappy Cloud attention game
+
+New Flappy Cloud cards on Welcome and Home open a single-scene game adapted from the local Infinite Runner Engine example. Tap/click the sky, press Space or use Subir to flap through scrolling penguin gates. Silent attempts end on collision or at 30 seconds; score/time feedback, restart, pause/resume and Home are available. Focus loss pauses the run. Course generation repeats on restart and a three-gate pool is reused. Leaving the screen or resetting the visitor clears the attempt. No result persistence/export, audio or causal noise-effect interpretation is provided. Con ruido: pendiente is disabled; Settings.DistractionNoise is a reserved authoring slot and remains unused even if assigned. The guided route is unchanged. See [game guide](FlappyCloud.md) and [report](Changes/2026-10-19-012-flappy-cloud-game.md).
+
 ## Feature change history
 
 Future feature changes append an entry here and update the current inventory/details. Use stable IDs; keep removed/deprecated entries with their status. Every entry links its detailed modification report.
@@ -116,3 +121,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-19 | F-008 | Explicitly create and require the wave CanvasRenderer, repair reused objects before clipping registration | [2026-10-19-010](Changes/2026-10-19-010-wave-canvasrenderer-fix.md) |
 
 | 2026-10-19 | F-008 | Blend leading and trailing contour ends to transparent | [2026-10-19-011](Changes/2026-10-19-011-soft-wave-ends.md) |
+
+| 2026-10-19 | F-001, F-002, F-006, F-017 | Add optional Flappy Cloud silent practice game, seven-card layout and reserved distraction-noise slot | [2026-10-19-012](Changes/2026-10-19-012-flappy-cloud-game.md) |

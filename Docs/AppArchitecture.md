@@ -118,3 +118,7 @@ LocalSoundSourceLibrary stores per-activity authored audio assignments under App
 ## Current background rendering
 
 The visual refresh replaces faint image-sprite drift with TravelingWaveGraphic, a texture-independent UI mesh driven by WaveTravel timing and AmbientWaveAnimation. RuntimeArtworkController initializes it explicitly, updates responsive artwork placement and applies a session-wide pause/resume preference from Home. It does not move controls or text. See VisualRefresh.md for timing, palette and verification limits.
+
+## Optional attention game
+
+AppManager ensures FlappyCloudController exists. Its Start method registers ScreenId.FlappyCloud after navigation initialization and creates template-derived cards on Welcome/Home. The enum value is appended to preserve serialized route IDs. FlappyCloudRun is a pure C# fixed-step simulation (120 Hz), independent of Unity physics, scene cameras and global timeScale. The controller owns transient state and resets on leaving the game or visitor reset; focus/interruption pauses it. FlappyCloudSettings in Resources/FlappyCloud holds a null AudioClip authoring slot. It is intentionally not used for playback; the noise round is disabled. No Infinite Runner Engine runtime, FMOD, new package, scene or backend is imported. See [Flappy Cloud](FlappyCloud.md).
