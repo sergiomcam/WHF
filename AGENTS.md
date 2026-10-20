@@ -20,6 +20,7 @@ Hearing Notion is an offline hearing-health and noise-awareness prototype for th
 - App-owned code: `Assets/_HearingNotion/Scripts/` with Core, Navigation, Exposure, Assessment, Audio, Content, Data, and NoiseMeter folders.
 - App-owned reusable content: ScriptableObjects, Prefabs, Audio, UI, and Resources under `Assets/_HearingNotion/`.
 - Active questionnaire JSON: `Assets/_HearingNotion/Resources/Questionnaires/HNAI.es.json`.
+- Active activity catalog: `Assets/_HearingNotion/Resources/ActivityCatalog.asset`; 21 source-mapped records with overlapping category memberships. See Docs/SoundscapeCatalog.md.
 - Active artwork: `Assets/_HearingNotion/Resources/Artwork/`.
 - Vendor reference: `Assets/Mobile App UI Templates Pro Assets/`. Preserve the package; adapt selected components into app-owned assets. Home derives from Menu Template 1.
 - Design and implementation notes: `Docs/`. Start with AppArchitecture.md, HomeScene.md, ExposureExplorer.md, SpanishQuestionnaire.md, and Artwork.md as relevant.
@@ -110,12 +111,12 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Keep the full HNAI and any later YANS implementation distinct from a short public educational knowledge check. Agreement responses are not correct/incorrect quiz answers.
 - Reported activity prevalence is not measured acoustic exposure. Do not invent prevalence, raw participant results or individual risk estimates from charts or selected activities.
 - Attitude or intention changes do not establish actual behavior change. Never fabricate personal results in Takeaways.
-- Review research audio provenance, distribution rights, levels and playback behavior before import/use. No approved research playback assets are assumed to be available.
+- Local authored sound sources can be imported for review. Ingestion does not authorize playback or redistribution. Review provenance, distribution rights, levels and playback behavior before enabling use; keep imported files review-pending and never autoplay them.
 - Simulated protection, hearing loss and tinnitus are educational illustrations, not hearing tests or accurate reproductions of individual impairment. Software gain cannot guarantee acoustic output across devices.
 - Future audio work requires reviewed gain limits, fades/limiting, predictable stop on navigation/reset/interruption and comfortable-volume instructions. Never instruct users to increase volume until uncomfortable.
 - Never label uncalibrated microphone RMS/dBFS as measured dBA. Measurement is a separate later milestone.
 - Source educational claims and numeric exposure guidance from current authoritative references before publication. Keep citations/provenance in content or documentation.
-- Do not collect personally identifying data, persist responses, add analytics, or export visitor data by default.
+- Do not collect personally identifying data, persist responses, add analytics, or export visitor data by default. The separate local sound-source library is authored content configuration under Application.persistentDataPath/SoundSources and intentionally survives visitor reset. Never publish imported sound files, source paths or private filenames as part of documentation synchronization.
 
 ## Feature documentation
 

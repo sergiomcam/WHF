@@ -25,6 +25,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
 | F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | Partial content; settings planned | Spanish HNAI and mostly English modules; no complete language/settings UI | 2026-10-19 inventory |
 | F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): Start guided experience | Implemented | Route checks passed; popup interaction/layout verification pending | 2026-10-19 |
+| F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment): Explorer activity details | Implemented | Editor/Windows code compiles; format/catalog tests pass; picker, persistence and UI tests pending | 2026-10-19 |
 
 ## Feature details
 
@@ -38,7 +39,7 @@ Landscape home uses two columns and portrait uses one. Expand scaling, large typ
 
 ### F-003 Exposure Explorer
 
-Three category filters expose nine activity records. Visitors open details, add/remove activities and pass a selected activity to Sound Experience. Tips and selections do not quantify acoustic exposure or individual risk. Source: ExposureManager and ScriptableObjects/Activities under Assets/_HearingNotion. See [Explorer details and checks](ExposureExplorer.md).
+Three category filters expose 21 source-mapped activity records (18 annex soundscapes plus three chart-only labels), with overlapping category memberships and Spanish details. Visitors open details, inspect classification/source notes, add/remove activities, assign a local WAV/OGG/MP3 per activity and pass the selected activity/filename to Sound Experience. Tips and selections do not quantify acoustic exposure or individual risk. Source: ExposureManager and ScriptableObjects/Activities under Assets/_HearingNotion. See [Explorer details and checks](ExposureExplorer.md) and [soundscape catalog/import guide](SoundscapeCatalog.md).
 
 ### F-004 Spanish HNAI questionnaire
 
@@ -50,7 +51,7 @@ Displays selected activity names and suggestions, supports an empty state and li
 
 ### F-006 Visitor session and reset
 
-In-memory state includes activity selections, sound context and draft HNAI answers/completion. Reset replaces the session and triggers navigation/UI reset subscribers. Returning Home preserves the current visit. There is no disk persistence, account, automatic analytics or remote participant storage. Source: SessionManager, AppSession and module reset subscriptions. See [Architecture](AppArchitecture.md).
+In-memory state includes activity selections, sound context and draft HNAI answers/completion. Reset replaces the session and triggers navigation/UI reset subscribers. Returning Home preserves the current visit. Visitor state has no disk persistence, account, automatic analytics or remote participant storage. The separately authored local audio library persists across visits; it contains content assignments, not participant answers. Source: SessionManager, AppSession and module reset subscriptions. See [Architecture](AppArchitecture.md).
 
 ### F-007 Theme and artwork
 
@@ -62,7 +63,7 @@ Two transparent sprite layers drift behind the interface and respond slightly to
 
 ### F-009 Sound Experience
 
-Explorer passes the active activity ID and the destination displays its description and an explicit audio-pending message. Protection/hearing-loss/tinnitus comparisons, transport controls, reviewed audio assets and safety processing are not implemented. See [Architecture](AppArchitecture.md) and [Explorer checks](ExposureExplorer.md).
+Explorer passes the active activity ID and the destination displays its description, any assigned local filename and an explicit playback-pending message. Protection/hearing-loss/tinnitus comparisons, transport controls, reviewed audio assets and safety processing are not implemented. See [Architecture](AppArchitecture.md) and [Explorer checks](ExposureExplorer.md).
 
 ### F-010 Hearing Health and sources
 
@@ -82,11 +83,15 @@ Future music-perception/DSP research module; route reserved and unavailable. No 
 
 ### F-014 Bilingual controls and settings
 
-Spanish HNAI and bilingual-capable content fields exist; most other UI currently uses English. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
+Spanish HNAI, Spanish Explorer activity details/import controls and bilingual-capable content fields exist; other UI remains mixed English/Spanish. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
 
 ### F-015 Guided screen introductions
 
 Six Spanish popups briefly explain the purpose, controls and limitations of each guided stage. Each appears once per stage per guided run; Back does not repeat a dismissed introduction, and restarting the journey/reset allows them again. Entendido or Escape dismisses the modal. The popup blocks underlying controls and focuses its dismiss button. Free exploration does not show these popups. Source: GuidedJourney and GuidedExperienceController; see [Guided experience](GuidedExperience.md). The Noise Meter remains informational and sound playback remains pending. Fixed a user-reported CanvasGroup MissingComponentException by using a Unity-aware null check before adding the component. Popup rendering, keyboard/touch behavior and this runtime fix still require Unity verification.
+
+### F-016 Local sound-source assignment
+
+Each activity can receive a local WAV, OGG or MP3 (50 MB limit). The Editor file picker, Windows native dialog or local-path fallback assigns a copied file to that stable activity ID. A local versioned manifest and copied content persist across app restarts and visitor reset; reimport replaces only the activity mapping. Imported files are unreviewed, do not autoplay, are not decoded/played by this feature and are never uploaded to GitHub. Basic header checks do not prove complete audio validity or licensing/safety approval. Replacement retains old files; cleanup UI is pending. Source: LocalSoundSourceLibrary, LocalAudioFilePicker, SoundSourceImportRules and ExposureManager. See [catalog, storage and verification](SoundscapeCatalog.md).
 
 ## Feature change history
 
@@ -99,3 +104,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-19 | F-001, F-004, F-010, F-012, F-015 | Reorder guided journey, require HNAI completion, add screen introductions and an informational meter stage | [2026-10-19-006](Changes/2026-10-19-006-guided-journey-and-popups.md) |
 
 | 2026-10-19 | F-015 | Fix missing CanvasGroup handling and defer seen-state until popup opens | [2026-10-19-007](Changes/2026-10-19-007-guided-popup-canvasgroup-fix.md) |
+
+| 2026-10-19 | F-003, F-006, F-009, F-014, F-016 | Map annex/chart activities, preserve multi-category contexts and add local per-activity audio assignment | [2026-10-19-008](Changes/2026-10-19-008-annex-catalog-and-audio-import.md) |

@@ -6,7 +6,7 @@ The home adapts Menu Template 1's rounded card sprite, TextMesh Pro typography, 
 
 The six module cards follow the supplied reference. Exposure Explorer, Sound Experience, Hearing Health, Awareness Check and Research & Sources open app-owned introductory panels. Noise Meter is disabled and labeled coming later. Personalized Takeaways opens a separate panel. Start guided experience starts at HNAI, followed by Exposure Explorer → Sound Experience → Hearing Health recommendations → informational Noise Meter → Research & Resources → Home. Each stage has a brief introduction popup in guided mode. See GuidedExperience.md for completion and navigation behavior. Home returns to the module grid; Back uses navigation history.
 
-Destination panels describe intended content and make unfinished interactions explicit. Audio, questionnaires, scoring, personal results and microphone input are not implemented in this scene. This pass uses English copy; Spanish content and language controls remain a subsequent step.
+Destination panels describe intended content and make unfinished interactions explicit. The HNAI questionnaire, activity selection and activity takeaways now have runtime controllers. Local audio assignment is implemented separately from playback. Audio playback, clinical scoring and microphone input remain unimplemented. This pass uses English copy; Spanish content and language controls remain a subsequent step.
 
 All UI objects, text, colors and persistent button actions are serialized and editable in the scene. Application Managers contains AppManager, NavigationManager and SessionManager. Each panel has a ScreenView; navigation holds the eight panel references. Keep Application Managers outside panel roots.
 

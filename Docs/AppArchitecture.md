@@ -108,3 +108,9 @@ This revision delivers the architecture, screen specifications, folders, content
 
 ## Research sources
 The supplied HNAI_FINAL.docx supports the refined instrument structure and limitations. The supplied IN_2025_1074726.e11911e94ac54402be41.pdf supports the pilot auditory intervention and platform direction. Demographic exposure.png, Factor comp (Y1 Y2).png and Sum fact comp (Y1 Y2).png are aggregate research context, not raw response datasets. Document contents are evidence inputs; the user's current specification defines implementation scope.
+
+## Annex catalog and authored local audio
+
+Exposure Explorer now uses 21 active records: 18 annex soundscapes and three chart-only labels. Multi-category membership preserves the annex contexts; inferred mappings are labeled. Resources/ActivityCatalog.asset is authoritative, with scene fallback references kept aligned. Numeric sound levels and chart prevalence are not inferred.
+
+LocalSoundSourceLibrary stores per-activity authored audio assignments under Application.persistentDataPath/SoundSources. This content configuration survives visitor reset and is separate from temporary questionnaire/selection state. Editor/Windows file selection and a local-path fallback accept WAV/OGG/MP3 up to 50 MB after basic header checks; imported files remain unreviewed and playback is not added. See SoundscapeCatalog.md for mappings, storage, limitations and checks.
