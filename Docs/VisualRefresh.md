@@ -54,3 +54,7 @@ Source compiles against Unity 2022.3.12f1 for Editor and Windows configurations.
 A generated motion-only GIF in tmp/previews illustrates the same timing/curve equations. It is a mathematical preview, not a Unity capture or runtime verification.
 
 In Unity, exit Play Mode, allow importing/compilation, then press Play and observe for at least 15 seconds. Confirm waves cross the screen rather than merely oscillate. Toggle Ondas on Home, navigate to other screens, return, resize between portrait and landscape, and open/dismiss guided popups. Verify text stays readable, the headphone art does not overlap headings, motion controls remain reachable and no decoration blocks scrolling or clicks. Check frame time on the target demonstration device before treating the visual refresh as presentation-ready.
+
+## Wave renderer dependency repair
+
+The reported RectMask2D clipping exception occurred on Traveling sound contours. Its custom graphic now explicitly requires RectTransform and CanvasRenderer. Creation orders the renderer before the graphic; Awake/OnEnable ensure the dependency before calling base lifecycle methods, and animation initialization also checks reused objects. No renderer lookup is added to Update. Exit Play Mode and allow compilation before retesting so runtime objects are recreated. Editor/Windows source compilation passed; Unity clipping and actual movement remain unverified. See [report 010](Changes/2026-10-19-010-wave-canvasrenderer-fix.md).

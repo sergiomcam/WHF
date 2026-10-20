@@ -17,7 +17,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home or Continue | Partial | Selected activity summary implemented; knowledge outcomes and habit selection pending | 2026-10-19 inventory |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Explorer/Takeaways reset | Implemented | Reset/re-entry regression pending; memory only | 2026-10-19 inventory |
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Implemented | Images inspected and code compiled; final placement review pending | 2026-10-19 inventory |
-| F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | User reported absent motion; explicit startup fix needs confirmation | 2026-10-19 inventory |
+| F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | CanvasRenderer dependency repaired; Play Mode confirmation pending | 2026-10-19 inventory |
 | F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer | Partial | Activity context only; no reviewed audio or playback | 2026-10-19 inventory |
 | F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home | Partial | Introductory panels; full lessons/reference browsing pending | 2026-10-19 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
@@ -60,6 +60,8 @@ Warm near-white backgrounds, white cards with light borders, yellow primary acti
 ### F-008 Animated wave sprites
 
 The previous low-opacity fixed-position sprite drift has been replaced by two procedural 2D UI wave bands. Each band traverses the screen in 10 seconds, rests 4 seconds and fades at entry/exit; the second band starts 7 seconds apart. Initial time is set to 2.5 seconds so a pass is visible on entry. No wave image import is required. AmbientWaveAnimation updates TravelingWaveGraphic with unscaled time; inactive screens do not update, and unfocused standalone players pause. A home button labeled Ondas: activas/pausadas freezes both bands into static contours for the current app session. Controls/header remain still and decorative graphics do not intercept input. Pure timing tests and compilation passed, but the user-reported Unity visibility issue is not yet confirmed resolved in Play Mode. See [visual refresh](VisualRefresh.md).
+
+Wave graphics now explicitly require RectTransform/CanvasRenderer, create the renderer before the graphic, and repair missing renderers during initialization and activation. This addresses the reported clipping exception; Unity runtime confirmation is pending. See [renderer fix report](Changes/2026-10-19-010-wave-canvasrenderer-fix.md).
 
 ### F-009 Sound Experience
 
@@ -108,3 +110,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-19 | F-003, F-006, F-009, F-014, F-016 | Map annex/chart activities, preserve multi-category contexts and add local per-activity audio assignment | [2026-10-19-008](Changes/2026-10-19-008-annex-catalog-and-audio-import.md) |
 
 | 2026-10-19 | F-002, F-007, F-008, F-014 | Replace faint sprite drift with traveling wave geometry, refresh cards/palette and headphone artwork, add home motion controls | [2026-10-19-009](Changes/2026-10-19-009-traveling-waves-and-visual-refresh.md) |
+
+| 2026-10-19 | F-008 | Explicitly create and require the wave CanvasRenderer, repair reused objects before clipping registration | [2026-10-19-010](Changes/2026-10-19-010-wave-canvasrenderer-fix.md) |

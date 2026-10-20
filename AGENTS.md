@@ -65,6 +65,7 @@ AudioSimulationManager, AudioSafetyManager, ContentManager, NoiseMeterManager an
 - Preserve `.meta` files and GUIDs when moving assets. Keep assets and metadata together; avoid duplicate GUIDs.
 - Prefer Unity serialization/editor workflows for complex scene and prefab edits. If editing YAML directly, validate local file IDs, external GUIDs, component ownership, enum values, button targets and array bindings.
 - Replacing a cloned Button's callbacks must remove serialized persistent actions as well as runtime listeners. This project replaces `onClick` with a new ButtonClickedEvent before wiring module actions.
+- Custom uGUI graphics must explicitly require CanvasRenderer and RectTransform. Create the renderer before the graphic and repair missing dependencies before base activation registers masking/rebuilds; check reused objects as well as new ones.
 - UI decoration must not intercept clicks. Set raycastTarget false on decorative text/images and keep decoration behind controls.
 - Check serialized references after renaming classes, fields, routes or GameObjects. Existing controllers use some transform-name lookups.
 - Use Unity-aware `== null`, `!= null` or TryGetComponent checks for UnityEngine.Object instances. Do not use `??` or `?.` to detect missing/destroyed Unity components; CLR null checks can miss Unity's object lifetime state.
