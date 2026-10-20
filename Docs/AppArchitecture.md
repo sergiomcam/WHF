@@ -114,3 +114,7 @@ The supplied HNAI_FINAL.docx supports the refined instrument structure and limit
 Exposure Explorer now uses 21 active records: 18 annex soundscapes and three chart-only labels. Multi-category membership preserves the annex contexts; inferred mappings are labeled. Resources/ActivityCatalog.asset is authoritative, with scene fallback references kept aligned. Numeric sound levels and chart prevalence are not inferred.
 
 LocalSoundSourceLibrary stores per-activity authored audio assignments under Application.persistentDataPath/SoundSources. This content configuration survives visitor reset and is separate from temporary questionnaire/selection state. Editor/Windows file selection and a local-path fallback accept WAV/OGG/MP3 up to 50 MB after basic header checks; imported files remain unreviewed and playback is not added. See SoundscapeCatalog.md for mappings, storage, limitations and checks.
+
+## Current background rendering
+
+The visual refresh replaces faint image-sprite drift with TravelingWaveGraphic, a texture-independent UI mesh driven by WaveTravel timing and AmbientWaveAnimation. RuntimeArtworkController initializes it explicitly, updates responsive artwork placement and applies a session-wide pause/resume preference from Home. It does not move controls or text. See VisualRefresh.md for timing, palette and verification limits.

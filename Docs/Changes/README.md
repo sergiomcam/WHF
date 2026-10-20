@@ -15,3 +15,4 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 
 | 2026-10-19 | [2026-10-19-007](2026-10-19-007-guided-popup-canvasgroup-fix.md) | Fix missing CanvasGroup handling in guided popups. |
 | 2026-10-19 | [2026-10-19-008](2026-10-19-008-annex-catalog-and-audio-import.md) | Map annex/chart sound sources and add local per-activity audio assignment. |
+| 2026-10-19 | [2026-10-19-009](2026-10-19-009-traveling-waves-and-visual-refresh.md) | Add traveling wave contours, Home motion controls and refreshed GUI/headphone artwork. |

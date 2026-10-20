@@ -55,11 +55,11 @@ In-memory state includes activity selections, sound context and draft HNAI answe
 
 ### F-007 Theme and artwork
 
-White surfaces, charcoal text and yellow/gold controls follow the supplied palette. Generated sound-wave background and headphone/noise header artwork load locally. Decorative images do not receive clicks. Source: AppTheme and AppArtwork; PNGs in Resources/Artwork. See [Artwork and generation prompts](Artwork.md).
+Warm near-white backgrounds, white cards with light borders, yellow primary actions, soft-yellow takeaways and gold selections retain the supplied visual identity while reducing large yellow blocks. Shared button hover/pressed/disabled states apply to home, runtime activity controls, questionnaire controls and modal confirmation. A new transparent isolated headphone illustration replaces the tiny composite header; the static background texture is reduced to 16% opacity. Source: AppTheme and AppArtwork; headphones-hero-v2.png in Resources/Artwork. See [Artwork and prompts](Artwork.md) and [visual refresh](VisualRefresh.md). Code compiles and the image alpha was checked; actual Unity placement remains unverified.
 
 ### F-008 Animated wave sprites
 
-Two transparent sprite layers drift behind the interface and respond slightly to pointer position. RuntimeArtworkController explicitly initializes them in Play Mode. Current defaults: 48 reference-unit horizontal drift, half as much vertical drift, 18-second cycle and 12-unit pointer parallax; layer opacities are 32% and 24%. Reduced Motion is a per-screen Inspector option, not a persistent settings control. Header and controls remain static. User-reported lack of motion prompted a startup fix; actual motion remains unverified. Source: RuntimeArtworkController, AmbientWaveAnimation and AppArtwork. See [Artwork notes](Artwork.md), whose original animation defaults describe an earlier revision; these values reflect current source.
+The previous low-opacity fixed-position sprite drift has been replaced by two procedural 2D UI wave bands. Each band traverses the screen in 10 seconds, rests 4 seconds and fades at entry/exit; the second band starts 7 seconds apart. Initial time is set to 2.5 seconds so a pass is visible on entry. No wave image import is required. AmbientWaveAnimation updates TravelingWaveGraphic with unscaled time; inactive screens do not update, and unfocused standalone players pause. A home button labeled Ondas: activas/pausadas freezes both bands into static contours for the current app session. Controls/header remain still and decorative graphics do not intercept input. Pure timing tests and compilation passed, but the user-reported Unity visibility issue is not yet confirmed resolved in Play Mode. See [visual refresh](VisualRefresh.md).
 
 ### F-009 Sound Experience
 
@@ -83,7 +83,7 @@ Future music-perception/DSP research module; route reserved and unavailable. No 
 
 ### F-014 Bilingual controls and settings
 
-Spanish HNAI, Spanish Explorer activity details/import controls and bilingual-capable content fields exist; other UI remains mixed English/Spanish. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
+Spanish HNAI, Spanish Explorer activity details/import controls and bilingual-capable content fields exist; other UI remains mixed English/Spanish. Home now exposes a session-wide wave pause/resume button. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
 
 ### F-015 Guided screen introductions
 
@@ -106,3 +106,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-19 | F-015 | Fix missing CanvasGroup handling and defer seen-state until popup opens | [2026-10-19-007](Changes/2026-10-19-007-guided-popup-canvasgroup-fix.md) |
 
 | 2026-10-19 | F-003, F-006, F-009, F-014, F-016 | Map annex/chart activities, preserve multi-category contexts and add local per-activity audio assignment | [2026-10-19-008](Changes/2026-10-19-008-annex-catalog-and-audio-import.md) |
+
+| 2026-10-19 | F-002, F-007, F-008, F-014 | Replace faint sprite drift with traveling wave geometry, refresh cards/palette and headphone artwork, add home motion controls | [2026-10-19-009](Changes/2026-10-19-009-traveling-waves-and-visual-refresh.md) |

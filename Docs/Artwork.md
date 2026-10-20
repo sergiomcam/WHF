@@ -1,4 +1,6 @@
-# Noise artwork version 1
+# Noise artwork and animation history
+
+Current version: see VisualRefresh.md. The former sprite drift below is historical; active wave motion now uses texture-independent UI geometry. The current header is headphones-hero-v2.png. Earlier image variants are retained, not overwritten.
 
 Generated with the built-in image generation tool. Both original PNGs are 1536×1024 and are saved in Assets/_HearingNotion/Resources/Artwork. No vendor art is overwritten. AppArtwork loads the textures locally and places them behind the screen content and in its header margin during Play Mode. Raycasts are disabled on both decorative images. Background opacity is 55 percent; opaque content panels preserve readability. Header placement adapts to portrait and landscape. No generated text is used, so headings remain editable/localizable Unity text.
 
@@ -23,3 +25,11 @@ Final sprite prompt:
 Use case: stylized-concept. Asset type: transparent 2D sprite layer for a Unity hearing-awareness app background. A single elegant bundle of smooth flowing acoustic wave contours sweeping diagonally from lower left to upper right, made from many very fine parallel curved lines. Pale warm gray #DFDEDD lines and a few soft yellow #FDD633 and gold #EEC900 lines, sparse delicate editorial style matching layered paper sound waves. Landscape 1536x1024, plenty of transparent negative space between and around the lines, no opaque white background, no objects, no headphones, no text, no shadows, no border. Fine subtle wave ribbon only, suitable for slow drifting animation behind a white app interface. Genuine transparent background.
 
 Compilation and PNG alpha checks passed. Animation timing and placement still require Unity Play Mode verification.
+
+
+## Headphone hero version 2
+
+Generated using the built-in image generation tool and saved as Assets/_HearingNotion/Resources/Artwork/headphones-hero-v2.png. Actual output is 1254×1254 RGBA with alpha range 0–255; the prompt requested a square asset. Visually inspected the tool image. Used without compositing/editing the earlier assets.
+
+Final prompt:
+Use case: product-mockup. Asset type: transparent headphone header illustration for Hearing Notion, a youth noise awareness app with a white and warm yellow interface. A single premium pair of over-ear headphones, three-quarter front view, compact sculptural silhouette, rich warm yellow #FDD633 headband and earcups, warm white soft cushioning, charcoal #4A4C49 fine accents. Sophisticated clean 3D editorial illustration with gently rounded forms, crisp edges and beautiful soft lighting. Headphones alone, fully visible with generous transparent margin, centered in a square 1024x1024 image. No city, no people, no speaker, no sound waves, no text, no logo, no watermark, no cast shadow plane, no scene background. Genuine transparent background, designed to remain recognizable at 180px.

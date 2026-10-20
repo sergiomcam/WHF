@@ -15,3 +15,5 @@ Source compilation and scene reference validation are automated. Unity Play Mode
 `Tools/build_home_scene.py` reproduces this scene from vendor component definitions. It overwrites Main.unity and Build Settings, so do not rerun after manual scene edits without preserving them. Normal subsequent UI changes should be made in Unity.
 
 ResponsiveScreenLayout on Canvas updates home cards and destination panels when the viewport changes, including Edit Mode previews. The camera uses a solid matching background. Source compilation, local scene references and fit calculations at six viewport sizes were checked; Unity visual and interaction checks remain required.
+
+The visual refresh uses white outlined module cards, yellow primary actions and an isolated transparent headphone header. Home includes Ondas: activas/pausadas, controlling all background waves for the current session. See VisualRefresh.md.

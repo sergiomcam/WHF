@@ -43,7 +43,7 @@ Use a single scene with modular screen-panel roots. Application Managers stays o
 | AppTheme | Shared white/yellow/charcoal palette. |
 | RuntimeArtworkController / AppArtwork | Explicit Play Mode artwork initialization and screen artwork. |
 | GuidedJourney / GuidedExperienceController | Ordered guided stages, continuation bindings, introductions and informational meter panel. |
-| AmbientWaveAnimation | Decorative sprite movement and reduced-motion control. |
+| AmbientWaveAnimation / TravelingWaveGraphic / WaveTravel | Timed traveling UI wave contours and reduced-motion control; no wave texture dependency. |
 
 AudioSimulationManager, AudioSafetyManager, ContentManager, NoiseMeterManager and DataExportManager are design responsibilities, not necessarily implemented components. Check source before claiming they exist.
 
@@ -92,13 +92,13 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 
 ## UI and accessibility
 
-- Palette: white surfaces; charcoal `#4A4C49` text; `#DFDEDD` panels; `#9F9F9E` accents; `#FDD633` yellow actions; `#EEC900` selected highlights. Use AppTheme for runtime colors. Gray accents are not a default body-text color.
+- Palette: warm near-white `#FFFEF8` background, white cards, charcoal `#4A4C49` text, warm `#F6F4EB` panels, `#DFDEDD` borders, `#686B63` secondary text, `#FDD633` primary actions, `#FFF5C2` soft-yellow accents and `#EEC900` selections. Use AppTheme for runtime colors; retain readable contrast and distinct action hierarchy.
 - Maintain readable contrast, large type, clear hierarchy, comfortable padding and reachable controls. Do not shrink labels to illegibility to avoid wrapping.
 - Home uses two columns in landscape and one in portrait. Awareness Check / Conciencia auditiva is the first home option. Guided order: HNAI → Exposure Explorer → Sound Experience → Hearing Health recommendations → informational Noise Meter → Research & Resources → Home. HNAI completion enables guided continuation. Show a brief modal introduction once per stage per guided run; free exploration has no automatic popups.
 - Canvas reference sizes are 1920×1080 landscape and 1080×1920 portrait, with Expand scaling. Preserve full-viewport backgrounds and responsive anchors.
 - Long activity/questionnaire content uses ScrollRect regions. Wrapped text must grow through layout sizing instead of overflowing neighboring rows. Keep navigation outside those scroll regions.
 - Check mouse wheel, drag/touch scrolling and pointer/keyboard operation as applicable. Preserve selected state with a visible marker in addition to color.
-- Keep motion decorative and subtle. Background sprites must not move text or buttons. Preserve reduced-motion support; its current control is per-screen Inspector state, not a persistent app setting.
+- Keep motion decorative and subtle. Wave contours must not move text or buttons or intercept input. Home exposes Ondas: activas/pausadas as a session-wide reduced-motion switch; it is not a persistent app setting. Current waves sweep for 10 seconds, rest 4 seconds, and are staggered 7 seconds. Preserve explicit startup and texture-independent rendering.
 - Avoid automatic audio playback. Provide stop, pause, optional skip and text explanations before enabling auditory demonstrations.
 
 ## Research and audio rules

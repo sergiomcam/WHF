@@ -13,6 +13,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Exposure Explorer](ExposureExplorer.md) | Activity selection, sound context and takeaway review checks |
 | [Spanish questionnaire](SpanishQuestionnaire.md) | HNAI response scale, session behavior and research limitations |
 | [Artwork](Artwork.md) | Image provenance, prompts and animation notes |
+| [Visual refresh](VisualRefresh.md) | Traveling waves, motion control, palette and headphone header |
 | [Modification history](Changes/README.md) | Indexed task reports |
 | [Report template](Changes/TEMPLATE.md) | Required report structure |
 
