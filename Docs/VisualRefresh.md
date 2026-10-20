@@ -58,3 +58,7 @@ In Unity, exit Play Mode, allow importing/compilation, then press Play and obser
 ## Wave renderer dependency repair
 
 The reported RectMask2D clipping exception occurred on Traveling sound contours. Its custom graphic now explicitly requires RectTransform and CanvasRenderer. Creation orders the renderer before the graphic; Awake/OnEnable ensure the dependency before calling base lifecycle methods, and animation initialization also checks reused objects. No renderer lookup is added to Update. Exit Play Mode and allow compilation before retesting so runtime objects are recreated. Editor/Windows source compilation passed; Unity clipping and actual movement remain unverified. See [report 010](Changes/2026-10-19-010-wave-canvasrenderer-fix.md).
+
+## Soft contour ends
+
+WaveTravel.EndOpacity applies a symmetric smoothstep taper over each outer 35% of the ribbon. TravelingWaveGraphic assigns separate alpha values to each segment endpoint, interpolated by the UI renderer. Both tips reach zero opacity; the central 30% retains its original opacity. This spatial taper complements the existing temporal fade and also applies in reduced-motion mode. Geometry counts, timing and palette are unchanged. Source compilation passed for Editor/Windows; inspect the actual entry/exit and paused state in Unity before confirming visual quality.

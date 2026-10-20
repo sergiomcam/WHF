@@ -59,6 +59,8 @@ Warm near-white backgrounds, white cards with light borders, yellow primary acti
 
 ### F-008 Animated wave sprites
 
+Each traveling contour now fades smoothly to transparent across both outer 35% sections, with vertex-interpolated opacity. This removes the hard leading/trailing tips in either travel direction, including paused waves. Temporal fades remain active. Source compilation passed; Unity visual review remains pending. See [soft wave ends](Changes/2026-10-19-011-soft-wave-ends.md).
+
 The previous low-opacity fixed-position sprite drift has been replaced by two procedural 2D UI wave bands. Each band traverses the screen in 10 seconds, rests 4 seconds and fades at entry/exit; the second band starts 7 seconds apart. Initial time is set to 2.5 seconds so a pass is visible on entry. No wave image import is required. AmbientWaveAnimation updates TravelingWaveGraphic with unscaled time; inactive screens do not update, and unfocused standalone players pause. A home button labeled Ondas: activas/pausadas freezes both bands into static contours for the current app session. Controls/header remain still and decorative graphics do not intercept input. Pure timing tests and compilation passed, but the user-reported Unity visibility issue is not yet confirmed resolved in Play Mode. See [visual refresh](VisualRefresh.md).
 
 Wave graphics now explicitly require RectTransform/CanvasRenderer, create the renderer before the graphic, and repair missing renderers during initialization and activation. This addresses the reported clipping exception; Unity runtime confirmation is pending. See [renderer fix report](Changes/2026-10-19-010-wave-canvasrenderer-fix.md).
@@ -112,3 +114,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-19 | F-002, F-007, F-008, F-014 | Replace faint sprite drift with traveling wave geometry, refresh cards/palette and headphone artwork, add home motion controls | [2026-10-19-009](Changes/2026-10-19-009-traveling-waves-and-visual-refresh.md) |
 
 | 2026-10-19 | F-008 | Explicitly create and require the wave CanvasRenderer, repair reused objects before clipping registration | [2026-10-19-010](Changes/2026-10-19-010-wave-canvasrenderer-fix.md) |
+
+| 2026-10-19 | F-008 | Blend leading and trailing contour ends to transparent | [2026-10-19-011](Changes/2026-10-19-011-soft-wave-ends.md) |

@@ -17,3 +17,4 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-19 | [2026-10-19-008](2026-10-19-008-annex-catalog-and-audio-import.md) | Map annex/chart sound sources and add local per-activity audio assignment. |
 | 2026-10-19 | [2026-10-19-009](2026-10-19-009-traveling-waves-and-visual-refresh.md) | Add traveling wave contours, Home motion controls and refreshed GUI/headphone artwork. |
 | 2026-10-19 | [2026-10-19-010](2026-10-19-010-wave-canvasrenderer-fix.md) | Repair missing wave CanvasRenderer before UI clipping. |
+| 2026-10-19 | [2026-10-19-011](2026-10-19-011-soft-wave-ends.md) | Fade both wave tips to transparent for softer entry and exit. |
