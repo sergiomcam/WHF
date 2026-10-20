@@ -12,3 +12,5 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-19 | [2026-10-19-004](2026-10-19-004-feature-documentation.md) | Create the central feature catalog and require ongoing updates. |
 | 2026-10-19 | [2026-10-19-005](2026-10-19-005-documentation-publication-workflow.md) | Require feature-documentation publication and synchronize the current main docs. |
 | 2026-10-19 | [2026-10-19-006](2026-10-19-006-guided-journey-and-popups.md) | Reorder guided stages, add introductory popups and informational Noise Meter. |
+
+| 2026-10-19 | [2026-10-19-007](2026-10-19-007-guided-popup-canvasgroup-fix.md) | Fix missing CanvasGroup handling in guided popups. |

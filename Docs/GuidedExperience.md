@@ -42,3 +42,7 @@ Unity Play Mode and visual/device validation remain pending. Check:
 - Reset clears answers and popup history, returns Welcome and leaves the interface usable.
 - Portrait/landscape changes keep popup copy, dismiss button, content and navigation readable.
 - Keyboard focus, Escape, pointer/touch interaction and modal dismissal behave correctly.
+
+## CanvasGroup regression fix
+
+A user-reported MissingComponentException in the HNAI introduction exposed an unsafe null-coalescing check on a Unity component. GuidedExperienceController now uses Unity-aware null checks before adding the screen CanvasGroup and when finding alternate footer controls. A stage is marked explained only after its popup opens. Verify starting the guide with no pre-existing CanvasGroup, dismissing the popup, and revisiting the stage in Play Mode; source compilation cannot verify Unity object-lifetime semantics.

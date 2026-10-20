@@ -66,6 +66,7 @@ AudioSimulationManager, AudioSafetyManager, ContentManager, NoiseMeterManager an
 - Replacing a cloned Button's callbacks must remove serialized persistent actions as well as runtime listeners. This project replaces `onClick` with a new ButtonClickedEvent before wiring module actions.
 - UI decoration must not intercept clicks. Set raycastTarget false on decorative text/images and keep decoration behind controls.
 - Check serialized references after renaming classes, fields, routes or GameObjects. Existing controllers use some transform-name lookups.
+- Use Unity-aware `== null`, `!= null` or TryGetComponent checks for UnityEngine.Object instances. Do not use `??` or `?.` to detect missing/destroyed Unity components; CLR null checks can miss Unity's object lifetime state.
 - Keep source files and Spanish JSON in UTF-8. Avoid encoding corruption and escaped text being rendered literally.
 
 ## Optimization guidelines
