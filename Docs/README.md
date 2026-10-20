@@ -8,6 +8,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Feature catalog](FEATURES.md) | Current feature inventory and dated feature history |
 | [Architecture](AppArchitecture.md) | System boundaries, screens, roadmap and design decisions |
 | [Home scene](HomeScene.md) | Template-derived navigation and responsive layout |
+| [Guided experience](GuidedExperience.md) | Six-stage journey, introductory popups and review checklist |
 | [Exposure Explorer](ExposureExplorer.md) | Activity selection, sound context and takeaway review checks |
 | [Spanish questionnaire](SpanishQuestionnaire.md) | HNAI response scale, session behavior and research limitations |
 | [Artwork](Artwork.md) | Image provenance, prompts and animation notes |

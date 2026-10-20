@@ -14,3 +14,5 @@ Choose one response per item. The selected option has a visible [X] and contrast
 Responses are stored in a separate local prototype draft list with item ID, choice ID and UTC answer timestamp. Numeric values are defined by the questionnaire choices. They are not added to consented research assessment records, persisted, exported or scored. Full research administration and interpretation remain dependent on an approved protocol; protocolConfirmed stays false.
 
 Verification: source compilation and JSON structure checks passed. In Unity Play Mode, verify answer selection, revision, disabled Next for unanswered items, final completion, navigation away/back, and reset. Inspect portrait and landscape wrapping. Play Mode verification has not been performed by the agent.
+
+Guided mode now begins with HNAI. After all 22 answers, press Finalizar, then the outer Continuar button to open Exposure Explorer. In free exploration the outer action remains Salir. Starting a guided journey preserves the current visit’s draft answers; use visitor reset for a fresh participant.

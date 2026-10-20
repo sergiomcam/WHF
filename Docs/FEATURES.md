@@ -10,26 +10,27 @@ Use this page to review app contents, find implementation details and trace feat
 
 | ID | Feature and entry point | Implementation | Verification and limits | Last updated |
 | --- | --- | --- | --- | --- |
-| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented | Source/scene checks previously recorded; full interaction check pending | 2026-10-19 inventory |
+| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented | Source/scene checks previously recorded; full interaction check pending | 2026-10-19 |
 | F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all screens | Implemented | User reported improved fitting; full portrait/landscape regression pending | 2026-10-19 inventory |
 | F-003 | [Exposure Explorer](#f-003-exposure-explorer): home or guided journey | Implemented | Compilation/static checks recorded; runtime interactions pending | 2026-10-19 inventory |
-| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Conciencia auditiva | Implemented prototype | Loading fix and responses need Play Mode confirmation; no scoring/research administration | 2026-10-19 inventory |
+| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Conciencia auditiva | Implemented prototype | Loading fix and responses need Play Mode confirmation; no scoring/research administration | 2026-10-19 |
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home or Continue | Partial | Selected activity summary implemented; knowledge outcomes and habit selection pending | 2026-10-19 inventory |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Explorer/Takeaways reset | Implemented | Reset/re-entry regression pending; memory only | 2026-10-19 inventory |
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Implemented | Images inspected and code compiled; final placement review pending | 2026-10-19 inventory |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | User reported absent motion; explicit startup fix needs confirmation | 2026-10-19 inventory |
 | F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer | Partial | Activity context only; no reviewed audio or playback | 2026-10-19 inventory |
-| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home | Partial | Introductory panels; full lessons/reference browsing pending | 2026-10-19 inventory |
+| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home | Partial | Introductory panels; full lessons/reference browsing pending | 2026-10-19 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
-| F-012 | [Noise Meter](#f-012-noise-meter): disabled home card | Planned, stage two | No microphone measurement or calibration | 2026-10-19 inventory |
+| F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
 | F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | Partial content; settings planned | Spanish HNAI and mostly English modules; no complete language/settings UI | 2026-10-19 inventory |
+| F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): Start guided experience | Implemented | Route checks passed; popup interaction/layout verification pending | 2026-10-19 |
 
 ## Feature details
 
 ### F-001 Home and navigation
 
-Main.unity uses app-owned panels adapted from Menu Template 1. Home opens modules, Conciencia auditiva is the first option, Back uses navigation history, and the guided flow proceeds through Exposure, Sound, Health, Awareness and Takeaways. The 5–8-minute target has not been usability-tested. Source: AppManager, NavigationManager, ScreenView in Assets/_HearingNotion/Scripts. See [Home scene](HomeScene.md) and [Architecture](AppArchitecture.md).
+Main.unity uses app-owned panels adapted from Menu Template 1. Home opens modules, Conciencia auditiva is the first option, Back uses navigation history, and the guided flow now proceeds through HNAI, Exposure, Sound, Health recommendations, an informational Noise Meter stage, and Research & Resources. HNAI must be completed before guided continuation; the final stage returns Home. The 5–8-minute target has not been usability-tested. Source: AppManager, NavigationManager, ScreenView in Assets/_HearingNotion/Scripts. See [Home scene](HomeScene.md) and [Architecture](AppArchitecture.md).
 
 ### F-002 Responsive, readable UI
 
@@ -41,7 +42,7 @@ Three category filters expose nine activity records. Visitors open details, add/
 
 ### F-004 Spanish HNAI questionnaire
 
-The 22 supplied Spanish statements use the confirmed five-point agreement scale. Visitors select/revise answers, navigate Anterior/Siguiente, complete all items with Finalizar and review responses. Answers remain local draft state for the visit. No score, clinical result or export is produced. The controller loads Resources/Questionnaires/HNAI.es.json and has startup recovery. This full instrument prototype is separate from a future short public quiz and consented research administration. Source: AwarenessCheckManager and AppSession. See [Spanish questionnaire](SpanishQuestionnaire.md).
+The 22 supplied Spanish statements use the confirmed five-point agreement scale. Visitors select/revise answers, navigate Anterior/Siguiente, complete all items with Finalizar and review responses. Answers remain local draft state for the visit. No score, clinical result or export is produced. In guided mode HNAI is first; Finalizar completes the questionnaire and enables the outer Continuar button to open Exposure Explorer. The controller loads Resources/Questionnaires/HNAI.es.json and has startup recovery. This full instrument prototype is separate from a future short public quiz and consented research administration. Source: AwarenessCheckManager and AppSession. See [Spanish questionnaire](SpanishQuestionnaire.md).
 
 ### F-005 Personalized Takeaways
 
@@ -65,7 +66,7 @@ Explorer passes the active activity ID and the destination displays its descript
 
 ### F-010 Hearing Health and sources
 
-Navigation and introductory panels describe the five educational themes and research background. Full topic content, source cards and browsing interactions remain pending. EducationalTopicDefinition provides a content schema. See [Architecture](AppArchitecture.md).
+Navigation and introductory panels describe the five educational themes and research background. Health now includes brief recommendations for comfortable volume, quiet breaks, distance from speakers and hearing protection. Full topic content, source cards and browsing interactions remain pending. EducationalTopicDefinition provides a content schema. See [Architecture](AppArchitecture.md).
 
 ### F-011 Public knowledge check and research mode
 
@@ -73,7 +74,7 @@ Planned as separate experiences: a short educational quiz and full approved rese
 
 ### F-012 Noise Meter
 
-Disabled coming-later home card and blocked route. Microphone acquisition, RMS/weighting, calibration and qualified estimated readings are deferred. No calibrated sound levels are displayed. See [Architecture](AppArchitecture.md).
+The home card remains disabled. Guided mode now includes an informational coming-later screen with its own introduction and Continue control. Microphone acquisition, RMS/weighting, calibration and qualified estimated readings are deferred. No calibrated sound levels are displayed. See [Architecture](AppArchitecture.md).
 
 ### F-013 Music Lab
 
@@ -83,6 +84,10 @@ Future music-perception/DSP research module; route reserved and unavailable. No 
 
 Spanish HNAI and bilingual-capable content fields exist; most other UI currently uses English. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
 
+### F-015 Guided screen introductions
+
+Six Spanish popups briefly explain the purpose, controls and limitations of each guided stage. Each appears once per stage per guided run; Back does not repeat a dismissed introduction, and restarting the journey/reset allows them again. Entendido or Escape dismisses the modal. The popup blocks underlying controls and focuses its dismiss button. Free exploration does not show these popups. Source: GuidedJourney and GuidedExperienceController; see [Guided experience](GuidedExperience.md). The Noise Meter remains informational and sound playback remains pending. Popup rendering, keyboard/touch behavior and scene wiring still require Unity verification.
+
 ## Feature change history
 
 Future feature changes append an entry here and update the current inventory/details. Use stable IDs; keep removed/deprecated entries with their status. Every entry links its detailed modification report.
@@ -90,3 +95,5 @@ Future feature changes append an entry here and update the current inventory/det
 | Date | Affected IDs | Change | Report |
 | --- | --- | --- | --- |
 | 2026-10-19 | F-001–F-014 | Initial inventory from existing implementation; no new runtime features added | [2026-10-19-004](Changes/2026-10-19-004-feature-documentation.md) |
+
+| 2026-10-19 | F-001, F-004, F-010, F-012, F-015 | Reorder guided journey, require HNAI completion, add screen introductions and an informational meter stage | [2026-10-19-006](Changes/2026-10-19-006-guided-journey-and-popups.md) |

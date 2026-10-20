@@ -4,7 +4,7 @@ Open `Assets/_HearingNotion/Scenes/Main.unity` in Unity and press Play. The layo
 
 The home adapts Menu Template 1's rounded card sprite, TextMesh Pro typography, button styling, Canvas and EventSystem. The original vendor scene is unchanged. The phone status bar and unrelated template imagery are omitted for the desktop layout.
 
-The six module cards follow the supplied reference. Exposure Explorer, Sound Experience, Hearing Health, Awareness Check and Research & Sources open app-owned introductory panels. Noise Meter is disabled and labeled coming later. Personalized Takeaways opens a separate panel. Start guided experience starts at Exposure Explorer; Continue follows Sound → Health → Awareness → Takeaways. Home returns to the module grid; Back uses navigation history.
+The six module cards follow the supplied reference. Exposure Explorer, Sound Experience, Hearing Health, Awareness Check and Research & Sources open app-owned introductory panels. Noise Meter is disabled and labeled coming later. Personalized Takeaways opens a separate panel. Start guided experience starts at HNAI, followed by Exposure Explorer → Sound Experience → Hearing Health recommendations → informational Noise Meter → Research & Resources → Home. Each stage has a brief introduction popup in guided mode. See GuidedExperience.md for completion and navigation behavior. Home returns to the module grid; Back uses navigation history.
 
 Destination panels describe intended content and make unfinished interactions explicit. Audio, questionnaires, scoring, personal results and microphone input are not implemented in this scene. This pass uses English copy; Spanish content and language controls remain a subsequent step.
 

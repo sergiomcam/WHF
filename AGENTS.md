@@ -9,7 +9,7 @@ Hearing Notion is an offline hearing-health and noise-awareness prototype for th
 - Primary development target: Windows desktop; preserve responsive portrait/mobile previews. macOS and mobile deployment are later targets.
 - English and Spanish are intended. The current HNAI questionnaire is Spanish first; do not translate or rewrite instrument wording without instruction.
 - Core modules: home/navigation, Exposure Explorer, Sound Experience, Hearing Health, Awareness Check, Research & Sources, Personalized Takeaways.
-- Noise Meter is deferred; Music Lab is future scope. Do not make these appear functional before implementation.
+- Noise measurement is deferred; guided mode includes an informational Noise Meter stage only. Music Lab is future scope. Do not make these appear functional before implementation.
 - No cloud backend, accounts, microphone acquisition, telemetry, or persistent participant storage is required for the core prototype.
 
 ## Stack and repository map
@@ -41,6 +41,7 @@ Use a single scene with modular screen-panel roots. Application Managers stays o
 | ResponsiveScreenLayout | Portrait/landscape positions, sizing and readable typography. |
 | AppTheme | Shared white/yellow/charcoal palette. |
 | RuntimeArtworkController / AppArtwork | Explicit Play Mode artwork initialization and screen artwork. |
+| GuidedJourney / GuidedExperienceController | Ordered guided stages, continuation bindings, introductions and informational meter panel. |
 | AmbientWaveAnimation | Decorative sprite movement and reduced-motion control. |
 
 AudioSimulationManager, AudioSafetyManager, ContentManager, NoiseMeterManager and DataExportManager are design responsibilities, not necessarily implemented components. Check source before claiming they exist.
@@ -91,7 +92,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 
 - Palette: white surfaces; charcoal `#4A4C49` text; `#DFDEDD` panels; `#9F9F9E` accents; `#FDD633` yellow actions; `#EEC900` selected highlights. Use AppTheme for runtime colors. Gray accents are not a default body-text color.
 - Maintain readable contrast, large type, clear hierarchy, comfortable padding and reachable controls. Do not shrink labels to illegibility to avoid wrapping.
-- Home uses two columns in landscape and one in portrait. Awareness Check / Conciencia auditiva is the first home option. This ordering does not by itself change guided sequencing.
+- Home uses two columns in landscape and one in portrait. Awareness Check / Conciencia auditiva is the first home option. Guided order: HNAI → Exposure Explorer → Sound Experience → Hearing Health recommendations → informational Noise Meter → Research & Resources → Home. HNAI completion enables guided continuation. Show a brief modal introduction once per stage per guided run; free exploration has no automatic popups.
 - Canvas reference sizes are 1920×1080 landscape and 1080×1920 portrait, with Expand scaling. Preserve full-viewport backgrounds and responsive anchors.
 - Long activity/questionnaire content uses ScrollRect regions. Wrapped text must grow through layout sizing instead of overflowing neighboring rows. Keep navigation outside those scroll regions.
 - Check mouse wheel, drag/touch scrolling and pointer/keyboard operation as applicable. Preserve selected state with a visible marker in addition to color.

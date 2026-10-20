@@ -14,7 +14,8 @@ Use one app-owned scene, `Assets/_HearingNotion/Scenes/Main.unity`, with persist
 ```mermaid
 flowchart TD
     Welcome --> Home
-    Welcome -->|Guided| Exposure
+    Welcome -->|Guided| HNAI
+    HNAI --> Exposure
     Home --> Exposure
     Home --> Sound
     Home --> Health
@@ -22,7 +23,8 @@ flowchart TD
     Home --> Sources
     Exposure --> Sound
     Sound --> Health
-    Health --> Check
+    Health --> MeterInfo[Noise Meter — information only]
+    MeterInfo --> Sources
     Check --> Takeaways
     Sources --> Consent
     Consent --> Research
@@ -38,7 +40,7 @@ flowchart TD
     Data --> Export[Optional consent-based research export]
 ```
 
-The public path does not require research consent or a baseline research questionnaire. Sound demonstrations are optional and can be skipped. Research consent gates only research administration and research export. The guided journey is Introduction (30 seconds), Exposure (60 seconds), Sound (2–3 minutes), Learn (1 minute), Reflect (1–2 minutes). This is a target duration to verify with visitors, not an enforced timer.
+The public path does not require research consent or a baseline research questionnaire. Sound demonstrations are optional and can be skipped. Research consent gates only research administration and research export. The current guided journey starts with the full Spanish HNAI, then Exposure Explorer, Sound Experience, Hearing Health recommendations, informational Noise Meter and Research & Resources. Brief Spanish introduction modals appear once per stage per run. Completing HNAI enables guided continuation. Full HNAI may extend the original 5–8-minute target; duration must be measured rather than assumed. See GuidedExperience.md.
 
 ## Screen by screen design
 | Screen | Content and interaction | Navigation and Unity components |
