@@ -1,6 +1,6 @@
 # Hearing Notion feature catalog
 
-Last reviewed: 2026-10-19 (America/Mexico_City).
+Last reviewed: 2026-10-20 (America/Mexico_City).
 
 Use this page to review app contents, find implementation details and trace feature changes. This initial inventory is reconstructed from current source, scene configuration and project notes; it is not a claim that all features were added or tested today. Detailed modification records start in [Modification history](Changes/README.md).
 
@@ -18,7 +18,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Explorer/Takeaways reset | Implemented | Reset/re-entry regression pending; memory only | 2026-10-19 inventory |
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Implemented | Images inspected and code compiled; final placement review pending | 2026-10-19 inventory |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | CanvasRenderer dependency repaired; Play Mode confirmation pending | 2026-10-19 inventory |
-| F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer | Partial | Activity context only; no reviewed audio or playback | 2026-10-19 inventory |
+| F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer; offline MATLAB authoring | Partial | MATLAB reference/guard checks passed; no reviewed public audio, acoustic verification, runtime DSP or playback | 2026-10-20 |
 | F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home | Partial | Introductory panels; full lessons/reference browsing pending | 2026-10-19 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
@@ -69,6 +69,8 @@ Wave graphics now explicitly require RectTransform/CanvasRenderer, create the re
 ### F-009 Sound Experience
 
 Explorer passes the active activity ID and the destination displays its description, any assigned local filename and an explicit playback-pending message. Protection/hearing-loss/tinnitus comparisons, transport controls, reviewed audio assets and safety processing are not implemented. See [Architecture](AppArchitecture.md) and [Explorer checks](ExposureExplorer.md).
+
+WHIS-DTVF is the selected hearing-loss authoring method. An offline MATLAB wrapper calls pinned WHIS v302/GCFB v234 reference code with explicit seven-point dB HL, compression health and calibration assumptions. It saves review-pending source/processed pairs and local processing metadata, handles mono/stereo without autoplay, and rejects unsupported input, clipping and overwrites. Reference checkouts/output are local and ignored. MATLAB numerical checks and their actual status are recorded in the [report](Changes/2026-10-20-002-whis-dtvf-offline-processing.md); this does not establish perceptual/device validation or Unity playback. See [steps, sources and use](WHIS.md).
 
 ### F-010 Hearing Health and sources
 
@@ -123,3 +125,4 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-19 | F-008 | Blend leading and trailing contour ends to transparent | [2026-10-19-011](Changes/2026-10-19-011-soft-wave-ends.md) |
 
 | 2026-10-19 | F-001, F-002, F-006, F-017 | Add optional Flappy Cloud silent practice game, seven-card layout and reserved distraction-noise slot | [2026-10-19-012](Changes/2026-10-19-012-flappy-cloud-game.md) |
+| 2026-10-20 | F-009 | Select WHIS-DTVF and add offline reference MATLAB authoring with explicit profile/level assumptions and review records; Unity playback remains pending | [2026-10-20-002](Changes/2026-10-20-002-whis-dtvf-offline-processing.md) |

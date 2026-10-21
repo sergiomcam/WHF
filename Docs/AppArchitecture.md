@@ -119,6 +119,10 @@ LocalSoundSourceLibrary stores per-activity authored audio assignments under App
 
 The visual refresh replaces faint image-sprite drift with TravelingWaveGraphic, a texture-independent UI mesh driven by WaveTravel timing and AmbientWaveAnimation. RuntimeArtworkController initializes it explicitly, updates responsive artwork placement and applies a session-wide pause/resume preference from Home. It does not move controls or text. See VisualRefresh.md for timing, palette and verification limits.
 
+## Offline hearing-loss audio authoring
+
+WHIS-DTVF is selected for hearing-loss illustrations. Tools/Audio/process_whis_dtvf.m calls the pinned authors' WHIS v302 / GCFB v234 MATLAB reference implementation outside Unity. Authored hearing levels, compression assumptions and calibration mapping are explicit; review-pending source/processed pairs and processing records stay local. No runtime DSP, approved audio assets or playback is added. See [WHIS workflow and sources](WHIS.md). This offline tool is distinct from the proposed AudioSimulationManager and the persistent local source-assignment library.
+
 ## Optional attention game
 
 AppManager ensures FlappyCloudController exists. Its Start method registers ScreenId.FlappyCloud after navigation initialization and creates template-derived cards on Welcome/Home. The enum value is appended to preserve serialized route IDs. FlappyCloudRun is a pure C# fixed-step simulation (120 Hz), independent of Unity physics, scene cameras and global timeScale. The controller owns transient state and resets on leaving the game or visitor reset; focus/interruption pauses it. FlappyCloudSettings in Resources/FlappyCloud holds a null AudioClip authoring slot. It is intentionally not used for playback; the noise round is disabled. No Infinite Runner Engine runtime, FMOD, new package, scene or backend is imported. See [Flappy Cloud](FlappyCloud.md).

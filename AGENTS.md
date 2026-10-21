@@ -116,6 +116,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Attitude or intention changes do not establish actual behavior change. Never fabricate personal results in Takeaways.
 - Local authored sound sources can be imported for review. Ingestion does not authorize playback or redistribution. Review provenance, distribution rights, levels and playback behavior before enabling use; keep imported files review-pending and never autoplay them.
 - Simulated protection, hearing loss and tinnitus are educational illustrations, not hearing tests or accurate reproductions of individual impairment. Software gain cannot guarantee acoustic output across devices.
+- Hearing-loss authoring uses the pinned WHIS-DTVF MATLAB reference workflow in `Tools/Audio/` and `Docs/WHIS.md`. Keep reference checkouts and generated review audio outside Unity Assets and out of documentation publication. Require explicit hearing-profile/compression and calibration assumptions; the offline wrapper does not implement Unity playback or establish acoustic safety.
 - Future audio work requires reviewed gain limits, fades/limiting, predictable stop on navigation/reset/interruption and comfortable-volume instructions. Never instruct users to increase volume until uncomfortable.
 - Never label uncalibrated microphone RMS/dBFS as measured dBA. Measurement is a separate later milestone.
 - Source educational claims and numeric exposure guidance from current authoritative references before publication. Keep citations/provenance in content or documentation.

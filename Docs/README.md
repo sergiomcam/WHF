@@ -11,6 +11,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Home scene](HomeScene.md) | Template-derived navigation and responsive layout |
 | [Guided experience](GuidedExperience.md) | Six-stage journey, introductory popups and review checklist |
 | [Soundscape catalog and audio import](SoundscapeCatalog.md) | Annex/chart mappings and per-source local audio assignment |
+| [WHIS-DTVF processing](WHIS.md) | Reference MATLAB authoring workflow, scientific sources, calibration assumptions and verification limits |
 | [Flappy Cloud](FlappyCloud.md) | Optional attention game, reference provenance and future noise slot |
 | [Exposure Explorer](ExposureExplorer.md) | Activity selection, sound context and takeaway review checks |
 | [Spanish questionnaire](SpanishQuestionnaire.md) | HNAI response scale, session behavior and research limitations |
