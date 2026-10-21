@@ -37,3 +37,11 @@ Before activating a noise round, add deliberate playback controls, gain manageme
 FlappyCloudChecks passes idle input, flap lift, collision, terminal state, restart, deterministic input/course replay, gate recycling/scoring, 180-second completion, a height range exceeding 0.4 field heights, 1.9× speed by 45 seconds and tighter spacing/gaps and reset. Editor/Windows source compilation passed with existing Inspector CS0649 warnings only. These model checks do not verify the Unity UI state transitions or actual input feel.
 
 Unity Play Mode/device checks remain: all tutorial popups, tap-to-start/flap across free screen areas, dedicated Pause/Reanudar control and rapid flap taps, pause/resume without accidental jump loss, focus/suspension during both play and transition, quiet-round collision/timeout, six-second notice, automatic second attempt, final Retry, Salir, visitor reset and portrait/landscape layouts. Confirm audio-pending text and no playback. A future audio task still requires safe gain/fades, stop-on-interruption and explicit user listening instructions before enabling real noise.
+
+## Blue and red collectibles (2026-10-21)
+
+Stars appear before the obstacle pairs and move with the course. Blue stars add 10 points; red stars subtract 10 points, including below zero. Each disappears after contact and can score only once, then is reset when its obstacle slot is recycled. The point total is separate from cleared gaps. Both round results include points, and retry/navigation/session reset clear them. Star colors and +10/−10 labels identify the reward/penalty. Tap/tutorial instructions explain the rule.
+
+Three star objects are reused. CollectibleStarGraphic draws a code-native five-point silhouette with explicit RectTransform/CanvasRenderer dependencies, avoiding image tint distortion or additional asset imports. FlappyCloudRun handles contacts and score; the existing three-minute speed/pause/two-round flow remains. Both conditions still have no noise playback.
+
+Checks cover blue +10, red −10, disappearance, no duplicate score, negative total and reset, alongside the existing complete-course regression. Unity rendering, collision feel, color/label readability and pause/transition behavior remain to inspect in Play Mode.

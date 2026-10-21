@@ -25,3 +25,4 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-20 | [2026-10-20-004](2026-10-20-004-research-stages.md) | Add pilot, demographic, HNAI and YANS research stages with source figures. |
 | 2026-10-20 | [2026-10-20-005](2026-10-20-005-flappy-cloud-tap-flow.md) | Simplify Flappy Cloud controls and add progressive three-minute two-round flow. |
 | 2026-10-20 | [2026-10-20-006](2026-10-20-006-flappy-cloud-layout-difficulty.md) | Narrow Flappy Cloud, preserve sprite ratios, accelerate difficulty and restore Pause. |
+| 2026-10-21 | [2026-10-21-001](2026-10-21-001-flappy-cloud-stars.md) | Add blue/red Flappy Cloud stars and positive/negative point scoring. |
