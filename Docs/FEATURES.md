@@ -104,6 +104,8 @@ Each activity can receive a local WAV, OGG or MP3 (50 MB limit). The Editor file
 
 ### F-017 Flappy Cloud attention game
 
+Courses now vary on Retry/re-entry: randomized gate heights, vertical gaps, inter-obstacle spacing, star height/lead and blue/red type. Both attempts in a session reuse its seed; controls and scoring remain fixed. Spacing and the rising speed vary arrival timing. Bounds checked across 1,000 seeds; Unity playability remains unverified. See [randomization report](Changes/2026-10-21-002-flappy-cloud-randomization.md).
+
 Blue/red collectible stars now add/subtract 10 points per contact, disappear once collected and respawn on obstacle recycling. Negative totals are allowed. Points are shown separately from cleared gaps and included in both round results. Rules appear in the tutorial; color is supplemented by +10/−10 labels. Scoring/reset checks and compilation pass; Unity rendering/contact/label checks remain pending. See [star report](Changes/2026-10-21-001-flappy-cloud-stars.md).
 
 Welcome/Home open a tap-first game with three short tutorial popups. Tap a free screen area or press Space to advance/start/flap; a dedicated Pausa/Reanudar button pauses/resumes; rapid taps continue flapping. Each round ends on collision or at 180 seconds. Penguin gaps alternate between varied low/high centers; speed increases from 1.0× to 1.9× over 45 seconds. The playfield has a fixed narrow aspect ratio, sprites keep their proportions, and obstacle spacing/gaps are reduced. The quiet round automatically leads through a six-second notice into a second round. Because audio integration remains pending, this is explicitly a silent placeholder for the noisy condition. Results show both attempts without attributing differences to noise. Retry appears only after the second attempt; Salir remains available for navigation. Focus loss pauses play/countdown; screen exit/reset clears both attempts. No persistence/export or actual noise playback is introduced. See [game guide](FlappyCloud.md) and [revision report](Changes/2026-10-20-005-flappy-cloud-tap-flow.md). Model tests/compilation passed; Unity tap/Pause/transition/visual review is pending.
@@ -139,3 +141,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-20 | F-017 | Narrow proportionate playfield, faster speed ramp, closer obstacles and dedicated Pause/Reanudar without double-tap detection | [2026-10-20-006](Changes/2026-10-20-006-flappy-cloud-layout-difficulty.md) |
 
 | 2026-10-21 | F-017 | Add blue/red star collectibles worth +10/−10 with separate points and per-round results | [2026-10-21-001](Changes/2026-10-21-001-flappy-cloud-stars.md) |
+
+| 2026-10-21 | F-017 | Randomize bounded obstacle/star layout and arrival intervals with fresh session seeds | [2026-10-21-002](Changes/2026-10-21-002-flappy-cloud-randomization.md) |
