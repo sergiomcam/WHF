@@ -21,3 +21,4 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-19 | [2026-10-19-012](2026-10-19-012-flappy-cloud-game.md) | Add Flappy Cloud silent attention game and reserved noise slot. |
 | 2026-10-20 | [2026-10-20-001](2026-10-20-001-development-workflow.md) | Visualize research, WHO guidance, Codex/Unity work and GitHub documentation. |
 | 2026-10-20 | [2026-10-20-002](2026-10-20-002-whis-dtvf-offline-processing.md) | Add offline WHIS-DTVF reference processing, explicit model/level assumptions and synthetic MATLAB verification. |
+| 2026-10-20 | [2026-10-20-003](2026-10-20-003-whis-audio-launcher.md) | Add single-entry MATLAB launcher for audio selection, model settings and processed WAV export. |

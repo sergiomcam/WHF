@@ -50,6 +50,10 @@ This wrapper does not establish a validated binaural model. Different left/right
 
 ## Usage
 
+For a single entry point, open Tools/Audio/run_whis.m in MATLAB and click **Run**, or type `run_whis` after adding Tools/Audio to the path. Select an input file, edit the seven hearing levels, alpha and modeled level assumptions, then select a parent output folder. A new run directory contains whis-dtvf.wav (processed audio), source.wav (normalized reference) and review-record.mat. The Command Window prints their paths. Canceling a dialog stops the launcher without processing. The prefilled settings are a fictional example and require deliberate review; the interactive workflow always records modeled-only calibration. It does not play audio. Inputs must already be 24 or 48 kHz.
+
+For automation, `record = run_whis(inputAudio, newOutputDirectory, cfg)` uses the same processing path without dialogs. The launcher calls process_whis_dtvf, which calls setup_whis; running either supporting file separately is unnecessary. See the [launcher report](Changes/2026-10-20-003-whis-audio-launcher.md).
+
 Run in MATLAB from the project root. This fictional flat profile and alpha are examples, not defaults, participant data or a clinical prescription. All seven points must be supplied deliberately; the wrapper does not invent a missing 125 Hz threshold or map a 3000 Hz point automatically.
 
 ```matlab
