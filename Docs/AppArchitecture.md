@@ -134,3 +134,7 @@ AppManager ensures ResearchSourcesController at runtime. It fills the existing R
 FlappyCloudTapSurface forwards pointer-down gestures from free screen areas. Game UI uses tutorial, ready, play, pause, transition and result states; the second attempt begins after a six-second notice. Each deterministic round lasts up to 180 seconds with a 1.0–1.9× speed ramp over 45 seconds. Pausa/Reanudar is a dedicated control; final Retry replays and Salir remains navigation. Focus loss freezes play/countdown and requires a tap to resume. Noise playback is still unimplemented.
 
 The game arena uses AspectRatioFitter inside its reserved bounds at width/height 0.85. Cached sprite proportions determine cloud/gate visuals; penguin heads align with collision gaps and bodies extend behind the mask. Double-tap pause is removed. Spacing 0.54 and gap 0.32 increase difficulty; adjacent height changes are bounded at 0.30.
+
+## Offline hearing-protection authoring
+
+Tools/Audio/run_hearing_protection.m supplies a generic educational attenuation example with fir2/fftfilt and a cited laboratory reference curve. It exports review-pending aligned source/protected audio and numerical response/provenance evidence, outside Unity. This is separate from WHIS hearing-loss modeling. No runtime playback or protection-efficacy validation is introduced. See [HearingProtection](HearingProtection.md).

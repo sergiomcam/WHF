@@ -68,6 +68,8 @@ Wave graphics now explicitly require RectTransform/CanvasRenderer, create the re
 
 ### F-009 Sound Experience
 
+Offline hearing-protection authoring now has run_hearing_protection.m: select audio/output to generate a generic educational example from a cited laboratory attenuation curve using documented MATLAB fir2/fftfilt. Exports aligned source/protected WAVs, provenance record and response-check CSV; no autoplay/Unity import. Numerical verification passed, including <1 dB target-anchor agreement at four rates. Perceptual/device/field validation is not established. See [method, sources and limitations](HearingProtection.md) and [report](Changes/2026-10-21-003-hearing-protection-authoring.md).
+
 Offline authoring now has a single MATLAB entry point, Tools/Audio/run_whis.m: choose audio, enter the seven thresholds/compression and modeled-level assumptions, and select an output parent folder. It saves the processed WAV/reference/record to a new folder without playback, or accepts three arguments for scripted use. Interactive values are explicitly illustrative and modeled-only. Dialog interaction still needs manual verification. See [launcher report](Changes/2026-10-20-003-whis-audio-launcher.md).
 
 Explorer passes the active activity ID and the destination displays its description, any assigned local filename and an explicit playback-pending message. Protection/hearing-loss/tinnitus comparisons, transport controls, reviewed audio assets and safety processing are not implemented. See [Architecture](AppArchitecture.md) and [Explorer checks](ExposureExplorer.md).
@@ -143,3 +145,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-21 | F-017 | Add blue/red star collectibles worth +10/−10 with separate points and per-round results | [2026-10-21-001](Changes/2026-10-21-001-flappy-cloud-stars.md) |
 
 | 2026-10-21 | F-017 | Randomize bounded obstacle/star layout and arrival intervals with fresh session seeds | [2026-10-21-002](Changes/2026-10-21-002-flappy-cloud-randomization.md) |
+
+| 2026-10-21 | F-009 | Add generic lab-data-based hearing-protection authoring and evidence/validation rules | [2026-10-21-003](Changes/2026-10-21-003-hearing-protection-authoring.md) |
