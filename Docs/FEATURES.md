@@ -26,7 +26,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | Partial content; settings planned | Spanish HNAI and mostly English modules; no complete language/settings UI | 2026-10-19 inventory |
 | F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): Start guided experience | Implemented | Route checks passed; popup interaction/layout verification pending | 2026-10-19 |
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment): Explorer activity details | Implemented | Editor/Windows code compiles; format/catalog tests pass; picker, persistence and UI tests pending | 2026-10-19 |
-| F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): Welcome/Home | Partial: playable silent game and reserved noise slot | Model checks and Editor/Windows compilation passed; Unity gameplay/layout verification pending; no noise playback/comparison | 2026-10-19 |
+| F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): Welcome/Home | Partial: two-round tap game; audio pending | Model checks and Editor/Windows compilation passed; Unity gameplay/layout verification pending; no noise playback/comparison | 2026-10-20 |
 
 ## Feature details
 
@@ -104,7 +104,7 @@ Each activity can receive a local WAV, OGG or MP3 (50 MB limit). The Editor file
 
 ### F-017 Flappy Cloud attention game
 
-New Flappy Cloud cards on Welcome and Home open a single-scene game adapted from the local Infinite Runner Engine example. Tap/click the sky, press Space or use Subir to flap through scrolling penguin gates. Silent attempts end on collision or at 30 seconds; score/time feedback, restart, pause/resume and Home are available. Focus loss pauses the run. Course generation repeats on restart and a three-gate pool is reused. Leaving the screen or resetting the visitor clears the attempt. No result persistence/export, audio or causal noise-effect interpretation is provided. Con ruido: pendiente is disabled; Settings.DistractionNoise is a reserved authoring slot and remains unused even if assigned. The guided route is unchanged. See [game guide](FlappyCloud.md) and [report](Changes/2026-10-19-012-flappy-cloud-game.md).
+Welcome/Home open a tap-first game with three short tutorial popups. Tap a free screen area or press Space to advance/start/flap; two taps within 0.28 seconds pause, and one resumes. Each round ends on collision or at 180 seconds. Penguin gaps alternate between varied low/high centers; speed increases continuously from 1.0× to 1.9×. The quiet round automatically leads through a six-second notice into a second round. Because audio integration remains pending, this is explicitly a silent placeholder for the noisy condition. Results show both attempts without attributing differences to noise. Retry appears only after the second attempt; Salir remains available for navigation. Focus loss pauses play/countdown; screen exit/reset clears both attempts. No persistence/export or actual noise playback is introduced. See [game guide](FlappyCloud.md) and [revision report](Changes/2026-10-20-005-flappy-cloud-tap-flow.md). Model tests/compilation passed; Unity tap/double-tap/transition/visual review is pending.
 
 ## Feature change history
 
@@ -131,3 +131,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-20 | F-009 | Add one-entry-point MATLAB audio/settings/output launcher with scripted use | [2026-10-20-003](Changes/2026-10-20-003-whis-audio-launcher.md) |
 
 | 2026-10-20 | F-010, F-015 | Add four sourced research stages, scrollable summaries/figures and updated guided explanation; exclude audiovisual material | [2026-10-20-004](Changes/2026-10-20-004-research-stages.md) |
+
+| 2026-10-20 | F-017 | Tap tutorial, double-tap pause, progressive three-minute rounds, automatic second-condition notice and final Retry | [2026-10-20-005](Changes/2026-10-20-005-flappy-cloud-tap-flow.md) |

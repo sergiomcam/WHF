@@ -2,9 +2,15 @@
 
 ## Current experience
 
-Open Flappy Cloud from either home menu after pressing Play. Choose Jugar / reiniciar, then tap/click the sky, use Subir or press Space to flap upward. Avoid the top/bottom boundaries and pass between paired penguins. Attempts end on collision or after 30 seconds. Score counts cleared gaps; feedback shows gaps and elapsed play time. Pausar/Reanudar and Escape pause/resume via the visible control; focus loss or app suspension pauses without automatic resumption. Inicio returns to Home. Leaving the screen or resetting the visitor discards the attempt. Nothing is saved or exported.
+Open Flappy Cloud from either home menu. Three brief popups explain tapping, double-tap pause and the two-round sequence. Tap a free area of the screen (including the sky) or press Space to advance the tutorial and start/flap. A starting tap immediately gives the cloud lift. No Start/Subir/Pause buttons are needed.
 
-This is a silent practice game. Con ruido: pendiente is disabled. It does not demonstrate a causal noise effect or constitute a clinical/cognitive assessment. Practice, fatigue, input hardware and game familiarity would need consideration before interpreting any later comparison.
+Two taps within 0.28 seconds pause the game; the first tap flaps immediately and the second pauses. One tap resumes with lift. Escape and focus loss also pause. After focus/suspension interruption, play/countdown stays paused until the user resumes. Salir remains a separate navigation control.
+
+Each round ends on collision or at 180 seconds. Speed rises linearly from 0.20 to 0.38 field-widths per second (1.0× to 1.9×). Successive gates alternate low centers (0.24–0.43) and high centers (0.57–0.76) in normalized coordinates. A fixed seed and three recycled gates preserve repeatability and bounded object counts. Difficulty and visual/input feel need actual device testing.
+
+After the quiet round, a six-second notice shows its results and announces the next condition. The second round starts automatically. **Its audio remains pending, so it is explicitly labeled silent/noise pending.** No clip is loaded or played, even if the reserved field is assigned. The UI does not claim a real noise comparison. The two rounds repeat the same course and difficulty ramp; this does not control for learning/fatigue or establish a scientific protocol.
+
+After the second attempt, the result area shows both scores/times and a single Retry gameplay button. Retry restarts the tutorial/quiet-first sequence. Leaving/resetting clears all results. No scores are persisted or exported. The six-stage educational guided route is unchanged.
 
 ## Source and adaptation
 
@@ -14,8 +20,8 @@ One existing penguins-characters.png sprite sheet and its original .meta are cop
 
 ## Architecture and authoring
 
-- FlappyCloudRun: normalized playfield, gravity/flap, bounding-rectangle collisions, score, deterministic course seed, 30-second cap and three recycled obstacle pairs. Tick uses fixed 1/120-second steps.
-- FlappyCloudController: runtime screen and menu registration, uGUI input, fixed-step accumulator, drawing, pause, result text and visitor/navigation cleanup. Frame delta is capped at 0.1 seconds; long stalls do not fast-forward a run. Controls and score text are updated on changes. No global timeScale change.
+- FlappyCloudRun: normalized playfield, gravity/flap, bounding-rectangle collisions, score, deterministic course seed, 180-second cap and progressive speed and three recycled obstacle pairs. Tick uses fixed 1/120-second steps.
+- FlappyCloudController: runtime screen and menu registration, tap/Space input, tutorial/automatic round transitions, fixed-step accumulator, drawing, pause, result text and visitor/navigation cleanup. Frame delta is capped at 0.1 seconds; long stalls do not fast-forward a run. Controls and score text are updated on changes. No global timeScale change.
 - FlappyCloudSettings: an authoring ScriptableObject at Assets/_HearingNotion/Resources/FlappyCloud/Settings.asset. The Distraction Noise AudioClip field is left empty. A later task can assign reviewed audio here; assigning a clip alone does not enable playback in this version.
 
 ScreenId.FlappyCloud is appended to the enum. Main and Build Settings stay intact. Runtime cards clone the existing Exposure Explorer button with cleared actions. Responsive home layout reserves a seventh card; the game owns its anchored layout and excludes the generic module artwork. The six-stage guided experience remains unchanged.
@@ -26,6 +32,6 @@ Before activating a noise round, add deliberate playback controls, gain manageme
 
 ## Verification
 
-FlappyCloudChecks exercises idle input, flap lift, boundary collision, terminal state, restart, repeated-course determinism, gate recycling/scoring, 30-second completion and reset. The existing guided-route checks confirm its order and HNAI gate remain intact. Source compilation against Unity 2022.3.12f1 passed for Editor and Windows, with existing Inspector-field CS0649 warnings only. Sprite PNG/meta hashes match the source; menu rectangle calculations have no card/Takeaways overlap in either orientation.
+FlappyCloudChecks passes idle input, flap lift, collision, terminal state, restart, deterministic input/course replay, gate recycling/scoring, 180-second completion, a height range exceeding 0.4 field heights, final 1.9× speed and reset. Editor/Windows source compilation passed with existing Inspector CS0649 warnings only. These model checks do not verify the Unity UI state transitions or actual input feel.
 
-Unity Play Mode, sprite rendering, keyboard/touch interaction, pause/focus behavior and device testing remain unverified. Test 1920×1080 and 1080×1920: confirm all seven cards, clear menu labels, cloud/penguin visibility, touch/Space/Subir flaps, collision, scoring, restart, completion, pause/focus/resume, Home/back and visitor reset. Resize during play/pause and confirm reachable controls and no clipping. Confirm no sound plays and Con ruido stays disabled. Profile the target device before setting performance expectations.
+Unity Play Mode/device checks remain: all tutorial popups, tap-to-start/flap across free screen areas, double-tap threshold, pause/resume without accidental jump loss, focus/suspension during both play and transition, quiet-round collision/timeout, six-second notice, automatic second attempt, final Retry, Salir, visitor reset and portrait/landscape layouts. Confirm audio-pending text and no playback. A future audio task still requires safe gain/fades, stop-on-interruption and explicit user listening instructions before enabling real noise.
