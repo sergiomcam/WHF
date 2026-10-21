@@ -19,3 +19,4 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-19 | [2026-10-19-010](2026-10-19-010-wave-canvasrenderer-fix.md) | Repair missing wave CanvasRenderer before UI clipping. |
 | 2026-10-19 | [2026-10-19-011](2026-10-19-011-soft-wave-ends.md) | Fade both wave tips to transparent for softer entry and exit. |
 | 2026-10-19 | [2026-10-19-012](2026-10-19-012-flappy-cloud-game.md) | Add Flappy Cloud silent attention game and reserved noise slot. |
+| 2026-10-20 | [2026-10-20-001](2026-10-20-001-development-workflow.md) | Visualize research, WHO guidance, Codex/Unity work and GitHub documentation. |
