@@ -19,7 +19,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Implemented | Images inspected and code compiled; final placement review pending | 2026-10-19 inventory |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | CanvasRenderer dependency repaired; Play Mode confirmation pending | 2026-10-19 inventory |
 | F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer; offline MATLAB authoring | Partial | MATLAB reference/guard checks passed; no reviewed public audio, acoustic verification, runtime DSP or playback | 2026-10-20 |
-| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home | Partial | Introductory panels; full lessons/reference browsing pending | 2026-10-19 |
+| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Partial overall; four research stages implemented | Sourced summaries/figures and compile checks passed; Unity tabs/scrolling review pending; full health lessons pending | 2026-10-20 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
@@ -76,7 +76,7 @@ WHIS-DTVF is the selected hearing-loss authoring method. An offline MATLAB wrapp
 
 ### F-010 Hearing Health and sources
 
-Navigation and introductory panels describe the five educational themes and research background. Health now includes brief recommendations for comfortable volume, quiet breaks, distance from speakers and hearing protection. Full topic content, source cards and browsing interactions remain pending. EducationalTopicDefinition provides a content schema. See [Architecture](AppArchitecture.md).
+Hearing Health retains prevention content. Research & Sources now offers four Spanish tabs: INTER-NOISE pilot, demographic noise-source reports, preliminary HNAI psychometrics and post-awareness YANS change. Each shows a scrollable sourced summary and limitations; demographics and YANS include three original research figures. Tabs reset to the first stage on entry/visitor reset; navigation stays outside the scroll region. Prior study findings are separate from visitor responses. No audiovisual content or original DOCX/PDF files are bundled. HNAI validation remains preliminary; YANS figure metadata gaps and unknown demographic group sizes are explicit. See [research guide](ResearchSources.md). Full hearing-health lessons and broader source browsing remain partial; actual Unity interaction/figure readability requires review.
 
 ### F-011 Public knowledge check and research mode
 
@@ -129,3 +129,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-19 | F-001, F-002, F-006, F-017 | Add optional Flappy Cloud silent practice game, seven-card layout and reserved distraction-noise slot | [2026-10-19-012](Changes/2026-10-19-012-flappy-cloud-game.md) |
 | 2026-10-20 | F-009 | Select WHIS-DTVF and add offline reference MATLAB authoring with explicit profile/level assumptions and review records; Unity playback remains pending | [2026-10-20-002](Changes/2026-10-20-002-whis-dtvf-offline-processing.md) |
 | 2026-10-20 | F-009 | Add one-entry-point MATLAB audio/settings/output launcher with scripted use | [2026-10-20-003](Changes/2026-10-20-003-whis-audio-launcher.md) |
+
+| 2026-10-20 | F-010, F-015 | Add four sourced research stages, scrollable summaries/figures and updated guided explanation; exclude audiovisual material | [2026-10-20-004](Changes/2026-10-20-004-research-stages.md) |

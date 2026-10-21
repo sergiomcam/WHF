@@ -46,3 +46,7 @@ Unity Play Mode and visual/device validation remain pending. Check:
 ## CanvasGroup regression fix
 
 A user-reported MissingComponentException in the HNAI introduction exposed an unsafe null-coalescing check on a Unity component. GuidedExperienceController now uses Unity-aware null checks before adding the screen CanvasGroup and when finding alternate footer controls. A stage is marked explained only after its popup opens. Verify starting the guide with no pre-existing CanvasGroup, dismissing the popup, and revisiting the stage in Play Mode; source compilation cannot verify Unity object-lifetime semantics.
+
+## Research stage update (2026-10-20)
+
+The final guided popup now describes the four research tabs: INTER-NOISE pilot, reported sources, preliminary HNAI psychometrics and YANS change. Visitors can scroll through each before Finalizar returns Home. Tab changes do not change guided progression or calculate results. See [research content and limits](ResearchSources.md).

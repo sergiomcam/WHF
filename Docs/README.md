@@ -14,6 +14,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [WHIS-DTVF processing](WHIS.md) | Reference MATLAB authoring workflow, scientific sources, calibration assumptions and verification limits |
 | [Flappy Cloud](FlappyCloud.md) | Optional attention game, reference provenance and future noise slot |
 | [Exposure Explorer](ExposureExplorer.md) | Activity selection, sound context and takeaway review checks |
+| [Research & Sources](ResearchSources.md) | Pilot, demographic sources, HNAI psychometrics and YANS results with provenance/limits |
 | [Spanish questionnaire](SpanishQuestionnaire.md) | HNAI response scale, session behavior and research limitations |
 | [Artwork](Artwork.md) | Image provenance, prompts and animation notes |
 | [Visual refresh](VisualRefresh.md) | Traveling waves, motion control, palette and headphone header |

@@ -38,6 +38,7 @@ Use a single scene with modular screen-panel roots. Application Managers stays o
 | NavigationManager / ScreenView | Screen registration, transitions, Back, guided flow, and research-route guards. |
 | SessionManager / AppSession | Temporary visitor selections, draft answers, consent state and complete reset. |
 | ExposureManager | Activity filters/details, selection state, selected sound context and activity takeaways. |
+| ResearchSourcesController | Four sourced Spanish research stages, scrollable summaries and original study figures. |
 | AwarenessCheckManager | Spanish HNAI rendering, answer revision, completion and local draft responses. |
 | ResponsiveScreenLayout | Portrait/landscape positions, sizing and readable typography. |
 | AppTheme | Shared white/yellow/charcoal palette. |
@@ -112,6 +113,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Do not infer scoring rules, reverse coding, clinical cutoffs, missing-response rules or administration timing from the response scale. Keep protocolConfirmed false until an actual protocol is confirmed.
 - HNAI is preliminary; do not present it as a fully validated diagnostic instrument. YANS is a separate instrument with separate identity, questions and scoring. The earlier pilot's 18-item questionnaire is another version, not interchangeable with the refined HNAI.
 - Keep the full HNAI and any later YANS implementation distinct from a short public educational knowledge check. Agreement responses are not correct/incorrect quiz answers.
+- Research & Sources uses Resources/Research/ResearchStages.es.json. Preserve the pilot (50), preliminary HNAI (316 complete of 318) and YANS figure evidence as distinct studies; do not infer a shared cohort. Unknown demographic sample sizes and YANS sample/error-bar/scoring metadata remain explicit. Original research figures are allowed locally; audiovisual content and raw research documents are excluded from this module.
 - Reported activity prevalence is not measured acoustic exposure. Do not invent prevalence, raw participant results or individual risk estimates from charts or selected activities.
 - Attitude or intention changes do not establish actual behavior change. Never fabricate personal results in Takeaways.
 - Local authored sound sources can be imported for review. Ingestion does not authorize playback or redistribution. Review provenance, distribution rights, levels and playback behavior before enabling use; keep imported files review-pending and never autoplay them.

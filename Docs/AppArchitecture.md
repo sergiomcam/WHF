@@ -126,3 +126,7 @@ WHIS-DTVF is selected for hearing-loss illustrations. Tools/Audio/process_whis_d
 ## Optional attention game
 
 AppManager ensures FlappyCloudController exists. Its Start method registers ScreenId.FlappyCloud after navigation initialization and creates template-derived cards on Welcome/Home. The enum value is appended to preserve serialized route IDs. FlappyCloudRun is a pure C# fixed-step simulation (120 Hz), independent of Unity physics, scene cameras and global timeScale. The controller owns transient state and resets on leaving the game or visitor reset; focus/interruption pauses it. FlappyCloudSettings in Resources/FlappyCloud holds a null AudioClip authoring slot. It is intentionally not used for playback; the noise round is disabled. No Infinite Runner Engine runtime, FMOD, new package, scene or backend is imported. See [Flappy Cloud](FlappyCloud.md).
+
+## Research evidence module
+
+AppManager ensures ResearchSourcesController at runtime. It fills the existing ResearchSources panel from Resources/Research/ResearchStages.es.json, using four tabs, a vertical ScrollRect and three imported research figures. Main scene/build settings and route IDs are unchanged. Summaries distinguish study versions and limitations; navigation/reset returns to stage one. Source PDFs/DOCX and audiovisual files are not bundled. This displays prior findings without scoring visitor responses or implementing YANS administration. See [Research & Sources](ResearchSources.md).
