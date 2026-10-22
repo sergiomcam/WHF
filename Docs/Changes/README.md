@@ -33,3 +33,5 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-22 | [2026-10-22-001](2026-10-22-001-soundscape-protection-batch.md) | Process and verify 18 protected soundscapes with aligned reference files. |
 
 | 2026-10-22 | [2026-10-22-002](2026-10-22-002-media-integration.md) | Integrate 18 protection comparisons, five WHIS song sets and five informative videos into the app. |
+
+| 2026-10-22 | [2026-10-22-003](2026-10-22-003-existing-media-library.md) | Reference the existing audiovisual library directly without duplicate media copies. |

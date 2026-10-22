@@ -142,3 +142,7 @@ Tools/Audio/run_hearing_protection.m supplies a generic educational attenuation 
 ## Offline media integration — 2026-10-22
 
 AppManager now installs MediaExperienceController. It replaces the Sound Experience and Hearing Health placeholder bodies with scrollable comparison/video controls after guided initialization. Resources contains only a small local catalog; actual WAV/MP4 files live in Assets/StreamingAssets/HearingNotionMedia. One selected audio clip or video loads on demand. The transport owns cancellation and cleanup on selection/navigation/reset, pauses on interruption, and preserves shared reference/variant gain. Exposure activity IDs select packaged pairs. Offline MATLAB authoring remains separate; no runtime DSP or microphone is added. Earlier statements about unavailable runtime playback describe the prior milestone. See [media playback](MediaPlayback.md).
+
+## Direct external library — current configuration
+
+The user corrected media integration to reference the existing library without separate copies. MediaCatalog version 2 supplies a local-only ExternalRoot with relative file paths. The transport resolves those original files directly; the generated StreamingAssets duplicates have been removed after verification. The previous packaged architecture remains available only as optional authoring tooling. Desktop builds require the external library and valid local configuration. See [correction report](Changes/2026-10-22-003-existing-media-library.md).

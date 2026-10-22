@@ -68,6 +68,8 @@ Wave graphics now explicitly require RectTransform/CanvasRenderer, create the re
 
 ### F-009 Sound Experience
 
+**Current configuration:** audio and videos reference the existing external library directly; no separate media copies remain in Assets. Local catalog paths are private. The demonstration computer must have this folder available. See [direct-library correction](Changes/2026-10-22-003-existing-media-library.md).
+
 Local playback now integrates 18 original/protected comparisons and five original/95/100 WHIS song sets. Select an example and press Reproducir; version changes preserve approximate playback position and common gain. Playback stops on navigation/reset and pauses on interruption. One clip loads on demand. All ten prior song exports and completed listening copies now report PASS. Numerical, hash and format checks do not establish listening/device validity. See [media playback](MediaPlayback.md) and [integration report](Changes/2026-10-22-002-media-integration.md).
 
 All 18 source soundscapes now have local 3M 1260 laboratory-reference protected exports, aligned unfiltered references, profile/response records and summary data. Original rates/stereo preserved; common −6.02 dB input headroom, no independent protected normalization. All digital checks and original hashes passed; one full-scale source is flagged for review. These are offline illustrations, with Unity playback infrastructure now implemented; actual playback and listening/fit validation remain pending. See [soundscape batch](SoundscapeProtection.md) and [report](Changes/2026-10-22-001-soundscape-protection-batch.md).
@@ -86,7 +88,7 @@ WHIS-DTVF is the selected hearing-loss authoring method. An offline MATLAB wrapp
 
 ### F-010 Hearing Health and sources
 
-Hearing Health now includes five informative video playback copies: health effects, hearing loss, protection and two tinnitus versions, alongside general prevention recommendations. Explicit select/play controls, stop/pause and cleanup use the shared media transport. H.264/AAC copies preserve originals. Unity/device playback, editorial and caption review remain pending. Research & Sources continues to show its four research stages separately. See [media playback](MediaPlayback.md).
+Hearing Health now includes five informative video playback copies: health effects, hearing loss, protection and two tinnitus versions, alongside general prevention recommendations. Explicit select/play controls, stop/pause and cleanup use the shared media transport. The existing original video files are referenced directly; codec compatibility needs device checks. Unity/device playback, editorial and caption review remain pending. Research & Sources continues to show its four research stages separately. See [media playback](MediaPlayback.md).
 
 Hearing Health retains prevention content. Research & Sources now offers four Spanish tabs: INTER-NOISE pilot, demographic noise-source reports, preliminary HNAI psychometrics and post-awareness YANS change. Each shows a scrollable sourced summary and limitations; demographics and YANS include three original research figures. Tabs reset to the first stage on entry/visitor reset; navigation stays outside the scroll region. Prior study findings are separate from visitor responses. No audiovisual content or original DOCX/PDF files are bundled. HNAI validation remains preliminary; YANS figure metadata gaps and unknown demographic group sizes are explicit. See [research guide](ResearchSources.md). Full hearing-health lessons and broader source browsing remain partial; actual Unity interaction/figure readability requires review.
 
@@ -165,3 +167,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-22 | F-009 | Filter and verify all 18 soundscapes using the selected 3M 1260 lab reference; retain aligned comparisons and originals | [2026-10-22-001](Changes/2026-10-22-001-soundscape-protection-batch.md) |
 
 | 2026-10-22 | F-003, F-006, F-009, F-010, F-015 | Integrate offline comparisons and informative videos, explicit controls and transport cleanup | [2026-10-22-002](Changes/2026-10-22-002-media-integration.md) |
+
+| 2026-10-22 | F-009, F-010 | Use existing external audio/video files directly and remove generated duplicate media; preserve all module mappings | [2026-10-22-003](Changes/2026-10-22-003-existing-media-library.md) |
