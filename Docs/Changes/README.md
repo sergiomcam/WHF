@@ -28,3 +28,4 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-21 | [2026-10-21-001](2026-10-21-001-flappy-cloud-stars.md) | Add blue/red Flappy Cloud stars and positive/negative point scoring. |
 | 2026-10-21 | [2026-10-21-002](2026-10-21-002-flappy-cloud-randomization.md) | Randomize obstacle gaps, spacing, star positions/types and session courses. |
 | 2026-10-21 | [2026-10-21-003](2026-10-21-003-hearing-protection-authoring.md) | Add generic hearing-protection authoring with documented DSP, reference measurements and validation rules. |
+| 2026-10-21 | [2026-10-21-004](2026-10-21-004-whis-exposure-song-batch.md) | Render two full-song WHIS exposure illustrations with documented flat-profile assumptions. |

@@ -12,6 +12,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Guided experience](GuidedExperience.md) | Six-stage journey, introductory popups and review checklist |
 | [Soundscape catalog and audio import](SoundscapeCatalog.md) | Annex/chart mappings and per-source local audio assignment |
 | [Hearing-protection authoring](HearingProtection.md) | Generic laboratory-data-based example, documented DSP, measurements and limits |
+| [WHIS song batch](WHISSongBatch.md) | WHO chart-derived flat exposure illustrations, full-song processing and verification status |
 | [WHIS-DTVF processing](WHIS.md) | Reference MATLAB authoring workflow, scientific sources, calibration assumptions and verification limits |
 | [Flappy Cloud](FlappyCloud.md) | Optional attention game, reference provenance and future noise slot |
 | [Exposure Explorer](ExposureExplorer.md) | Activity selection, sound context and takeaway review checks |

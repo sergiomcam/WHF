@@ -68,6 +68,8 @@ Wave graphics now explicitly require RectTransform/CanvasRenderer, create the re
 
 ### F-009 Sound Experience
 
+A full-song offline batch for two WHO Figure 1 exposure labels is now rendering five supplied songs per variant. User-selected flat illustrative thresholds are 14.5/24.75 dB HL, alpha .5 assumed; originals are preserved and processing is 24 kHz stereo with documented context segmentation. Numerical wrapper checks passed; full-library completion, output verification and listening remain pending. See [song batch](WHISSongBatch.md).
+
 Offline hearing-protection authoring now has run_hearing_protection.m: select audio/output to generate a generic educational example from a cited laboratory attenuation curve using documented MATLAB fir2/fftfilt. Exports aligned source/protected WAVs, provenance record and response-check CSV; no autoplay/Unity import. Numerical verification passed, including <1 dB target-anchor agreement at four rates. Perceptual/device/field validation is not established. See [method, sources and limitations](HearingProtection.md) and [report](Changes/2026-10-21-003-hearing-protection-authoring.md).
 
 Offline authoring now has a single MATLAB entry point, Tools/Audio/run_whis.m: choose audio, enter the seven thresholds/compression and modeled-level assumptions, and select an output parent folder. It saves the processed WAV/reference/record to a new folder without playback, or accepts three arguments for scripted use. Interactive values are explicitly illustrative and modeled-only. Dialog interaction still needs manual verification. See [launcher report](Changes/2026-10-20-003-whis-audio-launcher.md).
@@ -147,3 +149,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-21 | F-017 | Randomize bounded obstacle/star layout and arrival intervals with fresh session seeds | [2026-10-21-002](Changes/2026-10-21-002-flappy-cloud-randomization.md) |
 
 | 2026-10-21 | F-009 | Add generic lab-data-based hearing-protection authoring and evidence/validation rules | [2026-10-21-003](Changes/2026-10-21-003-hearing-protection-authoring.md) |
+
+| 2026-10-21 | F-009 | Start full-song WHIS batch for user-approved flat 25-year 95/100 dBA exposure illustrations; numerical checks passed, render completion pending | [2026-10-21-004](Changes/2026-10-21-004-whis-exposure-song-batch.md) |
