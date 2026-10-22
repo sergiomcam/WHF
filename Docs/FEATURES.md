@@ -171,3 +171,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-22 | F-009, F-010 | Use existing external audio/video files directly and remove generated duplicate media; preserve all module mappings | [2026-10-22-003](Changes/2026-10-22-003-existing-media-library.md) |
 
 | 2026-10-22 | F-009, F-010 | Prevent media button labels from creating then removing required text-layout components; Editor/Windows compilation passed, Play Mode pending | [2026-10-22-004](Changes/2026-10-22-004-media-label-dependency.md) |
+
+| 2026-10-22 | F-003, F-009, F-016 | Make linked audio visible at the top of activity details; collapse optional uploads and check real availability | [2026-10-22-005](Changes/2026-10-22-005-explorer-linked-audio.md) |

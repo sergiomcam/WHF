@@ -9,3 +9,5 @@ Open Main.unity, press Play, select a category and open an activity. Scroll to a
 ExposureManager loads Resources/ActivityCatalog.asset, clones template-derived controls and builds a scroll area. ActivityDefinition stores category memberships and source/classification metadata. The local library is separate from session data and does not upload files to a service.
 
 Source compilation, catalog/reference validation and import-rule tests pass. Actual Unity Play Mode, native dialogs, local-storage persistence/replacement, restart/reset and responsive rendering remain to be tested. See the checklist in the catalog guide.
+
+Current audio flow: select an activity, then use Escuchar ejemplo directly below its title to open Sound Experience and press Reproducir. Audio already linked in the external library needs no upload. Optional additional-file assignment is collapsed under Opciones de edición de audio. Availability checks use the actual catalog and files; missing examples show explanatory text. Earlier pending-playback text above describes the prior milestone. See [linked-audio fix](Changes/2026-10-22-005-explorer-linked-audio.md).

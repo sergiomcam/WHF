@@ -37,3 +37,5 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-22 | [2026-10-22-003](2026-10-22-003-existing-media-library.md) | Reference the existing audiovisual library directly without duplicate media copies. |
 
 | 2026-10-22 | [2026-10-22-004](2026-10-22-004-media-label-dependency.md) | Fix LayoutElement dependency error when constructing media button labels. |
+
+| 2026-10-22 | [2026-10-22-005](2026-10-22-005-explorer-linked-audio.md) | Expose existing audio links above optional uploads with real file-availability checks. |
