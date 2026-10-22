@@ -2,9 +2,9 @@
 
 ## Current experience
 
-Open Flappy Cloud from either home menu. Three brief popups explain tapping, button pause and the two-round sequence. Tap a free area of the screen (including the sky) or press Space to advance the tutorial and start/flap. A starting tap immediately gives the cloud lift. No Start/Subir/Pause buttons are needed.
+Open Flappy Cloud from either home menu. Three brief popups explain tapping, button pause and the two-round sequence. Tap a free area of the screen (including the sky) or press Space to advance the tutorial and start/flap. A starting tap immediately gives the cloud lift. Starting and flying use taps or Space; Pause remains a separate button.
 
-Pausa is a separate button during play and the transition countdown; it changes to Reanudar when paused. Tapping the sky always flaps, even when taps arrive rapidly. A tap also resumes a paused round. Escape and focus loss still pause. Salir remains navigation and Retry appears only after both attempts.
+Pause is a separate button during play and the transition countdown; it changes to Resume when paused. Tapping the sky always flaps, even when taps arrive rapidly. A tap also resumes a paused round. Escape and focus loss still pause. Exit remains navigation and Retry appears only after both attempts.
 
 The playfield fits inside its reserved region at a fixed width:height ratio of 0.85. Cloud/penguin dimensions follow their imported sprite aspect ratios. Penguin heads anchor to the gap; long bodies extend outside the clipped sky instead of being stretched to the boundary. Sprite ratios are cached at initialization. Original source images are unchanged.
 
@@ -36,7 +36,7 @@ Before activating a noise round, add deliberate playback controls, gain manageme
 
 FlappyCloudChecks passes idle input, flap lift, collision, terminal state, restart, deterministic input/course replay, gate recycling/scoring, 180-second completion, a height range exceeding 0.4 field heights, 1.9× speed by 45 seconds and tighter spacing/gaps and reset. Editor/Windows source compilation passed with existing Inspector CS0649 warnings only. These model checks do not verify the Unity UI state transitions or actual input feel.
 
-Unity Play Mode/device checks remain: all tutorial popups, tap-to-start/flap across free screen areas, dedicated Pause/Reanudar control and rapid flap taps, pause/resume without accidental jump loss, focus/suspension during both play and transition, quiet-round collision/timeout, six-second notice, automatic second attempt, final Retry, Salir, visitor reset and portrait/landscape layouts. Confirm audio-pending text and no playback. A future audio task still requires safe gain/fades, stop-on-interruption and explicit user listening instructions before enabling real noise.
+Unity Play Mode/device checks remain: all tutorial popups, tap-to-start/flap across free screen areas, dedicated Pause/Resume control and rapid flap taps, pause/resume without accidental jump loss, focus/suspension during both play and transition, quiet-round collision/timeout, six-second notice, automatic second attempt, final Retry, Exit, visitor reset and portrait/landscape layouts. Confirm audio-pending text and no playback. A future audio task still requires safe gain/fades, stop-on-interruption and explicit user listening instructions before enabling real noise.
 
 ## Blue and red collectibles (2026-10-21)
 
@@ -51,3 +51,5 @@ Checks cover blue +10, red −10, disappearance, no duplicate score, negative to
 Retry and re-entry generate a fresh session seed; both attempts in that session use it. Initial and recycled gates sample new spacing, height and gap size. Spacing changes the interval between arrivals, while the existing speed ramp continues. Stars sample their lead distance (0.20–0.29 field-widths), height (within ±0.10 of the associated gap center) and type (65% blue probability, not a fixed quota). The collision and rendering paths use the same sampled coordinates/gaps. Points remain ±10.
 
 Gravity, flap strength, sprite proportions, three-minute limit and point values stay predictable. This variability is bounded rather than randomizing player controls. A repeated seed reproduces its course, permitting regression checks; the seed is temporary and no visitor data is stored. Model checks cover 1,000 initial seeds, valid geometry and existing three-minute simulation/scoring. Bounds do not establish every randomized course is equally easy or scientifically comparable; actual play review remains needed.
+
+All game copy and menu-card descriptions now use English with plain punctuation: Tap to fly, Pause, Resume, Exit, round notices, star values and results. The live score uses two lines. Both rounds remain explicitly silent; no noise-effect conclusion is presented. See [English-copy report](Changes/2026-10-22-007-flappy-english-copy.md).

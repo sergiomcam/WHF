@@ -41,3 +41,5 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-22 | [2026-10-22-005](2026-10-22-005-explorer-linked-audio.md) | Expose existing audio links above optional uploads with real file-availability checks. |
 
 | 2026-10-22 | [2026-10-22-006](2026-10-22-006-soundscape-back-crash.md) | Diagnose native audio-thread crash on Back and disable unsafe streamed-clip playback. |
+
+| 2026-10-22 | [2026-10-22-007](2026-10-22-007-flappy-english-copy.md) | Rewrite Flappy Cloud instructions, controls and results in clear English. |

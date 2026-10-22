@@ -175,3 +175,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-22 | F-003, F-009, F-016 | Make linked audio visible at the top of activity details; collapse optional uploads and check real availability | [2026-10-22-005](Changes/2026-10-22-005-explorer-linked-audio.md) |
 
 | 2026-10-22 | F-009, F-010 | Avoid documented streamed-clip native crash on Back by fully loading local WAVs; preserve navigation buttons and harden cleanup; native retest pending | [2026-10-22-006](Changes/2026-10-22-006-soundscape-back-crash.md) |
+
+| 2026-10-22 | F-017 | Rewrite game/tutorial/menu copy in clear English, remove corrupted characters and clarify silent rounds | [2026-10-22-007](Changes/2026-10-22-007-flappy-english-copy.md) |
