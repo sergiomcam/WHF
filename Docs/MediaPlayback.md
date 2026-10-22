@@ -41,3 +41,7 @@ Keep the external folder available offline. If it moves, rebuild the index; miss
 Media button labels use anchored RectTransforms without ReadableTextHeight or LayoutElement. Their parent buttons own layout sizing. Scrolling text retains both components; do not add and destroy required components to adapt a label. See [dependency fix](Changes/2026-10-22-004-media-label-dependency.md).
 
 Explorer now places linked audio status and Escuchar ejemplo above activity details; optional uploads are collapsed. No upload is needed for the existing library. The JSON catalog uses TextScriptImporter. See [Explorer correction](Changes/2026-10-22-005-explorer-linked-audio.md).
+
+## Back-navigation crash mitigation
+
+The observed native crash matched Unity UUM-14330: destroying a streamed AudioClip during cleanup. Local WAVs now explicitly disable streaming and compression and load fully before playback. Stop/detach/release and event cleanup remain explicit. One selected clip is loaded at a time; the largest current WAV needs about 71 MB of decoded float PCM, excluding request/decoder overhead. This is a size calculation, not a runtime benchmark. Back/Home controls are not destroyed; variant buttons hide on exit and return on selection. Runtime confirmation remains pending because a separate batch test could not open the already-open project. See [crash fix report](Changes/2026-10-22-006-soundscape-back-crash.md).
