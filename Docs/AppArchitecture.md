@@ -138,3 +138,7 @@ The game arena uses AspectRatioFitter inside its reserved bounds at width/height
 ## Offline hearing-protection authoring
 
 Tools/Audio/run_hearing_protection.m supplies a generic educational attenuation example with fir2/fftfilt and a cited laboratory reference curve. It exports review-pending aligned source/protected audio and numerical response/provenance evidence, outside Unity. This is separate from WHIS hearing-loss modeling. No runtime playback or protection-efficacy validation is introduced. See [HearingProtection](HearingProtection.md).
+
+## Offline media integration — 2026-10-22
+
+AppManager now installs MediaExperienceController. It replaces the Sound Experience and Hearing Health placeholder bodies with scrollable comparison/video controls after guided initialization. Resources contains only a small local catalog; actual WAV/MP4 files live in Assets/StreamingAssets/HearingNotionMedia. One selected audio clip or video loads on demand. The transport owns cancellation and cleanup on selection/navigation/reset, pauses on interruption, and preserves shared reference/variant gain. Exposure activity IDs select packaged pairs. Offline MATLAB authoring remains separate; no runtime DSP or microphone is added. Earlier statements about unavailable runtime playback describe the prior milestone. See [media playback](MediaPlayback.md).

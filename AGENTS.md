@@ -183,3 +183,7 @@ Every future task that changes code, scenes, assets, content, project settings, 
 8. Deliver a concise account of changes, validation and material limitations. Reference the real changed files. Do not create commits, pull requests, deployment, or unrelated cleanup without task context authorizing them.
 
 No default agent delegation is required. Keep changes focused, preserve the user's project work, and proceed autonomously with authorized implementation rather than repeatedly requesting routine confirmation.
+
+## Packaged media playback
+
+AppManager installs MediaExperienceController after the original module initialization. Preserve its two-frame startup delay: GuidedExperienceController first clones the original Health panel for Noise Meter. The controller owns a single on-demand audio/video transport, with explicit playback, relative-gain preservation, cancellation, interruption pause and navigation/reset cleanup. Resources/MediaCatalog.json and Assets/StreamingAssets/HearingNotionMedia are local generated content excluded from publication; never publish media-derived filenames or paths. Video playback copies use H.264/AAC; original research media remains intact. See Docs/MediaPlayback.md. Existing local imported audio remains review-pending and does not override the packaged library.
