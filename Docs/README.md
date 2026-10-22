@@ -11,6 +11,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Home scene](HomeScene.md) | Template-derived navigation and responsive layout |
 | [Guided experience](GuidedExperience.md) | Six-stage journey, introductory popups and review checklist |
 | [Soundscape catalog and audio import](SoundscapeCatalog.md) | Annex/chart mappings and per-source local audio assignment |
+| [Protected soundscape batch](SoundscapeProtection.md) | Completed 18-source 3M 1260 reference filtering, comparison files and verification |
 | [Hearing-protection authoring](HearingProtection.md) | Generic laboratory-data-based example, documented DSP, measurements and limits |
 | [WHIS song batch](WHISSongBatch.md) | WHO chart-derived flat exposure illustrations, full-song processing and verification status |
 | [WHIS-DTVF processing](WHIS.md) | Reference MATLAB authoring workflow, scientific sources, calibration assumptions and verification limits |

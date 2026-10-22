@@ -30,3 +30,4 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-21 | [2026-10-21-003](2026-10-21-003-hearing-protection-authoring.md) | Add generic hearing-protection authoring with documented DSP, reference measurements and validation rules. |
 | 2026-10-21 | [2026-10-21-004](2026-10-21-004-whis-exposure-song-batch.md) | Render two full-song WHIS exposure illustrations with documented flat-profile assumptions. |
 | 2026-10-21 | [2026-10-21-005](2026-10-21-005-whis-listening-level-fix.md) | Diagnose quiet exports and create common-gain listening comparisons. |
+| 2026-10-22 | [2026-10-22-001](2026-10-22-001-soundscape-protection-batch.md) | Process and verify 18 protected soundscapes with aligned reference files. |

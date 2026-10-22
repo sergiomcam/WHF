@@ -1,6 +1,6 @@
 # Hearing Notion feature catalog
 
-Last reviewed: 2026-10-21 (America/Mexico_City).
+Last reviewed: 2026-10-22 (America/Mexico_City).
 
 Use this page to review app contents, find implementation details and trace feature changes. This initial inventory is reconstructed from current source, scene configuration and project notes; it is not a claim that all features were added or tested today. Detailed modification records start in [Modification history](Changes/README.md).
 
@@ -67,6 +67,8 @@ The previous low-opacity fixed-position sprite drift has been replaced by two pr
 Wave graphics now explicitly require RectTransform/CanvasRenderer, create the renderer before the graphic, and repair missing renderers during initialization and activation. This addresses the reported clipping exception; Unity runtime confirmation is pending. See [renderer fix report](Changes/2026-10-19-010-wave-canvasrenderer-fix.md).
 
 ### F-009 Sound Experience
+
+All 18 source soundscapes now have local 3M 1260 laboratory-reference protected exports, aligned unfiltered references, profile/response records and summary data. Original rates/stereo preserved; common −6.02 dB input headroom, no independent protected normalization. All digital checks and original hashes passed; one full-scale source is flagged for review. These are offline illustrations, with Unity playback and listening/fit validation pending. See [soundscape batch](SoundscapeProtection.md) and [report](Changes/2026-10-22-001-soundscape-protection-batch.md).
 
 Model-level song exports were found too quiet for practical listening. Separate reference/95/100 listening folders now use one common per-song gain, preserving model differences; raw exports and originals remain unchanged. Eight available processed copies passed sample/gain checks; a one-time finalizer handles the remaining two after rendering. Listening/device review remains pending. See [level correction](Changes/2026-10-21-005-whis-listening-level-fix.md).
 
@@ -155,3 +157,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-10-21 | F-009 | Start full-song WHIS batch for user-approved flat 25-year 95/100 dBA exposure illustrations; numerical checks passed, render completion pending | [2026-10-21-004](Changes/2026-10-21-004-whis-exposure-song-batch.md) |
 
 | 2026-10-21 | F-009 | Correct overly quiet export presentation with common-gain comparison copies; preserve raw model levels | [2026-10-21-005](Changes/2026-10-21-005-whis-listening-level-fix.md) |
+
+| 2026-10-22 | F-009 | Filter and verify all 18 soundscapes using the selected 3M 1260 lab reference; retain aligned comparisons and originals | [2026-10-22-001](Changes/2026-10-22-001-soundscape-protection-batch.md) |
