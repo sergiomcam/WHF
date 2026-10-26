@@ -43,3 +43,5 @@ Review current app contents and feature status in the [feature catalog](../FEATU
 | 2026-10-22 | [2026-10-22-006](2026-10-22-006-soundscape-back-crash.md) | Diagnose native audio-thread crash on Back and disable unsafe streamed-clip playback. |
 
 | 2026-10-22 | [2026-10-22-007](2026-10-22-007-flappy-english-copy.md) | Rewrite Flappy Cloud instructions, controls and results in clear English. |
+
+| 2026-10-26 | [2026-10-26-001](2026-10-26-001-ethics-policy.md) | Add ethics policy for transparency, data handling, documentation and source verification. |

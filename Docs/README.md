@@ -5,6 +5,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | Document | Purpose |
 | --- | --- |
 | [Project instructions](../AGENTS.md) | Stack, conventions, critical rules, optimization and documentation publication policy |
+| [Ethics and research integrity](ETHICS.md) | Transparency, data management, source verification, documentation and correction responsibilities |
 | [Development workflow](DevelopmentWorkflow.md) | Visual research-to-Codex-to-Unity process, review gates and GitHub traceability |
 | [Feature catalog](FEATURES.md) | Current feature inventory and dated feature history |
 | [Architecture](AppArchitecture.md) | System boundaries, screens, roadmap and design decisions |
