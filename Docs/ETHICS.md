@@ -63,7 +63,7 @@ Follow [AGENTS.md](../AGENTS.md) and the [modification-report template](Changes/
 
 1. Identify the request, scope, source inputs and relevant current behavior.
 2. Preserve stable IDs, instrument versions, asset GUIDs and original research/media inputs. Record parameters, reference/code revisions and hashes where useful. Hashes establish file identity, not truth or permission.
-3. Save one dated report describing changes, decisions, actual checks, failures, limitations and rollback. Separate compilation, static checks, native/runtime tests, visual review and physical-device listening.
+3. Save one dated report describing changes, decisions, actual checks, failures, limitations and rollback. Record modifications in a table connecting each main change to its affected scripts/documents/assets and purpose. Maintain a continuous history-index table with date, report, main changes and key modified files. Separate compilation, static checks, native/runtime tests, visual review and physical-device listening.
 4. Update affected guides, the report index and the feature catalog for user-visible changes. Preserve history and identify superseding corrections rather than rewriting earlier results as if they had always been correct.
 5. Publish only authorized project-authored documentation to GitHub. Inspect the latest remote state, preserve concurrent edits, avoid force-pushes and verify the published content. Exclude participant information, private paths, source media, credentials and vendor material.
 

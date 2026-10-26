@@ -1,6 +1,6 @@
 # Hearing Notion documentation
 
-Start with the [feature catalog](FEATURES.md) for current app contents, implementation status and known verification gaps. Use the [modification history](Changes/README.md) to review what changed in each task.
+Start with the [feature catalog](FEATURES.md) for current app contents, implementation status and known verification gaps. Use the [modification history](Changes/README.md) table to review each task's main changes and the key scripts/documents modified. Report links contain complete file and validation details.
 
 | Document | Purpose |
 | --- | --- |

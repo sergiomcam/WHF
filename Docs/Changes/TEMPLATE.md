@@ -10,11 +10,11 @@ Explain the problem or requested change and the final result. State whether it i
 
 ## Modifications
 
-| File or asset | Change and purpose |
-| --- | --- |
-| Project-relative path | Describe the meaningful modification. |
+| Main change | Script, document or asset modified | Purpose / effect |
+| --- | --- | --- |
+| Concise change summary | Project-relative path; link project documentation when useful | Explain the resulting behavior or documentation change. |
 
-List related generated metadata as a group when applicable.
+Use one row per meaningful change. List exact project-relative paths; group related generated metadata when appropriate. Never include private source paths or participant information. Add a matching history-index row with date, report link, main changes and key scripts/documents modified; the full file list stays in this report. Keep the index as one continuous Markdown table without blank lines between its rows.
 
 ## Decisions and implications
 
