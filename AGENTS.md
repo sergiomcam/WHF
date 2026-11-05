@@ -40,14 +40,14 @@ Use a single scene with modular screen-panel roots. Application Managers stays o
 | AppManager | Initialize a fresh session and navigation; ensure runtime questionnaire/artwork controllers exist. |
 | NavigationManager / ScreenView | Screen registration, transitions, Back, guided flow, and research-route guards. |
 | SessionManager / AppSession | Temporary visitor selections, draft answers, consent state and complete reset. |
-| ExposureManager | Activity filters/details, selection state, selected sound context and activity takeaways. |
+| ExposureManager | Activity filters/details and sound context; visitor add/import UI retired; general takeaways. |
 | ResearchSourcesController | Four sourced Spanish research stages, scrollable summaries and original study figures. |
 | AwarenessCheckManager | Spanish HNAI rendering, answer revision, completion and local draft responses. |
 | ResponsiveScreenLayout | Portrait/landscape positions, sizing and readable typography. |
 | AppTheme | Shared white/yellow/charcoal palette. |
 | RuntimeArtworkController / AppArtwork | Explicit Play Mode artwork initialization and screen artwork. |
 | GuidedJourney / GuidedExperienceController | Ordered guided stages, continuation bindings, introductions and informational meter panel. |
-| FlappyCloudController / FlappyCloudRun / FlappyCloudSettings | Optional menu game, deterministic fixed-step simulation and reserved distraction-audio slot. |
+| FlappyCloudController / FlappyCloudRun / FlappyCloudSettings | Optional menu game, deterministic fixed-step simulation and random reviewed original soundscape in round 2. |
 | AmbientWaveAnimation / TravelingWaveGraphic / WaveTravel | Timed traveling UI wave contours and reduced-motion control; no wave texture dependency. |
 
 AudioSimulationManager, AudioSafetyManager, ContentManager, NoiseMeterManager and DataExportManager are design responsibilities, not necessarily implemented components. Check source before claiming they exist.
@@ -105,7 +105,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Long activity/questionnaire content uses ScrollRect regions. Wrapped text must grow through layout sizing instead of overflowing neighboring rows. Keep navigation outside those scroll regions.
 - Check mouse wheel, drag/touch scrolling and pointer/keyboard operation as applicable. Preserve selected state with a visible marker in addition to color.
 - Keep motion decorative and subtle. Wave contours must not move text or buttons or intercept input. Home exposes Ondas: activas/pausadas as a session-wide reduced-motion switch; it is not a persistent app setting. Current waves sweep for 10 seconds, rest 4 seconds, and are staggered 7 seconds. Preserve explicit startup and texture-independent rendering.
-- Flappy Cloud is an optional free-exploration game, outside the six-stage guided route. Keep game results temporary and descriptive. Its two-round flow advances from quiet play through a notice to a second condition; with the reserved noise slot still unused, both rounds are explicitly silent and no noise comparison is available yet. Do not infer noise effects from silent practice scores. Preserve reference-art provenance and avoid importing the full Infinite Runner Engine/FMOD dependencies.
+- Flappy Cloud is an optional free-exploration game, outside the six-stage guided route. Keep game results temporary and descriptive. Its two-round flow offers Try again/Continue inside the playfield after quiet play, then a notice and randomly selected original Explorer soundscape in round 2. Pause and navigation must stop/pause owned buffered audio predictably. Results are descriptive; practice, fatigue and chance prevent causal inference from score differences. Preserve reference-art provenance and avoid importing the full Infinite Runner Engine/FMOD dependencies.
 - Avoid automatic audio playback. Provide stop, pause, optional skip and text explanations before enabling auditory demonstrations.
 
 ## Research and audio rules
@@ -209,3 +209,10 @@ AppManager installs MediaExperienceController after the original module initiali
 The user requests direct use of the existing audiovisual folder without duplicate media imports. MediaCatalog version 2 has a private ExternalRoot and relative file paths; MediaExperienceController resolves file URLs there. Run Tools/Audio/package_app_media.py --link-existing to refresh the index without copying or transcoding. Preserve common-gain comparison files. The earlier packaged-media convention is optional deployment tooling, not the current configuration. Generated duplicates were removed; original videos now depend on their source codecs. Do not publish the local catalog, media titles or absolute source paths. The external folder must remain accessible offline; show actionable missing-file feedback.
 
 Local comparison WAVs must use fully loaded, uncompressed DownloadHandlerAudioClip playback (streamAudio=false, compressed=false) on Unity 2022.3.12f1. The observed native Back-navigation crash matched Unity UUM-14330 (AudioClip::WWWRead while releasing a streamed clip). Do not re-enable streaming without a reviewed engine/lifetime solution and native regression tests. Keep one selected clip loaded, stop/detach before release, and retain navigation controls. See Docs/Changes/2026-10-22-006-soundscape-back-crash.md.
+
+
+## Listening setup and simplified exploration
+
+AppManager explicitly installs ListeningSetupController and NoiseBasicsController. After demographics closes, offer the optional 6 kHz preview at zero slider gain with Play/Stop, Accept and Skip. Store only temporary AppSession.ListeningGain (0–0.25), apply it equally to media variants/game, and restore the prior gain on Skip. No acoustic calibration, hearing-test or safe-dose claim follows from comfort. Never force audibility of a high-frequency tone. ModalScreenScope blocks underlying ScreenView CanvasGroups and restores interaction/focus. Preserve session-reset cleanup.
+
+NoiseBasics is an appended route and a separate Home card, not an extra guided stage. Source definitions of dB, weighting, energy-equivalent level and eight-hour normalization; distinguish LAeq,8h from LEX,8h. Explorer no longer creates add-activity, audio-authoring/import or reset controls. Existing authored local files remain intact. Original/Protection version buttons explicitly toggle playback; remove preset-volume buttons and hide the separate Play control for protection pairs. See Docs/ListeningSetup.md, Docs/NoiseBasics.md and Docs/ExposureExplorer.md.

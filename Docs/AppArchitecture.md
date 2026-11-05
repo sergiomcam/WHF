@@ -146,3 +146,7 @@ AppManager now installs MediaExperienceController. It replaces the Sound Experie
 ## Direct external library — current configuration
 
 The user corrected media integration to reference the existing library without separate copies. MediaCatalog version 2 supplies a local-only ExternalRoot with relative file paths. The transport resolves those original files directly; the generated StreamingAssets duplicates have been removed after verification. The previous packaged architecture remains available only as optional authoring tooling. Desktop builds require the external library and valid local configuration. See [correction report](Changes/2026-10-22-003-existing-media-library.md).
+
+## 2026-11-05 interaction update
+
+AppManager explicitly installs ListeningSetupController and NoiseBasicsController. ModalScreenScope temporarily blocks screen CanvasGroups while the demographics/listening sibling overlay owns input. AppSession.ListeningGain is a temporary digital gain, not calibration. ScreenId.NoiseBasics is appended without changing existing serialized enum values; its panel clones the existing module template at runtime before media setup. The guided order is unchanged. Explorer selection/import UI is retired; existing library data is retained. Flappy round 2 loads a random original soundscape through its own buffered source. See [listening setup](ListeningSetup.md), [noise terms](NoiseBasics.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).

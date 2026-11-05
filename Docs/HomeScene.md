@@ -21,3 +21,5 @@ The visual refresh uses white outlined module cards, yellow primary actions and 
 ## Optional Flappy Cloud section
 
 Welcome and Home now include a seventh module card, Flappy Cloud. FlappyCloudController creates its template-derived cards and game panel at startup; these runtime objects appear after pressing Play. The first six options retain their order and HNAI remains first. Portrait uses seven 136-unit cards spaced 150 units apart; landscape uses four rows of 112-unit cards spaced 128 apart, followed by Takeaways/footer. The responsive controller is invalidated after card creation. The game owns its anchored layout and excludes generic module artwork/layout; its simulation uses normalized coordinates. The six-stage guided route and serialized Main scene/build settings are unchanged. See [game guide](FlappyCloud.md).
+
+2026-11-05: nine responsive cards include Noise basics and About you. Card spacing and description sizes fit one portrait column or two landscape columns. About you reopens the demographics/listening sequence. See [Noise basics](NoiseBasics.md) and [Listening setup](ListeningSetup.md).

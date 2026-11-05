@@ -23,7 +23,7 @@ The regression runner leaves an interactive Editor in Play Mode at Home and rest
 | First launch | Optional form appears once per installation/notice version; Skip, temporary continuation and explicit local save are distinct; About you reopens it |
 | Demographics | Use synthetic values only; blank age accepted; invalid/out-of-range age rejected; Save explains local storage; Delete removes the local profile; no networking or device identifier collection |
 | HNAI | Original Spanish wording, revise answers, completion guard, scrolling and visitor reset |
-| Explorer | All 18 linked recordings, three chart-only missing-example states, optional import controls |
+| Explorer | All 18 linked recordings, three chart-only missing-example states, no add/import/reset controls; direct version toggles |
 | Audio | Original/protected and original/WHIS choices, Play/Pause/Stop, version switching, Back while loading/playing, re-entry and reset; buffered clips, no native crash |
 | Video | Prepare, moving image, audio-route state, Pause/Stop/Back, original vs compatibility cache, error/30-second timeout feedback |
 | Flappy Cloud | Tutorial, tap/Space, scoring, Pause/Resume, first game over waits indefinitely; Try again repeats quiet round; Continue begins notice then second round; final Retry only at session end |
@@ -38,6 +38,10 @@ Muted engine tests do not establish audible output, loudness consistency, codec 
 | QA-001 | Media library | Two original MP4s failed Unity file reads; initial compatible encodings also raised timestamp warnings | Playback | Local native logs and FFmpeg inspection | MediaExperienceController.cs; prepare_video_compatibility.py | Verified fixed in muted isolated run: 51 audio variants and all five baseline/timestamp-normalized videos playing; audible output still needs human review |
 | QA-002 | Home footer and About you | Profile entry overlapped motion control | Layout | Actual 4K render | DemographicPromptController.cs; ResponsiveScreenLayout.cs | Fixed and visually reviewed as a standard eighth card |
 | QA-003 | Home copy | Corrupted punctuation in duration and placeholder descriptions | Content | Actual portrait render | ResponsiveScreenLayout.cs | Corrected to plain punctuation and accurate prototype labels |
-| QA-004 | First quiet game over | Automatically advancing prevented retry choice | Flow | Native game/controller run and game-over render | FlappyCloudController.cs | Try again and Continue verified; second round remains silent |
+| QA-004 | First quiet game over | Automatically advancing prevented retry choice | Flow | Native game/controller run and game-over render | FlappyCloudController.cs | Try again and Continue verified; superseded by random soundscape round in corrections report |
 
 For new findings, record the minimal reproduction, actual observation, cause if supported, correction and retest result. Use open, fixed-awaiting-retest, verified-fixed or blocked; do not silently convert unresolved items into successes.
+
+## Corrections regression, 2026-11-05
+
+PrototypeReviewRunner now exercises all 18 direct Original-toggle paths, first-round buttons inside the playfield, random round-2 audio/pause/navigation cleanup, 6 kHz preview loading, live session-gain update and Accept stopping playback. It checks modal background blocking/restoration and captures demographics, listening setup and Noise basics in both orientations. Run an isolated project copy when Main is already open; do not start a second Editor on the same locked directory. Muted playback proves engine state only. Manually review slider dragging, keyboard focus, scrolling, comfortable output, Skip, missing-file feedback and target device behavior. See [task report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).

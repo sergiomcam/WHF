@@ -61,3 +61,7 @@ No cloud upload, GitHub audio publication, microphone permission, automatic play
 - Tools/Tests/SoundSourceImportChecks.cs tests header/extension/size rules and stable IDs. Tools/Tests/validate_annex_catalog.py checks expected records, overlapping categories and references. Neither test proves native file-dialog or Unity rendering behavior.
 
 In Play Mode, verify all filters, all 21 records, classification notes, multi-category selections, file-picker cancellation, valid import, invalid/oversized files, replacement, app restart, visitor reset and Sound Experience context. Test portrait/landscape wrapping and scrolling. Then verify the Windows player dialog and local storage on the demonstration computer.
+
+## Current visitor UI, 2026-11-05
+
+Earlier assignment/import steps above are historical authoring infrastructure. Explorer no longer exposes activity-add, audio-edit/import or reset controls. Existing authored files are retained; no migration/deletion occurs. Visitors open the existing comparison and toggle Original/Protection directly. See [current Explorer](ExposureExplorer.md) and [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).

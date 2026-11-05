@@ -2,7 +2,7 @@
 
 ## Current experience
 
-Updated 2026-11-05: after the first quiet game over, the game waits for a choice. Try again repeats the quiet round on the same course; Continue below it starts the six-second notice and second round. Tapping elsewhere does not advance this result screen. These two controls appear only after round 1; final Retry remains after round 2. The second round is still explicitly silent because distraction audio is pending. Older automatic-transition descriptions below are superseded by this choice screen.
+Updated 2026-11-05: after the first quiet game over, the game waits for a choice. Try again repeats the quiet round on the same course; Continue below it starts the six-second notice and second round. Tapping elsewhere does not advance this result screen. These two controls appear inside the playfield only after round 1; final Retry remains after round 2. The second round randomly selects one available original from the 18 Explorer soundscape pairs and loops it at the session listening gain. Loading failure shows an explicit unavailable notice and blocks the sound round until the library is corrected. Older automatic-transition descriptions below are superseded by this choice screen.
 
 Open Flappy Cloud from either home menu. Three brief popups explain tapping, button pause and the two-round sequence. Tap a free area of the screen (including the sky) or press Space to advance the tutorial and start/flap. A starting tap immediately gives the cloud lift. Starting and flying use taps or Space; Pause remains a separate button.
 
@@ -12,7 +12,7 @@ The playfield fits inside its reserved region at a fixed width:height ratio of 0
 
 Each round ends on collision or at 180 seconds. Speed rises from 0.20 to 0.38 field-widths/second over the first 45 seconds, then remains capped at 1.9×. Gate center spacing now varies from 0.48 to 0.66 field-widths; vertical gaps vary from 0.32 to 0.38 field-heights. Gate width is 0.14 to match the proportionate tall sprites in the narrow field. Gap centers are sampled from 0.24–0.76 field-heights, while adjacent centers change by at most 0.24 to keep the denser course navigable. Deterministic model checks include a full 180-second run; actual player difficulty still needs device review.
 
-After the quiet round, a six-second notice shows its results and announces the next condition. The second round starts automatically. **Its audio remains pending, so it is explicitly labeled silent/noise pending.** No clip is loaded or played, even if the reserved field is assigned. The UI does not claim a real noise comparison. Each Retry generates a fresh seed; the two rounds within that session repeat the same seeded course and difficulty ramp; this does not control for learning/fatigue or establish a scientific protocol.
+After the quiet round, a six-second notice shows its results and announces the next condition. The second round starts automatically. A buffered original soundscape loads after the notice and starts with the round, following the visitor’s explicit Continue action. Its activity title is displayed. Pause/focus loss pause the audio; navigation, reset and game over stop and release it. Results describe conditions without attributing score differences to noise. Each Retry generates a fresh seed; the two rounds within that session repeat the same seeded course and difficulty ramp; this does not control for learning/fatigue or establish a scientific protocol.
 
 After the second attempt, the result area shows both scores/times and a single Retry gameplay button. Retry restarts the tutorial/quiet-first sequence. Leaving/resetting clears all results. No scores are persisted or exported. The six-stage educational guided route is unchanged.
 
@@ -26,9 +26,9 @@ One existing penguins-characters.png sprite sheet and its original .meta are cop
 
 - FlappyCloudRun: normalized playfield, gravity/flap, bounding-rectangle collisions, score, deterministic course seed, 180-second cap and progressive speed and three recycled obstacle pairs. Tick uses fixed 1/120-second steps.
 - FlappyCloudController: runtime screen and menu registration, tap/Space input, tutorial/automatic round transitions, fixed-step accumulator, drawing, pause, result text and visitor/navigation cleanup. Frame delta is capped at 0.1 seconds; long stalls do not fast-forward a run. Controls and score text are updated on changes. No global timeScale change.
-- FlappyCloudSettings: an authoring ScriptableObject at Assets/_HearingNotion/Resources/FlappyCloud/Settings.asset. The Distraction Noise AudioClip field is left empty. A later task can assign reviewed audio here; assigning a clip alone does not enable playback in this version.
+- FlappyCloudSettings: an authoring ScriptableObject at Assets/_HearingNotion/Resources/FlappyCloud/Settings.asset. The legacy Distraction Noise AudioClip field remains unused; reviewed existing catalog originals supply the second round.
 
-ScreenId.FlappyCloud is appended to the enum. Main and Build Settings stay intact. Runtime cards clone the existing Exposure Explorer button with cleared actions. Responsive home layout reserves a seventh card; the game owns its anchored layout and excludes the generic module artwork. The six-stage guided experience remains unchanged.
+ScreenId.FlappyCloud is appended to the enum. Main and Build Settings stay intact. Runtime cards clone the existing Exposure Explorer button with cleared actions. Responsive home layout supports nine cards; the game owns its anchored layout and excludes the generic module artwork. The six-stage guided experience remains unchanged.
 
 ## Future noise condition
 
@@ -55,3 +55,5 @@ Retry and re-entry generate a fresh session seed; both attempts in that session 
 Gravity, flap strength, sprite proportions, three-minute limit and point values stay predictable. This variability is bounded rather than randomizing player controls. A repeated seed reproduces its course, permitting regression checks; the seed is temporary and no visitor data is stored. Model checks cover 1,000 initial seeds, valid geometry and existing three-minute simulation/scoring. Bounds do not establish every randomized course is equally easy or scientifically comparable; actual play review remains needed.
 
 All game copy and menu-card descriptions now use English with plain punctuation: Tap to fly, Pause, Resume, Exit, round notices, star values and results. The live score uses two lines. Both rounds remain explicitly silent; no noise-effect conclusion is presented. See [English-copy report](Changes/2026-10-22-007-flappy-english-copy.md).
+
+Current implementation and muted native verification: in-field quiet-round choices, retry, Continue, random buffered noise playback, Pause and navigation cleanup passed. These tests do not establish an experimental noise effect or physical listening comfort. See [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).

@@ -10,25 +10,26 @@ Use this page to review app contents, find implementation details and trace feat
 
 | ID | Feature and entry point | Implementation | Verification and limits | Last updated |
 | --- | --- | --- | --- | --- |
-| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented | Source/scene checks previously recorded; full interaction check pending | 2026-10-19 |
-| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all screens | Implemented | User reported improved fitting; full portrait/landscape regression pending | 2026-10-19 inventory |
-| F-003 | [Exposure Explorer](#f-003-exposure-explorer): home or guided journey | Implemented | Compilation/static checks recorded; runtime interactions pending | 2026-10-19 inventory |
+| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented; nine home cards | Muted isolated native navigation and two-orientation renders; device usability pending | 2026-11-05 |
+| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all screens | Implemented | 21 native renders including both popups; keyboard/touch/device review pending | 2026-11-05 |
+| F-003 | [Exposure Explorer](#f-003-exposure-explorer): home/guided | Implemented simplified exploration | All 18 direct original-toggle paths and audio variants checked natively; listening pending | 2026-11-05 |
 | F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Conciencia auditiva | Implemented prototype | Loading fix and responses need Play Mode confirmation; no scoring/research administration | 2026-10-19 |
-| F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home or Continue | Partial | Selected activity summary implemented; knowledge outcomes and habit selection pending | 2026-10-19 inventory |
-| F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Explorer/Takeaways reset | Implemented | Reset/re-entry regression pending; memory only | 2026-10-19 inventory |
+| F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home/Continue | Partial; general reminders | Activity-add UI retired; no invented personal outcome; no full takeaway runtime retest | 2026-11-05 |
+| F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Takeaways reset | Implemented | Draft state and digital gain reset; Explorer reset removed; memory only unless explicit demographic save | 2026-11-05 |
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Implemented | Images inspected and code compiled; final placement review pending | 2026-10-19 inventory |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | CanvasRenderer dependency repaired; Play Mode confirmation pending | 2026-10-19 inventory |
-| F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer; offline MATLAB authoring | Implemented local playback; review pending | Editor/Windows compile and packaged-file checks; device/listening review pending; offline DSP | 2026-10-22 |
+| F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer | Implemented direct audio controls | 51 variants/5 videos in muted native regression; physical listening pending | 2026-11-05 |
 | F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Partial overall; recommendations, videos and four research stages implemented | Source/asset checks passed; Unity playback, scrolling and full lessons pending | 2026-10-22 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
 | F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | Partial content; settings planned | Spanish HNAI and mostly English modules; no complete language/settings UI | 2026-10-19 inventory |
 | F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): Start guided experience | Implemented | Route checks passed; popup interaction/layout verification pending | 2026-10-19 |
-| F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment): Explorer activity details | Implemented | Editor/Windows code compiles; format/catalog tests pass; picker, persistence and UI tests pending | 2026-10-19 |
-| F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): Welcome/Home | Partial: two-round tap game; audio pending | Model checks and Editor/Windows compilation passed; Unity gameplay/layout verification pending; no noise playback/comparison | 2026-10-20 |
-| F-018 | Optional first-launch demographics: notice and About you | Implemented local prototype | All fields optional; explicit local-save consent; synthetic native validation; no research-consent/analytics claim | 2026-11-05 |
-
+| F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
+| F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Implemented two-round prototype with random soundscape | In-field choices, random playback, Pause and navigation cleanup passed; no causal research claim | 2026-11-05 |
+| F-018 | [Optional demographics](#f-018-optional-demographics): startup/About you | Implemented improved modal | Fixed footer, background blocking, synthetic consent/save/delete checks; local-only | 2026-11-05 |
+| F-019 | [Listening setup](#f-019-listening-setup): after demographics/About you | Implemented optional preview and slider | Native load/live gain/Accept/modal checks; physical comfort and calibration not established | 2026-11-05 |
+| F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 
 ## Feature details
 
@@ -42,7 +43,7 @@ Landscape home uses two columns and portrait uses one. Expand scaling, large typ
 
 ### F-003 Exposure Explorer
 
-Three category filters expose 21 source-mapped activity records (18 annex soundscapes plus three chart-only labels), with overlapping category memberships and Spanish details. Visitors open details, inspect classification/source notes, add/remove activities, assign a local WAV/OGG/MP3 per activity and pass the selected activity/filename to Sound Experience. Tips and selections do not quantify acoustic exposure or individual risk. Source: ExposureManager and ScriptableObjects/Activities under Assets/_HearingNotion. See [Explorer details and checks](ExposureExplorer.md) and [soundscape catalog/import guide](SoundscapeCatalog.md).
+Three category filters expose 21 source-mapped records, including 18 original/protected soundscapes and three chart-only labels. Visitors inspect activity descriptions and prevention tips, then open an existing comparison. Original/Protection 3M 1260 buttons directly start or stop their version. Add activities, audio-edit/import and Explorer reset controls are removed. Activity selection is no longer collected by this UI. Data provenance and category overlap remain intact; no personal risk estimate is inferred. See [Explorer](ExposureExplorer.md), [media](MediaPlayback.md) and [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-004 Spanish HNAI questionnaire
 
@@ -50,7 +51,7 @@ The 22 supplied Spanish statements use the confirmed five-point agreement scale.
 
 ### F-005 Personalized Takeaways
 
-Displays selected activity names and suggestions, supports an empty state and links back to Explorer or visitor reset. Knowledge outcomes, individualized hearing-risk results and habit tracking are not implemented. Source: ExposureManager.RefreshTakeaways and AppSession. See [Explorer details](ExposureExplorer.md).
+Currently provides general prevention reminders and a route back to soundscapes, with session reset. Explorer no longer offers activity-add controls; there is no claim of personalized knowledge gains, measured exposure or a hearing assessment. Legacy selection state remains infrastructure only. Source: ExposureManager. Full personalized knowledge/habit outcomes remain planned. See [Explorer](ExposureExplorer.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-006 Visitor session and reset
 
@@ -72,7 +73,7 @@ Wave graphics now explicitly require RectTransform/CanvasRenderer, create the re
 
 **Current configuration:** audio and videos reference the existing external library directly; no separate media copies remain in Assets. Local catalog paths are private. The demonstration computer must have this folder available. See [direct-library correction](Changes/2026-10-22-003-existing-media-library.md).
 
-Local playback now integrates 18 original/protected comparisons and five original/95/100 WHIS song sets. Select an example and press Reproducir; version changes preserve approximate playback position and common gain. Playback stops on navigation/reset and pauses on interruption. One clip loads on demand. All ten prior song exports and completed listening copies now report PASS. Numerical, hash and format checks do not establish listening/device validity. See [media playback](MediaPlayback.md) and [integration report](Changes/2026-10-22-002-media-integration.md).
+Local playback now integrates 18 original/protected comparisons and five original/95/100 WHIS song sets. Press an audio version to play; press the active version again to stop. Protection restarts at zero when switching; hearing-loss examples retain approximate position and an extra Play/Pause control. Session listening gain is common to all variants. Playback stops on navigation/reset and pauses on interruption. One clip loads on demand. All ten prior song exports and completed listening copies now report PASS. Numerical, hash and format checks do not establish listening/device validity. See [media playback](MediaPlayback.md) and [integration report](Changes/2026-10-22-002-media-integration.md).
 
 All 18 source soundscapes now have local 3M 1260 laboratory-reference protected exports, aligned unfiltered references, profile/response records and summary data. Original rates/stereo preserved; common −6.02 dB input headroom, no independent protected normalization. All digital checks and original hashes passed; one full-scale source is flagged for review. These are offline illustrations, with Unity playback infrastructure now implemented; actual playback and listening/fit validation remain pending. See [soundscape batch](SoundscapeProtection.md) and [report](Changes/2026-10-22-001-soundscape-protection-batch.md).
 
@@ -108,27 +109,31 @@ Future music-perception/DSP research module; route reserved and unavailable. No 
 
 ### F-014 Bilingual controls and settings
 
-Spanish HNAI, Spanish Explorer activity details/import controls and bilingual-capable content fields exist; other UI remains mixed English/Spanish. Home now exposes a session-wide wave pause/resume button. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
+Spanish HNAI, Spanish Explorer activity details and bilingual-capable content fields exist; other UI remains mixed English/Spanish. Home now exposes a session-wide wave pause/resume button. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
 
 ### F-015 Guided screen introductions
 
-Six Spanish popups briefly explain the purpose, controls and limitations of each guided stage. Each appears once per stage per guided run; Back does not repeat a dismissed introduction, and restarting the journey/reset allows them again. Entendido or Escape dismisses the modal. The popup blocks underlying controls and focuses its dismiss button. Free exploration does not show these popups. Source: GuidedJourney and GuidedExperienceController; see [Guided experience](GuidedExperience.md). The Noise Meter remains informational and sound playback remains pending. Fixed a user-reported CanvasGroup MissingComponentException by using a Unity-aware null check before adding the component. Popup rendering, keyboard/touch behavior and this runtime fix still require Unity verification.
+Six Spanish popups briefly explain the purpose, controls and limitations of each guided stage. Each appears once per stage per guided run; Back does not repeat a dismissed introduction, and restarting the journey/reset allows them again. Entendido or Escape dismisses the modal. The popup blocks underlying controls and focuses its dismiss button. Free exploration does not show these popups. Source: GuidedJourney and GuidedExperienceController; see [Guided experience](GuidedExperience.md). The Noise Meter remains informational; sound playback is implemented separately. Fixed a user-reported CanvasGroup MissingComponentException by using a Unity-aware null check before adding the component. Popup rendering, keyboard/touch behavior and this runtime fix still require Unity verification.
 
 ### F-016 Local sound-source assignment
 
-Each activity can receive a local WAV, OGG or MP3 (50 MB limit). The Editor file picker, Windows native dialog or local-path fallback assigns a copied file to that stable activity ID. A local versioned manifest and copied content persist across app restarts and visitor reset; reimport replaces only the activity mapping. Imported files are unreviewed, do not autoplay, are not decoded/played by this feature and are never uploaded to GitHub. Basic header checks do not prove complete audio validity or licensing/safety approval. Replacement retains old files; cleanup UI is pending. Source: LocalSoundSourceLibrary, LocalAudioFilePicker, SoundSourceImportRules and ExposureManager. See [catalog, storage and verification](SoundscapeCatalog.md).
+Visitor assignment/import controls are retired as of 2026-11-05. LocalSoundSourceLibrary, LocalAudioFilePicker and import-rule code remain available as authoring infrastructure; existing files and manifests are preserved and still survive session reset. This change does not delete imported content or approve it for playback/distribution. No new visitor upload path is offered. See [catalog](SoundscapeCatalog.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-017 Flappy Cloud attention game
 
-Courses now vary on Retry/re-entry: randomized gate heights, vertical gaps, inter-obstacle spacing, star height/lead and blue/red type. Both attempts in a session reuse its seed; controls and scoring remain fixed. Spacing and the rising speed vary arrival timing. Bounds checked across 1,000 seeds; Unity playability remains unverified. See [randomization report](Changes/2026-10-21-002-flappy-cloud-randomization.md).
-
-Blue/red collectible stars now add/subtract 10 points per contact, disappear once collected and respawn on obstacle recycling. Negative totals are allowed. Points are shown separately from cleared gaps and included in both round results. Rules appear in the tutorial; color is supplemented by +10/−10 labels. Scoring/reset checks and compilation pass; Unity rendering/contact/label checks remain pending. See [star report](Changes/2026-10-21-001-flappy-cloud-stars.md).
-
-Welcome/Home open a tap-first game with three short tutorial popups. Tap a free screen area or press Space to advance/start/flap; a dedicated Pausa/Reanudar button pauses/resumes; rapid taps continue flapping. Each round ends on collision or at 180 seconds. Penguin gaps alternate between varied low/high centers; speed increases from 1.0× to 1.9× over 45 seconds. The playfield has a fixed narrow aspect ratio, sprites keep their proportions, and obstacle spacing/gaps are reduced. The quiet round automatically leads through a six-second notice into a second round. Because audio integration remains pending, this is explicitly a silent placeholder for the noisy condition. Results show both attempts without attributing differences to noise. Retry appears only after the second attempt; Salir remains available for navigation. Focus loss pauses play/countdown; screen exit/reset clears both attempts. No persistence/export or actual noise playback is introduced. See [game guide](FlappyCloud.md) and [revision report](Changes/2026-10-20-005-flappy-cloud-tap-flow.md). Model tests/compilation passed; Unity tap/Pause/transition/visual review is pending.
+Tap/Space starts and flaps; a separate Pause button pauses. Two seeded rounds retain varied obstacles/stars, +10 blue/−10 red scoring, progressive speed and a maximum 180 seconds each. At first game over, Try again and Continue appear inside the playfield, with Continue below. Try again restarts quiet play; Continue opens a six-second notice then loads one randomly chosen available original Explorer soundscape for round 2. It loops at the common listening gain, pauses on interruption and stops/releases on navigation/reset/game over. Missing audio shows an explicit unavailable notice and blocks sound-round startup. Final Retry restarts both rounds. Scores are temporary/descriptive: practice, fatigue and chance prevent causal attribution to noise. Compilation/model tests and muted native action/playback/cleanup checks passed; physical listening and human difficulty remain unverified. See [game guide](FlappyCloud.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-018 Optional demographics
 
 First-launch optional gender, age, country, referral source and editable device model. Skip, session-only continuation and explicit local-save consent are distinct. One local profile can be deleted; About you reopens the notice. Data is not sent or linked to HNAI. See [demographics](Demographics.md), [testing](Test.md) and [task report](Changes/2026-11-05-001-prototype-review-and-media.md).
+
+### F-019 Listening setup
+
+After demographics closes, an optional 6 kHz preview and draggable volume slider let visitors choose a comfortable app gain. Explicit Play/Stop, Accept and continue and Skip prevent automatic preview playback. Accept stores temporary gain; Skip restores the prior gain. The software ceiling is not SPL calibration and comfort does not establish safe exposure. Popup controls block underlying screens. See [setup design and limits](ListeningSetup.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
+
+### F-020 Noise basics
+
+An independent Home screen explains dB, dBA, LAeq,T, LAeq,8h, LEX,8h, level/duration/frequency/peaks and digital versus acoustic levels. Seven sourced JSON entries scroll inside the template panel. It does not alter guided order or implement noise measurement. See [definitions and primary references](NoiseBasics.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ## Feature change history
 
@@ -162,3 +167,5 @@ First-launch optional gender, age, country, referral source and editable device 
 | 2026-11-05 | F-001, F-002, F-009, F-010, F-017, F-018 | Add game-over choices, repair media compatibility, optional consent-based local profile, native QA and authentic high-resolution captures | [2026-11-05-001](Changes/2026-11-05-001-prototype-review-and-media.md) |
 
 Future feature changes append an entry here and update the current inventory/details. Use stable IDs; keep removed/deprecated entries with their status. Every entry links its detailed modification report.
+
+| 2026-11-05 | F-001, F-002, F-003, F-005, F-006, F-009, F-016–F-020 | In-playfield choices, random game soundscape, optional volume setup, noise terms and direct Explorer audio; retire authoring controls | [2026-11-05-002](Changes/2026-11-05-002-direct-listening-and-noise-basics.md) |

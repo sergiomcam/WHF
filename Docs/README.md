@@ -8,6 +8,8 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Ethics and research integrity](ETHICS.md) | Transparency, data management, source verification, documentation and correction responsibilities |
 | [Project skill register](Skills.md) | Recurring workflows, skill locations, invocation status and validation history |
 | [Testing and bug correction](Test.md) | On-demand computer testing, native checks, captures and issue records |
+| [Listening setup](ListeningSetup.md) | Optional 6 kHz preview, session gain and popup interaction |
+| [Noise basics](NoiseBasics.md) | dB, equivalent level, eight-hour normalization and measurement context |
 | [Optional demographics](Demographics.md) | First-launch notice, temporary inputs, explicit local saving and deletion |
 | [WHO guidance library](WHO/README.md) | Official-source registry, local archives and context-specific recommendations |
 | [Marketing screens](Marketing.md) | Authentic 4K landscape/portrait captures and usage limits |
@@ -21,8 +23,8 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Hearing-protection authoring](HearingProtection.md) | Generic laboratory-data-based example, documented DSP, measurements and limits |
 | [WHIS song batch](WHISSongBatch.md) | WHO chart-derived flat exposure illustrations, full-song processing and verification status |
 | [WHIS-DTVF processing](WHIS.md) | Reference MATLAB authoring workflow, scientific sources, calibration assumptions and verification limits |
-| [Flappy Cloud](FlappyCloud.md) | Optional attention game, reference provenance and future noise slot |
-| [Exposure Explorer](ExposureExplorer.md) | Activity selection, sound context and takeaway review checks |
+| [Flappy Cloud](FlappyCloud.md) | Optional attention game, reference provenance and random soundscape round |
+| [Exposure Explorer](ExposureExplorer.md) | Simple soundscape exploration and direct version controls |
 | [Research & Sources](ResearchSources.md) | Pilot, demographic sources, HNAI psychometrics and YANS results with provenance/limits |
 | [Spanish questionnaire](SpanishQuestionnaire.md) | HNAI response scale, session behavior and research limitations |
 | [Artwork](Artwork.md) | Image provenance, prompts and animation notes |
