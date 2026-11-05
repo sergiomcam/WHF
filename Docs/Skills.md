@@ -7,4 +7,6 @@ Add one row for each skill when it is created, and update that row when its scop
 | Skill | Recurring task / trigger and purpose | Project location / invocation status | Dependencies and validation | Created / updated | Modification report |
 | --- | --- | --- | --- | --- | --- |
 
-The register is currently empty. Future entries must distinguish draft, available for explicit invocation, automatically discoverable, blocked and deprecated status as applicable; do not mark an untested workflow validated.
+| unity-prototype-review | Repeated Unity media/game/UI regression and bug documentation; replaces repeated ad-hoc checks | Docs/Skills/unity-prototype-review/SKILL.md; explicit invocation by reading; automatic discovery not claimed | Unity 2022.3.12f1, TMP/uGUI, local PowerShell/Python; structural validation passed; native tool evidence in task report | 2026-11-05 | [2026-11-05-001](Changes/2026-11-05-001-prototype-review-and-media.md) |
+
+Future entries must distinguish draft, available for explicit invocation, automatically discoverable, blocked and deprecated status as applicable; do not mark an untested workflow validated.

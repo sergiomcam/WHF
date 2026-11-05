@@ -18,6 +18,7 @@ This policy guides development, demonstrations and future research, including AI
 | Information | Current boundary | Required handling |
 | --- | --- | --- |
 | HNAI draft answers, activity selections and game results | Temporary local session/game state; no participant persistence or export implemented for this experience | Reset between visitors; do not copy responses into logs, screenshots, reports or GitHub |
+| Optional demographics (added 2026-11-05) | All fields optional; temporary by default, one local profile only after explicit Save locally consent | Notice explains five fields/timestamp, local storage and retention until deletion; provide Skip, temporary continuation and Delete; no research-consent inference or HNAI linkage |
 | Research consent/version fields | Session infrastructure exists | A boolean setter is not an approved consent procedure or completed research workflow |
 | Existing audiovisual library and local catalog | Authored content loaded from an external folder; catalog contains private paths | Keep source media and configuration private; preserve provenance and permissions; avoid unauthorized copying or publication |
 | Additional imported sound sources | Separate authored library persists in the app's local SoundSources directory | Session reset does not delete it; keep imported content review-pending |

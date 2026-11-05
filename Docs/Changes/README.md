@@ -39,3 +39,7 @@ This history starts on 2026-10-19. File summaries for earlier entries were added
 | 2026-10-26 | [2026-10-26-001](2026-10-26-001-ethics-policy.md) | Add ethics policy for transparency, data handling, documentation and source verification. | [ETHICS.md](../../Docs/ETHICS.md); [AGENTS.md](../../AGENTS.md); [README.md](../../Docs/README.md) |
 | 2026-10-26 | [2026-10-26-002](2026-10-26-002-tabular-documentation-history.md) | Add main-change/file tables and standardize future documentation history. | [TEMPLATE.md](../../Docs/Changes/TEMPLATE.md); [AGENTS.md](../../AGENTS.md); [README.md](../../Docs/README.md) |
 | 2026-10-26 | [2026-10-26-003](2026-10-26-003-recurring-task-skill-policy.md) | Require reusable skills for recurring workflows and document their scope, invocation and validation. | [AGENTS.md](../../AGENTS.md); [Skills.md](../Skills.md); [Docs/README.md](../README.md) |
+| 2026-11-03 | [2026-11-03-001](2026-11-03-001-whf-flyer.md) | Develop a yellow city-themed product flyer; smaller header image and wider description drafted in Canva. | External Canva design; [flyer report](2026-11-03-001-whf-flyer.md) |
+
+
+| 2026-11-05 | [2026-11-05-001](2026-11-05-001-prototype-review-and-media.md) | Add first-round game choices, optional demographics, media compatibility, WHO archive, native QA and 4K marketing renders. | `FlappyCloudController.cs`; `MediaExperienceController.cs`; `DemographicPromptController.cs`; [Test.md](../Test.md); [Demographics.md](../Demographics.md); [WHO library](../WHO/README.md) |

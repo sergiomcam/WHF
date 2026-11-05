@@ -1,10 +1,10 @@
 # Hearing Notion feature catalog
 
-Last reviewed: 2026-10-22 (America/Mexico_City).
+Last reviewed: 2026-11-05 (America/Mexico_City).
 
 Use this page to review app contents, find implementation details and trace feature changes. This initial inventory is reconstructed from current source, scene configuration and project notes; it is not a claim that all features were added or tested today. Detailed modification records start in [Modification history](Changes/README.md).
 
-**Status meanings:** Implemented means code/assets exist; Partial means only part of the intended experience exists; Planned means no working module is claimed. Verification is recorded separately. No Unity Play Mode/device verification by the agent is recorded for the features below. Earlier user feedback confirmed some UI improvements but also reported questionnaire-loading and animation issues; later fixes still need runtime confirmation.
+**Status meanings:** Implemented means code/assets exist; Partial means only part of the intended experience exists; Planned means no working module is claimed. Verification is recorded separately. Historical entries retain their earlier verification limits; on 2026-11-05 an isolated, muted Unity Editor run exercised navigation, audio/video playback, demographic save/delete with synthetic scratch data and first-round game actions. This is not physical listening or target-mobile verification. Earlier user feedback confirmed some UI improvements but also reported questionnaire-loading and animation issues; later fixes still need runtime confirmation.
 
 ## Inventory
 
@@ -27,6 +27,8 @@ Use this page to review app contents, find implementation details and trace feat
 | F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): Start guided experience | Implemented | Route checks passed; popup interaction/layout verification pending | 2026-10-19 |
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment): Explorer activity details | Implemented | Editor/Windows code compiles; format/catalog tests pass; picker, persistence and UI tests pending | 2026-10-19 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): Welcome/Home | Partial: two-round tap game; audio pending | Model checks and Editor/Windows compilation passed; Unity gameplay/layout verification pending; no noise playback/comparison | 2026-10-20 |
+| F-018 | Optional first-launch demographics: notice and About you | Implemented local prototype | All fields optional; explicit local-save consent; synthetic native validation; no research-consent/analytics claim | 2026-11-05 |
+
 
 ## Feature details
 
@@ -124,56 +126,39 @@ Blue/red collectible stars now add/subtract 10 points per contact, disappear onc
 
 Welcome/Home open a tap-first game with three short tutorial popups. Tap a free screen area or press Space to advance/start/flap; a dedicated Pausa/Reanudar button pauses/resumes; rapid taps continue flapping. Each round ends on collision or at 180 seconds. Penguin gaps alternate between varied low/high centers; speed increases from 1.0× to 1.9× over 45 seconds. The playfield has a fixed narrow aspect ratio, sprites keep their proportions, and obstacle spacing/gaps are reduced. The quiet round automatically leads through a six-second notice into a second round. Because audio integration remains pending, this is explicitly a silent placeholder for the noisy condition. Results show both attempts without attributing differences to noise. Retry appears only after the second attempt; Salir remains available for navigation. Focus loss pauses play/countdown; screen exit/reset clears both attempts. No persistence/export or actual noise playback is introduced. See [game guide](FlappyCloud.md) and [revision report](Changes/2026-10-20-005-flappy-cloud-tap-flow.md). Model tests/compilation passed; Unity tap/Pause/transition/visual review is pending.
 
-## Feature change history
+### F-018 Optional demographics
 
-Future feature changes append an entry here and update the current inventory/details. Use stable IDs; keep removed/deprecated entries with their status. Every entry links its detailed modification report.
+First-launch optional gender, age, country, referral source and editable device model. Skip, session-only continuation and explicit local-save consent are distinct. One local profile can be deleted; About you reopens the notice. Data is not sent or linked to HNAI. See [demographics](Demographics.md), [testing](Test.md) and [task report](Changes/2026-11-05-001-prototype-review-and-media.md).
+
+## Feature change history
 
 | Date | Affected IDs | Change | Report |
 | --- | --- | --- | --- |
 | 2026-10-19 | F-001–F-014 | Initial inventory from existing implementation; no new runtime features added | [2026-10-19-004](Changes/2026-10-19-004-feature-documentation.md) |
-
 | 2026-10-19 | F-001, F-004, F-010, F-012, F-015 | Reorder guided journey, require HNAI completion, add screen introductions and an informational meter stage | [2026-10-19-006](Changes/2026-10-19-006-guided-journey-and-popups.md) |
-
 | 2026-10-19 | F-015 | Fix missing CanvasGroup handling and defer seen-state until popup opens | [2026-10-19-007](Changes/2026-10-19-007-guided-popup-canvasgroup-fix.md) |
-
 | 2026-10-19 | F-003, F-006, F-009, F-014, F-016 | Map annex/chart activities, preserve multi-category contexts and add local per-activity audio assignment | [2026-10-19-008](Changes/2026-10-19-008-annex-catalog-and-audio-import.md) |
-
 | 2026-10-19 | F-002, F-007, F-008, F-014 | Replace faint sprite drift with traveling wave geometry, refresh cards/palette and headphone artwork, add home motion controls | [2026-10-19-009](Changes/2026-10-19-009-traveling-waves-and-visual-refresh.md) |
-
 | 2026-10-19 | F-008 | Explicitly create and require the wave CanvasRenderer, repair reused objects before clipping registration | [2026-10-19-010](Changes/2026-10-19-010-wave-canvasrenderer-fix.md) |
-
 | 2026-10-19 | F-008 | Blend leading and trailing contour ends to transparent | [2026-10-19-011](Changes/2026-10-19-011-soft-wave-ends.md) |
-
 | 2026-10-19 | F-001, F-002, F-006, F-017 | Add optional Flappy Cloud silent practice game, seven-card layout and reserved distraction-noise slot | [2026-10-19-012](Changes/2026-10-19-012-flappy-cloud-game.md) |
 | 2026-10-20 | F-009 | Select WHIS-DTVF and add offline reference MATLAB authoring with explicit profile/level assumptions and review records; Unity playback remains pending | [2026-10-20-002](Changes/2026-10-20-002-whis-dtvf-offline-processing.md) |
 | 2026-10-20 | F-009 | Add one-entry-point MATLAB audio/settings/output launcher with scripted use | [2026-10-20-003](Changes/2026-10-20-003-whis-audio-launcher.md) |
-
 | 2026-10-20 | F-010, F-015 | Add four sourced research stages, scrollable summaries/figures and updated guided explanation; exclude audiovisual material | [2026-10-20-004](Changes/2026-10-20-004-research-stages.md) |
-
 | 2026-10-20 | F-017 | Tap tutorial, double-tap pause, progressive three-minute rounds, automatic second-condition notice and final Retry | [2026-10-20-005](Changes/2026-10-20-005-flappy-cloud-tap-flow.md) |
-
 | 2026-10-20 | F-017 | Narrow proportionate playfield, faster speed ramp, closer obstacles and dedicated Pause/Reanudar without double-tap detection | [2026-10-20-006](Changes/2026-10-20-006-flappy-cloud-layout-difficulty.md) |
-
 | 2026-10-21 | F-017 | Add blue/red star collectibles worth +10/−10 with separate points and per-round results | [2026-10-21-001](Changes/2026-10-21-001-flappy-cloud-stars.md) |
-
 | 2026-10-21 | F-017 | Randomize bounded obstacle/star layout and arrival intervals with fresh session seeds | [2026-10-21-002](Changes/2026-10-21-002-flappy-cloud-randomization.md) |
-
 | 2026-10-21 | F-009 | Add generic lab-data-based hearing-protection authoring and evidence/validation rules | [2026-10-21-003](Changes/2026-10-21-003-hearing-protection-authoring.md) |
-
 | 2026-10-21 | F-009 | Start full-song WHIS batch for user-approved flat 25-year 95/100 dBA exposure illustrations; numerical checks passed, render completion pending | [2026-10-21-004](Changes/2026-10-21-004-whis-exposure-song-batch.md) |
-
 | 2026-10-21 | F-009 | Correct overly quiet export presentation with common-gain comparison copies; preserve raw model levels | [2026-10-21-005](Changes/2026-10-21-005-whis-listening-level-fix.md) |
-
 | 2026-10-22 | F-009 | Filter and verify all 18 soundscapes using the selected 3M 1260 lab reference; retain aligned comparisons and originals | [2026-10-22-001](Changes/2026-10-22-001-soundscape-protection-batch.md) |
-
 | 2026-10-22 | F-003, F-006, F-009, F-010, F-015 | Integrate offline comparisons and informative videos, explicit controls and transport cleanup | [2026-10-22-002](Changes/2026-10-22-002-media-integration.md) |
-
 | 2026-10-22 | F-009, F-010 | Use existing external audio/video files directly and remove generated duplicate media; preserve all module mappings | [2026-10-22-003](Changes/2026-10-22-003-existing-media-library.md) |
-
 | 2026-10-22 | F-009, F-010 | Prevent media button labels from creating then removing required text-layout components; Editor/Windows compilation passed, Play Mode pending | [2026-10-22-004](Changes/2026-10-22-004-media-label-dependency.md) |
-
 | 2026-10-22 | F-003, F-009, F-016 | Make linked audio visible at the top of activity details; collapse optional uploads and check real availability | [2026-10-22-005](Changes/2026-10-22-005-explorer-linked-audio.md) |
-
 | 2026-10-22 | F-009, F-010 | Avoid documented streamed-clip native crash on Back by fully loading local WAVs; preserve navigation buttons and harden cleanup; native retest pending | [2026-10-22-006](Changes/2026-10-22-006-soundscape-back-crash.md) |
-
 | 2026-10-22 | F-017 | Rewrite game/tutorial/menu copy in clear English, remove corrupted characters and clarify silent rounds | [2026-10-22-007](Changes/2026-10-22-007-flappy-english-copy.md) |
+| 2026-11-05 | F-001, F-002, F-009, F-010, F-017, F-018 | Add game-over choices, repair media compatibility, optional consent-based local profile, native QA and authentic high-resolution captures | [2026-11-05-001](Changes/2026-11-05-001-prototype-review-and-media.md) |
+
+Future feature changes append an entry here and update the current inventory/details. Use stable IDs; keep removed/deprecated entries with their status. Every entry links its detailed modification report.

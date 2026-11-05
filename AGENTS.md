@@ -13,6 +13,7 @@ Hearing Notion is an offline hearing-health and noise-awareness prototype for th
 - Core modules: home/navigation, Exposure Explorer, Sound Experience, Hearing Health, Awareness Check, Research & Sources, Personalized Takeaways.
 - Noise measurement is deferred; guided mode includes an informational Noise Meter stage only. Music Lab is future scope. Do not make these appear functional before implementation.
 - No cloud backend, accounts, microphone acquisition, telemetry, or persistent participant storage is required for the core prototype.
+- The explicitly requested optional demographic form is an exception to default non-persistence: save only on Save locally (I consent), retain no identifiers, provide Skip/temporary continuation and deletion, and do not link it to HNAI or treat it as formal research consent. See Docs/Demographics.md.
 
 ## Stack and repository map
 
@@ -182,6 +183,8 @@ Every future task that changes code, scenes, assets, content, project settings, 
 - Link the report in the final response. Report/index maintenance does not require a second report about the report itself. Do not invent retrospective reports for previous work; label any later historical reconstruction explicitly.
 
 ## Validation and delivery
+
+Use Docs/Test.md and the explicit-invocation skill at Docs/Skills/unity-prototype-review/SKILL.md for recurring prototype QA. Native test evidence and actual 4K Canvas/camera renders stay local. Test demographic save/delete only in the redirected synthetic scratch directory, never by replacing a real profile. Preserve open Editor state and avoid a second instance on the same project. Marketing/Screenshots contains actual renders, not fabricated interfaces. WHO downloads and their retrieval hashes remain under ReferenceLibrary/WHO; maintain the sourced public guide at Docs/WHO/README.md.
 
 1. Inspect affected source, scene bindings and relevant Docs before editing. Distinguish current implementation from older architecture proposals.
 2. Compile changed C# against the installed Unity version. Fix errors; distinguish expected Inspector-field warnings from errors. Do not add global tools or dependencies merely to run routine checks.

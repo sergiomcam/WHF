@@ -1,5 +1,11 @@
 # Offline audio and informative videos
 
+Updated 2026-11-05: local media source hashes remain intact. A local LocalMediaCache provides five verified H.264/AAC playback copies because the native player failed on two original MP4s in addition to HEVC/MOV compatibility concerns. Catalog PlaybackPath selects an existing compatibility copy, otherwise falls back to the original file. Cache files stay outside Unity Assets and GitHub. Regenerate with Tools/Audio/prepare_video_compatibility.py --ffmpeg <local executable> --all, then rerun native checks. Video now has a separate AudioSource; audio requests and video preparation have 30-second timeout feedback. Do not infer a codec/format failure solely from a file hash or successful FFmpeg decoding.
+
+If media is still silent on the working computer, check the Game view's Mute Audio control, that the scene AudioListener is enabled, the selected Windows output device/headphones and whether the app was paused by focus loss. Press Play again after returning focus. A playing AudioSource does not prove audible speaker output. Processed protection/WHIS examples intentionally retain their lower levels relative to the common-gain reference; do not independently normalize or raise playback until discomfort. Re-indexing the original library removes per-file PlaybackPath overrides; rerun compatibility preparation afterwards if needed.
+
+The final 2026-11-05 isolated muted Unity run exercised all 51 audio variants and all five videos, then released playback on Back. All passed without native test errors. Cache encodings use H.264 baseline, no B-frames, 30 fps and normalized track timestamps; the final log had no earlier timestamp warnings. This establishes tested engine playback/state cleanup, not physical output audibility, perceptual equivalence or universal codec compatibility.
+
 Implemented 2026-10-22; Unity interaction, listening and device playback verification remain pending.
 
 ## Where to find the material

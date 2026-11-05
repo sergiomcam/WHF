@@ -2,6 +2,8 @@
 
 ## Current experience
 
+Updated 2026-11-05: after the first quiet game over, the game waits for a choice. Try again repeats the quiet round on the same course; Continue below it starts the six-second notice and second round. Tapping elsewhere does not advance this result screen. These two controls appear only after round 1; final Retry remains after round 2. The second round is still explicitly silent because distraction audio is pending. Older automatic-transition descriptions below are superseded by this choice screen.
+
 Open Flappy Cloud from either home menu. Three brief popups explain tapping, button pause and the two-round sequence. Tap a free area of the screen (including the sky) or press Space to advance the tutorial and start/flap. A starting tap immediately gives the cloud lift. Starting and flying use taps or Space; Pause remains a separate button.
 
 Pause is a separate button during play and the transition countdown; it changes to Resume when paused. Tapping the sky always flaps, even when taps arrive rapidly. A tap also resumes a paused round. Escape and focus loss still pause. Exit remains navigation and Retry appears only after both attempts.

@@ -7,6 +7,10 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Project instructions](../AGENTS.md) | Stack, conventions, critical rules, optimization and documentation publication policy |
 | [Ethics and research integrity](ETHICS.md) | Transparency, data management, source verification, documentation and correction responsibilities |
 | [Project skill register](Skills.md) | Recurring workflows, skill locations, invocation status and validation history |
+| [Testing and bug correction](Test.md) | On-demand computer testing, native checks, captures and issue records |
+| [Optional demographics](Demographics.md) | First-launch notice, temporary inputs, explicit local saving and deletion |
+| [WHO guidance library](WHO/README.md) | Official-source registry, local archives and context-specific recommendations |
+| [Marketing screens](Marketing.md) | Authentic 4K landscape/portrait captures and usage limits |
 | [Development workflow](DevelopmentWorkflow.md) | Visual research-to-Codex-to-Unity process, review gates and GitHub traceability |
 | [Feature catalog](FEATURES.md) | Current feature inventory and dated feature history |
 | [Architecture](AppArchitecture.md) | System boundaries, screens, roadmap and design decisions |
