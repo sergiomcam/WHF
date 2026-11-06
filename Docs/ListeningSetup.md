@@ -13,3 +13,5 @@ Implementation: Assets/_HearingNotion/Scripts/Core/ListeningSetupController.cs, 
 Updated in [results/video/swipe correction](Changes/2026-11-05-003-results-video-and-swipe.md).
 
 The preview still requires explicit Play and retains its separate -12 dB trim. Default midpoint does not establish safe acoustic output. See [correction report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
+
+2026-11-06: portable catalogs can supply an explicit TinnitusPreview file. Legacy desktop catalogs without that entry, including an empty object produced by JSON deserialization, retain the original preview fallback. Gain range, midpoint and preview-only -12 dB trim are unchanged. Android assets load through the shared path resolver. See [deployment](AndroidDeployment.md).

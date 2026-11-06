@@ -1,6 +1,6 @@
 # High-resolution app screens
 
-Local folder: Marketing/Screenshots. The current set contains 32 authentic Unity camera/Canvas renders: nine app screens in both landscape and portrait, plus the first-round Flappy Cloud game-over screen and both setup popups, guided introduction and final game results in both orientations, plus five decoded-video landscape captures. Landscape files are 3840×2160; portrait files are 2160×3840. Dimensions were checked from the actual PNGs.
+Local folder: Marketing/Screenshots. The current set contains 37 authentic Unity camera/Canvas renders: ten app screens in both landscape and portrait, plus the first-round Flappy Cloud game-over screen and both setup popups, guided introduction and final game results in both orientations, plus five decoded-video landscape captures. Landscape files are 3840×2160; standard portrait files are 2160×3840, with one additional 720×1640 representative tall-phone capture. Dimensions were checked from the actual PNGs.
 
 | Screen / state | Landscape | Portrait |
 | --- | --- | --- |
@@ -10,6 +10,9 @@ Local folder: Marketing/Screenshots. The current set contains 32 authentic Unity
 | Listening setup | ListeningSetup-editor.png | ListeningSetup-portrait.png |
 | Spanish HNAI | AwarenessCheck-editor.png | AwarenessCheck-portrait.png |
 | Exposure Explorer | ExposureExplorer-editor.png | ExposureExplorer-portrait.png |
+| DHWANI future work | DhwaniFuture-editor.png | DhwaniFuture-portrait.png |
+| Stopped Editor Home | Stopped-home-editor.png | Stopped-home-portrait.png |
+| Tall phone-style Home | Not applicable | Home-android-tall.png (720×1640) |
 | Sound hub | SoundHub-editor.png | SoundHub-portrait.png |
 | Sound Experience | SoundExperience-editor.png | SoundExperience-portrait.png |
 | Hearing Health | HearingHealth-editor.png | HearingHealth-portrait.png |
@@ -30,3 +33,5 @@ Updated capture/test evidence: [corrections report](Changes/2026-11-05-002-direc
 Current capture revision: [results/video/swipe report](Changes/2026-11-05-003-results-video-and-swipe.md).
 
 Playing video captures use Video-1-playing-editor.png through Video-5-playing-editor.png and stay local; review media/artwork rights before any marketing publication. Whole-page captures represent a viewport at a scroll position, not an export of the entire long document. See [current report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
+
+The stopped Home pair is a labelled Editor-only preview, rendered without Play Mode. Tall-profile rendering does not prove behavior on the Acer AX85. Current additions and readiness limits: [report](Changes/2026-11-06-001-editor-dhwani-android.md).

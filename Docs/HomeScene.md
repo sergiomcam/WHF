@@ -25,3 +25,5 @@ Welcome and Home now include a seventh module card, Flappy Cloud. FlappyCloudCon
 2026-11-05: nine responsive cards include Noise basics and About you. Card spacing and description sizes fit one portrait column or two landscape columns. About you reopens the demographics/listening sequence. See [Noise basics](NoiseBasics.md) and [Listening setup](ListeningSetup.md).
 
 2026-11-05: eight home cards now include one Sound Experience entry; Exposure Explorer’s separate card is hidden after startup template cloning. Sound Experience opens Soundscapes / Hearing examples. Home itself participates in whole-page scrolling. See [hub](SoundExperienceHub.md) and [scrolling](PageScrolling.md).
+
+2026-11-06: stopped Main shows a complete transient Home preview, labelled as a preview and removed before Play. Runtime Home now has nine module cards including DHWANI (future work). The helper does not save or regenerate the scene. See [preview](EditorHomePreview.md) and [DHWANI](DhwaniFuture.md).

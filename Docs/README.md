@@ -18,6 +18,9 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Development workflow](DevelopmentWorkflow.md) | Visual research-to-Codex-to-Unity process, review gates and GitHub traceability |
 | [Feature catalog](FEATURES.md) | Current feature inventory and dated feature history |
 | [Architecture](AppArchitecture.md) | System boundaries, screens, roadmap and design decisions |
+| [Stopped Home preview](EditorHomePreview.md) | Complete labelled Home outside Play Mode without saving preview objects |
+| [DHWANI future work](DhwaniFuture.md) | Attributed informational features and implementation limits |
+| [Android personal build](AndroidDeployment.md) | Portable project, actual readiness blockers and Acer AX85 installation steps |
 | [Home scene](HomeScene.md) | Template-derived navigation and responsive layout |
 | [Guided experience](GuidedExperience.md) | Six-stage journey, introductory popups and review checklist |
 | [Soundscape catalog and audio import](SoundscapeCatalog.md) | Annex/chart mappings and per-source local audio assignment |

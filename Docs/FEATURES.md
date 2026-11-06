@@ -1,6 +1,6 @@
 # Hearing Notion feature catalog
 
-Last reviewed: 2026-11-05 (America/Mexico_City).
+Last reviewed: 2026-11-06 (America/Mexico_City).
 
 Use this page to review app contents, find implementation details and trace feature changes. This initial inventory is reconstructed from current source, scene configuration and project notes; it is not a claim that all features were added or tested today. Detailed modification records start in [Modification history](Changes/README.md).
 
@@ -10,7 +10,7 @@ Use this page to review app contents, find implementation details and trace feat
 
 | ID | Feature and entry point | Implementation | Verification and limits | Last updated |
 | --- | --- | --- | --- | --- |
-| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented; eight cards with one sound entry | Native single-entry/hub checks; both orientations; real device review pending | 2026-11-05 |
+| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented; nine cards with one sound entry | Native single-entry/hub checks; both orientations; real device review pending | 2026-11-05 |
 | F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages | Implemented whole-page scrolling | Native wheel/drag moves header, Back and footer together; responsive capture review; real touch review pending | 2026-11-05 |
 | F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | Implemented under unified entry | Stable catalog and direct audio retained; separate Home entry removed | 2026-11-05 |
 | F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Conciencia auditiva | Implemented prototype | Loading fix and responses need Play Mode confirmation; no scoring/research administration | 2026-10-19 |
@@ -31,10 +31,15 @@ Use this page to review app contents, find implementation details and trace feat
 | F-019 | [Listening setup](#f-019-listening-setup): after About you | Implemented midpoint default | Native 0.125 midpoint in unchanged 0–0.25 range; preview-only -12 dB preserved | 2026-11-05 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
+| F-022 | [DHWANI future-work information](#f-022-dhwani-future-work-information): Home | Informational page implemented; analysis planned only | Seven attributed sections; no recording, prediction, API or validation claim | 2026-11-06 |
+| F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Editor-only transient preview implemented | Actual stopped render in both orientations; no scene save/build inclusion | 2026-11-06 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate prepared project | Partial: portable media/source/configuration ready | 57 hashes verified; SDK module missing and engine remediation required; no APK/device test | 2026-11-06 |
 
 ## Feature details
 
 ### F-001 Home and navigation
+
+A ninth card opens the attributed DHWANI informational future-work page. Outside Play Mode an Editor-only labelled Home preview displays current cards/artwork without running managers. See [preview](EditorHomePreview.md).
 
 Main.unity uses app-owned panels adapted from Menu Template 1. Home now has one Sound Experience entry opening Soundscapes / Hearing examples. Home opens modules, Conciencia auditiva is the first option, Back uses navigation history, and the guided flow now proceeds through HNAI, Exposure, Sound, Health recommendations, an informational Noise Meter stage, and Research & Resources. HNAI must be completed before guided continuation; the final stage returns Home. The 5–8-minute target has not been usability-tested. Source: AppManager, NavigationManager, ScreenView in Assets/_HearingNotion/Scripts. See [Home scene](HomeScene.md) and [Architecture](AppArchitecture.md).
 
@@ -146,6 +151,18 @@ An independent Home screen explains dB, dBA, LAeq,T, LAeq,8h, LEX,8h, level/dura
 
 One Home card opens SoundHub with Soundscapes and Hearing examples. The former reuses the existing activity/catalog route and selected-pair player; the latter clears activity context and opens the five-song hearing-example list. The hidden Exposure Explorer template remains for startup cloning. An appended enum preserves existing route values; guided order is unchanged. See [hub guide](SoundExperienceHub.md) and [report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
 
+### F-022 DHWANI future-work information
+
+A Home page describes proposed inputs, computed indicators, model estimates, soundscape perception, integration steps and applications from the supplied overview, attributed to Dr Manish Manohare, IIT Delhi. Claims are author-described, not independently validated. No microphone/upload/analysis/model/API is implemented. See [scope and provenance](DhwaniFuture.md).
+
+### F-023 Stopped Home preview
+
+An Editor-only transient Canvas mirrors the complete Home with artwork and current cards while Main is stopped. It clears actions, labels preview status, is removed before Play and excluded from builds/saving. Actual stopped captures are separate from runtime verification. See [preview guide](EditorHomePreview.md).
+
+### F-024 Android personal-test export
+
+A separate portable project contains current source and all media with no Windows dependency in its catalog. The preparation script verifies copies and refuses overwrites. Build menus configure a personal APK and stop on missing toolchain or external desktop paths. Android video extraction and physical installation remain unverified: Android Build Support/SDK/NDK/OpenJDK is absent, and the pinned engine requires CVE-2025-59489 remediation before deployment. No APK exists. See [Android readiness and steps](AndroidDeployment.md).
+
 ## Feature change history
 
 | Date | Affected IDs | Change | Report |
@@ -184,3 +201,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-11-05 | F-002, F-009, F-010, F-015, F-017, F-018, F-019 | Preview-only -12 dB; always About you first; complete game results; centered guided control; page-wide gestures and inline videos | [2026-11-05-003](Changes/2026-11-05-003-results-video-and-swipe.md) |
 
 | 2026-11-05 | F-001, F-002, F-003, F-009, F-010, F-019, F-021 | Single sound hub, visible videos with controls below, midpoint default and actual whole-page scrolling | [2026-11-05-004](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md) |
+
+| 2026-11-06 | F-001, F-002, F-009, F-019, F-022, F-023, F-024 | Stopped Home visibility, attributed DHWANI future page and portable Android preparation with explicit toolchain/device blockers | [2026-11-06-001](Changes/2026-11-06-001-editor-dhwani-android.md) |

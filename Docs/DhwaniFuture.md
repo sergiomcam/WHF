@@ -1,0 +1,9 @@
+# DHWANI future-work information
+
+Added 2026-11-06 from the supplied DHWANI Intro Word document. The Home card opens an informational page with seven sections: scope/attribution, proposed inputs, computed indicators, predicted responses, soundscape perception, integration approach, and potential applications. No recording, upload, analysis, AI prediction, physiological measurement, API connection or partnership is implemented or implied.
+
+The overview attributes DHWANI to Dr Manish Manohare, Indian Institute of Technology Delhi, and describes loudness (sone), sharpness (acum), roughness (asper), time-varying loudness, predicted heart rate/stress/focus/annoyance, and pleasantness/eventfulness with a soundscape circumplex. These are descriptions supplied by the author, not independently verified results from Hearing Notion. Predicted physiological outputs are explicitly estimates, not direct measurements or clinical diagnoses. Exact algorithms, applicable standard versions, model validation and uncertainty were not supplied.
+
+A future integration could add a separate opt-in audio workflow only after reviewing documented methods, calibration, validation conditions, privacy, consent and permissions, and obtaining any necessary software/API licence or agreement. The overview identifies proprietary intellectual property; this task reproduces neither models/software nor raw documents/images. Educational paraphrases include attribution. No rights transfer, permission to deploy proprietary algorithms or WHO/IIT endorsement is inferred.
+
+Implementation: Assets/_HearingNotion/Resources/DhwaniFuture.json and Scripts/Content/DhwaniFutureController.cs. The appended DhwaniFuture route preserves prior enum values. AppManager installs it explicitly; the Home card is ninth in the responsive layout. The six-stage guided route is unchanged. See [task report](Changes/2026-11-06-001-editor-dhwani-android.md).

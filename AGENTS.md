@@ -8,7 +8,7 @@ Follow [Docs/ETHICS.md](Docs/ETHICS.md) for transparency, data minimization, sou
 
 Hearing Notion is an offline hearing-health and noise-awareness prototype for the World Hearing Forum. It supports a guided experience of approximately 5–8 minutes and independent module exploration. The audience includes young adults, educators, hearing-health professionals, and the public. Do not imply WHO endorsement.
 
-- Primary development target: Windows desktop; preserve responsive portrait/mobile previews. macOS and mobile deployment are later targets.
+- Primary development target: Windows desktop; preserve responsive portrait/mobile previews. Android personal-test export is now prepared in a separate portable project; actual APK/device testing requires the Android toolchain. macOS remains later scope.
 - English and Spanish are intended. The current HNAI questionnaire is Spanish first; do not translate or rewrite instrument wording without instruction.
 - Core modules: home/navigation, Exposure Explorer, Sound Experience, Hearing Health, Awareness Check, Research & Sources, Personalized Takeaways.
 - Noise measurement is deferred; guided mode includes an informational Noise Meter stage only. Music Lab is future scope. Do not make these appear functional before implementation.
@@ -221,3 +221,16 @@ NoiseBasics is an appended route and a separate Home card, not an extra guided s
 PageGestureInstaller wraps each ScreenView as the content of a full-viewport ScrollRect. WholePageScroll preserves its existing direct-child names/references, expands inner module content and disables inner module scroll/masks. Headers, Back/Home/Exit and bottom notes scroll together. Coordinate RestoreTemplate/CaptureTemplate with responsive layout and account for delayed CanvasScaler resolution. The modal demographics overlay keeps its separate field scroll. See Docs/PageScrolling.md.
 
 Home has one Sound Experience entry leading to SoundHub, with Soundscapes and Hearing examples. Preserve the internal ExposureExplorer route and stable IDs; do not repeat its catalog in the hearing-example player. SoundHub is appended without renumbering earlier enum values. Hearing Health has separate video cards and Play/Pause/Stop below each frame. Keep video RawImage tint white: black tint hides decoded pictures despite isPlaying. Test actual decoded nonblack frames as well as transport state. Final Flappy results retain both actual scores and honest, sourced general context. See Docs/SoundExperienceHub.md and Docs/MediaPlayback.md.
+
+
+## Stopped Home, DHWANI and Android preparation
+
+StoppedHomePreview is Editor-only, transient, labelled and removed before Play; never save its preview objects into Main or include them in builds. It mirrors Home rather than starting application managers outside Play Mode. Main remains the source scene. See Docs/EditorHomePreview.md.
+
+DhwaniFuture is informational only, based on the supplied overview attributed to Dr Manish Manohare, IIT Delhi. Separate computed psychoacoustic indicators from model-estimated human responses. Do not claim implemented models, measurements, validation, partnership or software rights. Any later integration requires documented methods, validation/provenance, appropriate permission/licensing and privacy/consent review. See Docs/DhwaniFuture.md.
+
+Android export uses Tools/Android/prepare_android_project.py to create a new self-contained local project with verified bundled media and a blank ExternalRoot. Never overwrite the working desktop catalog or an existing export. MediaAssetPath distinguishes native local paths from escaped download/jar URLs. VideoPlayer uses a native filesystem path; Android APK video extracts on demand into app-private VideoCache with cancellation/timeouts. The optional TinnitusPreview catalog entry must tolerate absent or empty objects and preserve the legacy desktop fallback. No streaming WAV regression.
+
+AndroidPrototypeBuild refuses the desktop external-path configuration and missing Android Build Support. Personal settings use IL2CPP, ARM64+ARMv7, API 23+, default debug signing and APK output; no store release or publication is authorized. Android-symbol compilation, portable Windows playback and file hashes are not an Android build or physical-device verification. Report missing SDK/NDK/JDK and no-APK status explicitly. See Docs/AndroidDeployment.md. Media cache is authored content, not participant data; explicit demographic consent remains unchanged.
+
+Before Android deployment, check the engine against Unity’s official security advisories. The pinned 2022.3.12f1 baseline predates CVE-2025-59489 remediation; do not describe an unremediated player as deployment-ready. A patched-editor migration or official binary remediation remains explicit work, confined to a separate copy and revalidated; do not silently upgrade the working project. See Docs/AndroidDeployment.md.
