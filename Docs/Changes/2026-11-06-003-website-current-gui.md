@@ -16,6 +16,7 @@ Update the existing Canva webpage to show the latest actual app screen. Canva ve
 | Device presentation | External Canva Code hero | Shared perspective, responsive phone sizing, accurate caption and alt text |
 | Larger-image inspection | External Canva Code image panel | Replaces mispositioned fixed overlay with an inline expandable upright screenshot; Escape collapses and returns focus |
 | Modification record | Docs/Changes/2026-11-06-003-website-current-gui.md; Docs/Changes/README.md | Records scope, evidence and rollback |
+| Local proof image | Marketing/Website/current-gui-canva-2026-11-06.png | Native browser screenshot of the completed Canva page; kept local |
 
 ## Decisions and implications
 
@@ -38,7 +39,7 @@ Not measured; no performance improvement claimed.
 
 ## Limitations and follow-up
 
-Canva controls hosted image resizing. Physical phone usability and the prototype's actual Android behavior are outside this webpage change. The public embed can take time to initialize after publication.
+Canva controls hosted image resizing. Physical phone usability and the prototype's actual Android behavior are outside this webpage change. Canva publication succeeded and its editor preview rendered; the public embed still showed a blank loading frame during this session, so public visual rendering remains unverified.
 
 ## Rollback
 
