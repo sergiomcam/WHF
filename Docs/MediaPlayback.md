@@ -6,13 +6,13 @@ If media is still silent on the working computer, check the Game view's Mute Aud
 
 The final 2026-11-05 isolated muted Unity run exercised all 51 audio variants and all five videos, then released playback on Back. All passed without native test errors. Cache encodings use H.264 baseline, no B-frames, 30 fps and normalized track timestamps; the final log had no earlier timestamp warnings. This establishes tested engine playback/state cleanup, not physical output audibility, perceptual equivalence or universal codec compatibility.
 
-Implemented 2026-10-22; Unity interaction, listening and device playback verification remain pending.
+Infrastructure first implemented 2026-10-22; current native checks and remaining physical-device limits are recorded below.
 
 ## Where to find the material
 
 - **Exposure Explorer:** the 18 annex activities offer “Explorar este sonido”, which selects their packaged original/protected comparison in Sound Experience. Three chart-only activities have no invented matching recording. Additional manually imported files remain review-pending and do not replace the packaged comparisons.
-- **Sound Experience:** 18 environmental pairs, followed by five songs with original, 25-year 95 dBA Lex8h and 25-year 100 dBA Lex8h illustrations. Select an example and press its version button to start; press it again to stop. Hearing-loss examples retain an additional Play/Pause control. Switching versions during playback reloads the selected version at the same approximate transport time; decoding introduces a gap. This is not sample-synchronous switching.
-- **Hearing Health:** prevention recommendations and five informative videos about health effects, hearing loss, protection and tinnitus (two versions). Swipe through separate video topic cards and press Play/Pause or Stop inside that frame. No separate selection step; playback is optional.
+- **Sound Experience:** One hub separates the 18 environmental pairs from five songs with original, 25-year 95 dBA Lex8h and 25-year 100 dBA Lex8h illustrations. Choose Soundscapes or Hearing examples in the hub, then press the selected example’s version button to start; press it again to stop. Hearing-loss examples retain an additional Play/Pause control. Switching versions during playback reloads the selected version at the same approximate transport time; decoding introduces a gap. This is not sample-synchronous switching.
+- **Hearing Health:** prevention recommendations and five informative videos about health effects, hearing loss, protection and tinnitus (two versions). Swipe through separate video topic cards and press Play/Pause or Stop directly below that frame. No separate selection step; playback is optional.
 
 Protection comparisons use direct version Play/Stop buttons; the separate Play/Pause control is hidden for these pairs. The two preset gain buttons are removed. Listening setup supplies one session gain; stop/restart and video Play/Pause remain. The application applies the same output gain to reference and variants. Visitors must begin with their device volume low and comfortable. Digital settings do not establish sound pressure at the ear. Selecting a catalog item or navigating does not play it. Pressing a version button explicitly requests playback; pressing the active version stops it. Hearing-loss switching retains approximate position; protection switching restarts at zero.
 
@@ -56,6 +56,13 @@ The observed native crash matched Unity UUM-14330: destroying a streamed AudioCl
 
 ## Inline video topics, 2026-11-05
 
-Hearing Health now lists five independent topic cards in one scrollable page. Each has its own title/explanation and 16:9 frame, with Play/Pause and Stop inside the frame. Pressing Play internally selects and prepares that card directly; no selection menu or separate global player step is exposed. Merely scrolling never autoplays. Switching cards stops the previous video and detaches its displayed texture; only one VideoPlayer and RenderTexture decode at a time. Pausing, missing-file/error feedback, 30-second preparation timeout, focus interruption and navigation/reset cleanup remain.
+Hearing Health now lists five independent topic cards in one scrollable page. Each has its own title/explanation and 16:9 frame, with Play/Pause and Stop below the frame. Pressing Play internally selects and prepares that card directly; no selection menu or separate global player step is exposed. Merely scrolling never autoplays. Switching cards stops the previous video and detaches its displayed texture; only one VideoPlayer and RenderTexture decode at a time. Pausing, missing-file/error feedback, 30-second preparation timeout, focus interruption and navigation/reset cleanup remain.
 
 Audio comparison controls and gains are unchanged. The tinnitus preview alone has a separate -12 dB trim. See [listening setup](ListeningSetup.md), [gesture behavior](PageScrolling.md) and [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).
+
+
+## Visible video fix and controls below frames
+
+The RawImage used a black tint, which multiplied the decoded picture by black even when VideoPlayer was playing. It now uses white with a black placeholder texture while unloaded. This distinction explains why earlier isPlaying checks could pass without visible video. Play/Pause and Stop are now in a horizontal row below each frame. Cards still select internally on explicit Play, share one decoder/target and stop on navigation/reset. The strengthened native review checks decoded nonblack texture pixels and advancing frames rather than relying only on playback flags. Actual physical audio remains a separate review.
+
+See [unified sound navigation](SoundExperienceHub.md), [whole-page scrolling](PageScrolling.md) and [report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).

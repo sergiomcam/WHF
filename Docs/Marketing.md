@@ -1,6 +1,6 @@
 # High-resolution app screens
 
-Local folder: Marketing/Screenshots. The current set contains 25 authentic Unity camera/Canvas renders: eight app screens in both landscape and portrait, plus the first-round Flappy Cloud game-over screen and both setup popups, guided introduction and final game results in both orientations. Landscape files are 3840×2160; portrait files are 2160×3840. Dimensions were checked from the actual PNGs.
+Local folder: Marketing/Screenshots. The current set contains 32 authentic Unity camera/Canvas renders: nine app screens in both landscape and portrait, plus the first-round Flappy Cloud game-over screen and both setup popups, guided introduction and final game results in both orientations, plus five decoded-video landscape captures. Landscape files are 3840×2160; portrait files are 2160×3840. Dimensions were checked from the actual PNGs.
 
 | Screen / state | Landscape | Portrait |
 | --- | --- | --- |
@@ -10,6 +10,7 @@ Local folder: Marketing/Screenshots. The current set contains 25 authentic Unity
 | Listening setup | ListeningSetup-editor.png | ListeningSetup-portrait.png |
 | Spanish HNAI | AwarenessCheck-editor.png | AwarenessCheck-portrait.png |
 | Exposure Explorer | ExposureExplorer-editor.png | ExposureExplorer-portrait.png |
+| Sound hub | SoundHub-editor.png | SoundHub-portrait.png |
 | Sound Experience | SoundExperience-editor.png | SoundExperience-portrait.png |
 | Hearing Health | HearingHealth-editor.png | HearingHealth-portrait.png |
 | Research & Sources | ResearchSources-editor.png | ResearchSources-portrait.png |
@@ -27,3 +28,5 @@ The final native run verified 51 audio variants, five videos, synthetic demograp
 Updated capture/test evidence: [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 Current capture revision: [results/video/swipe report](Changes/2026-11-05-003-results-video-and-swipe.md).
+
+Playing video captures use Video-1-playing-editor.png through Video-5-playing-editor.png and stay local; review media/artwork rights before any marketing publication. Whole-page captures represent a viewport at a scroll position, not an export of the entire long document. See [current report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).

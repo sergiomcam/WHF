@@ -10,16 +10,16 @@ Use this page to review app contents, find implementation details and trace feat
 
 | ID | Feature and entry point | Implementation | Verification and limits | Last updated |
 | --- | --- | --- | --- | --- |
-| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented; nine home cards | Muted isolated native navigation and two-orientation renders; device usability pending | 2026-11-05 |
-| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all screens | Implemented page-wide gesture forwarding | Native synthetic background wheel/swipe; 25 renders; real touch/device review pending | 2026-11-05 |
-| F-003 | [Exposure Explorer](#f-003-exposure-explorer): home/guided | Implemented simplified exploration | All 18 direct original-toggle paths and audio variants checked natively; listening pending | 2026-11-05 |
+| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented; eight cards with one sound entry | Native single-entry/hub checks; both orientations; real device review pending | 2026-11-05 |
+| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages | Implemented whole-page scrolling | Native wheel/drag moves header, Back and footer together; responsive capture review; real touch review pending | 2026-11-05 |
+| F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | Implemented under unified entry | Stable catalog and direct audio retained; separate Home entry removed | 2026-11-05 |
 | F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Conciencia auditiva | Implemented prototype | Loading fix and responses need Play Mode confirmation; no scoring/research administration | 2026-10-19 |
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home/Continue | Partial; general reminders | Activity-add UI retired; no invented personal outcome; no full takeaway runtime retest | 2026-11-05 |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Takeaways reset | Implemented | Draft state and digital gain reset; Explorer reset removed; memory only unless explicit demographic save | 2026-11-05 |
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Implemented | Images inspected and code compiled; final placement review pending | 2026-10-19 inventory |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | CanvasRenderer dependency repaired; Play Mode confirmation pending | 2026-10-19 inventory |
-| F-009 | [Sound Experience](#f-009-sound-experience): home/Explorer | Implemented direct audio controls | 51 variants/5 videos in muted native regression; physical listening pending | 2026-11-05 |
-| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Partial overall; inline videos, recommendations and research stages implemented | Five videos play via in-frame buttons in muted native regression; physical listening/full lessons pending | 2026-11-05 |
+| F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Implemented split branches | Soundscapes catalog appears once; Hearing examples contains music only; native media checks | 2026-11-05 |
+| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Partial overall; videos with controls below frame | White tint fixes hidden pictures; five decoded nonblack frames verified; physical listening pending | 2026-11-05 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
@@ -28,24 +28,23 @@ Use this page to review app contents, find implementation details and trace feat
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Implemented two-round prototype with random soundscape | In-field choices, random playback, Pause and navigation cleanup passed; no causal research claim | 2026-11-05 |
 | F-018 | [Optional demographics](#f-018-optional-demographics): startup/About you | Implemented; always before volume step | Native startup order and synthetic local consent/save/delete checks; local-only | 2026-11-05 |
-| F-019 | [Listening setup](#f-019-listening-setup): after About you | Implemented optional preview and slider | Native preview-only -12 dB, gain/Accept/modal checks; physical comfort/calibration not established | 2026-11-05 |
+| F-019 | [Listening setup](#f-019-listening-setup): after About you | Implemented midpoint default | Native 0.125 midpoint in unchanged 0–0.25 range; preview-only -12 dB preserved | 2026-11-05 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
+| F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 
 ## Feature details
 
 ### F-001 Home and navigation
 
-Main.unity uses app-owned panels adapted from Menu Template 1. Home opens modules, Conciencia auditiva is the first option, Back uses navigation history, and the guided flow now proceeds through HNAI, Exposure, Sound, Health recommendations, an informational Noise Meter stage, and Research & Resources. HNAI must be completed before guided continuation; the final stage returns Home. The 5–8-minute target has not been usability-tested. Source: AppManager, NavigationManager, ScreenView in Assets/_HearingNotion/Scripts. See [Home scene](HomeScene.md) and [Architecture](AppArchitecture.md).
+Main.unity uses app-owned panels adapted from Menu Template 1. Home now has one Sound Experience entry opening Soundscapes / Hearing examples. Home opens modules, Conciencia auditiva is the first option, Back uses navigation history, and the guided flow now proceeds through HNAI, Exposure, Sound, Health recommendations, an informational Noise Meter stage, and Research & Resources. HNAI must be completed before guided continuation; the final stage returns Home. The 5–8-minute target has not been usability-tested. Source: AppManager, NavigationManager, ScreenView in Assets/_HearingNotion/Scripts. See [Home scene](HomeScene.md) and [Architecture](AppArchitecture.md).
 
 ### F-002 Responsive, readable UI
 
-Page-background drags and wheel gestures now forward to visible scroll content; fixed navigation and existing inner scrolling remain. Module panel backgrounds are transparent. See [page scrolling](PageScrolling.md).
-
-Landscape home uses two columns and portrait uses one. Expand scaling, large typography and growing text blocks support small screens and long descriptions. Module content scrolls; outer navigation stays outside the scroll areas. Source: ResponsiveScreenLayout and ReadableTextHeight. Keyboard/device accessibility review remains pending. See [Home scene](HomeScene.md).
+WholePageScroll wraps each screen as the content of a full-viewport ScrollRect. Header, artwork, module content, Back/Home/Exit and bottom note move together. Inner module scrolling/masks are disabled and long content expands, preserving direct-child lookup bindings. Responsive template layout handles orientation and delayed CanvasScaler viewport updates. Native tests verify actual positions move together; physical touch feel and keyboard usability remain unverified. See [scrolling](PageScrolling.md) and [report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
 
 ### F-003 Exposure Explorer
 
-Three category filters expose 21 source-mapped records, including 18 original/protected soundscapes and three chart-only labels. Visitors inspect activity descriptions and prevention tips, then open an existing comparison. Original/Protection 3M 1260 buttons directly start or stop their version. Add activities, audio-edit/import and Explorer reset controls are removed. Activity selection is no longer collected by this UI. Data provenance and category overlap remain intact; no personal risk estimate is inferred. See [Explorer](ExposureExplorer.md), [media](MediaPlayback.md) and [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
+Within Sound Experience → Soundscapes, three category filters expose 21 source-mapped records, including 18 original/protected soundscapes and three chart-only labels. Visitors inspect activity descriptions and prevention tips, then open an existing comparison. Original/Protection 3M 1260 buttons directly start or stop their version. Add activities, audio-edit/import and Explorer reset controls are removed. Activity selection is no longer collected by this UI. Data provenance and category overlap remain intact; no personal risk estimate is inferred. See [Explorer](ExposureExplorer.md), [media](MediaPlayback.md) and [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-004 Spanish HNAI questionnaire
 
@@ -73,6 +72,8 @@ Wave graphics now explicitly require RectTransform/CanvasRenderer, create the re
 
 ### F-009 Sound Experience
 
+**Current navigation:** the hub splits Soundscapes and Hearing examples; the player no longer repeats the soundscape catalog. See [hub](SoundExperienceHub.md).
+
 **Current configuration:** audio and videos reference the existing external library directly; no separate media copies remain in Assets. Local catalog paths are private. The demonstration computer must have this folder available. See [direct-library correction](Changes/2026-10-22-003-existing-media-library.md).
 
 Local playback now integrates 18 original/protected comparisons and five original/95/100 WHIS song sets. Press an audio version to play; press the active version again to stop. Protection restarts at zero when switching; hearing-loss examples retain approximate position and an extra Play/Pause control. Session listening gain is common to all variants. Playback stops on navigation/reset and pauses on interruption. One clip loads on demand. All ten prior song exports and completed listening copies now report PASS. Numerical, hash and format checks do not establish listening/device validity. See [media playback](MediaPlayback.md) and [integration report](Changes/2026-10-22-002-media-integration.md).
@@ -93,7 +94,7 @@ WHIS-DTVF is the selected hearing-loss authoring method. An offline MATLAB wrapp
 
 ### F-010 Hearing Health and sources
 
-Current video UX: five scrollable topic cards each contain a frame with Play/Pause and Stop inside it. No separate selection step; one shared decoder renders only the explicitly played card. Scrolling does not autoplay. See [media playback](MediaPlayback.md) and [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).
+Current video UX: five topic cards each contain a frame with Play/Pause and Stop directly below it. White RawImage tint replaces black modulation that hid decoded pictures even while playing. No separate selection step; one shared decoder renders only the explicitly played card. Scrolling does not autoplay. See [media playback](MediaPlayback.md) and [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).
 
 Hearing Health now includes five informative video playback copies: health effects, hearing loss, protection and two tinnitus versions, alongside general prevention recommendations. Explicit select/play controls, stop/pause and cleanup use the shared media transport. The existing original video files are referenced directly; codec compatibility needs device checks. Unity/device playback, editorial and caption review remain pending. Research & Sources continues to show its four research stages separately. See [media playback](MediaPlayback.md).
 
@@ -135,11 +136,15 @@ Startup optional gender, age, country, referral source and editable device model
 
 ### F-019 Listening setup
 
-About you always appears first at startup. After it closes, an optional 6 kHz preview and draggable volume slider let visitors choose a comfortable app gain. Explicit Play/Stop, Accept and continue and Skip prevent automatic preview playback. Accept stores temporary gain; Skip restores the prior gain. The preview alone has -12 dB attenuation; the shared slider and all other sounds retain their previous scale. The software ceiling is not SPL calibration and comfort does not establish safe exposure. Popup controls block underlying screens. See [setup design and limits](ListeningSetup.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
+About you always appears first at startup. After it closes, a fresh visit starts the unchanged 0–0.25 slider at its midpoint, 0.125 (50%). An optional 6 kHz preview and draggable volume slider let visitors choose a comfortable app gain. Explicit Play/Stop, Accept and continue and Skip prevent automatic preview playback. Accept stores temporary gain; Skip restores the prior gain. The preview alone has -12 dB attenuation; the shared slider and all other sounds retain their previous scale. The software ceiling is not SPL calibration and comfort does not establish safe exposure. Popup controls block underlying screens. See [setup design and limits](ListeningSetup.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-020 Noise basics
 
 An independent Home screen explains dB, dBA, LAeq,T, LAeq,8h, LEX,8h, level/duration/frequency/peaks and digital versus acoustic levels. Seven sourced JSON entries scroll inside the template panel. It does not alter guided order or implement noise measurement. See [definitions and primary references](NoiseBasics.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
+
+### F-021 Unified sound hub
+
+One Home card opens SoundHub with Soundscapes and Hearing examples. The former reuses the existing activity/catalog route and selected-pair player; the latter clears activity context and opens the five-song hearing-example list. The hidden Exposure Explorer template remains for startup cloning. An appended enum preserves existing route values; guided order is unchanged. See [hub guide](SoundExperienceHub.md) and [report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
 
 ## Feature change history
 
@@ -177,3 +182,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-11-05 | F-001, F-002, F-003, F-005, F-006, F-009, F-016–F-020 | In-playfield choices, random game soundscape, optional volume setup, noise terms and direct Explorer audio; retire authoring controls | [2026-11-05-002](Changes/2026-11-05-002-direct-listening-and-noise-basics.md) |
 
 | 2026-11-05 | F-002, F-009, F-010, F-015, F-017, F-018, F-019 | Preview-only -12 dB; always About you first; complete game results; centered guided control; page-wide gestures and inline videos | [2026-11-05-003](Changes/2026-11-05-003-results-video-and-swipe.md) |
+
+| 2026-11-05 | F-001, F-002, F-003, F-009, F-010, F-019, F-021 | Single sound hub, visible videos with controls below, midpoint default and actual whole-page scrolling | [2026-11-05-004](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md) |
