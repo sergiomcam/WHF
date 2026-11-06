@@ -33,7 +33,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [DHWANI future-work information](#f-022-dhwani-future-work-information): Home | Informational page implemented; analysis planned only | Seven attributed sections; no recording, prediction, API or validation claim | 2026-11-06 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Editor-only transient preview implemented | Actual stopped render in both orientations; no scene save/build inclusion | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate prepared project | Partial: portable media/source/configuration ready | 57 hashes verified; SDK module missing and engine remediation required; no APK/device test | 2026-11-06 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | APK built; phone verification pending | Patched Editor regression: 91 checks; signed 1.44 GB APK and 57 in-package hashes verified; no device connected | 2026-11-06 |
 
 ## Feature details
 
@@ -161,7 +161,7 @@ An Editor-only transient Canvas mirrors the complete Home with artwork and curre
 
 ### F-024 Android personal-test export
 
-A separate portable project contains current source and all media with no Windows dependency in its catalog. The preparation script verifies copies and refuses overwrites. Build menus configure a personal APK and stop on missing toolchain or external desktop paths. Android video extraction and physical installation remain unverified: Android Build Support/SDK/NDK/OpenJDK is absent, and the pinned engine requires CVE-2025-59489 remediation before deployment. No APK exists. See [Android readiness and steps](AndroidDeployment.md).
+A separate portable project contains current source and all media with no Windows dependency in its catalog. Unity 2022.3.62f2 and its Android toolchain are installed; the migrated copy passed 91 native Editor checks. A personal IL2CPP ARM64/ARMv7 APK built successfully, its signature verifies, and all 57 packaged media hashes match. Preparation uses ASCII media paths to avoid the diagnosed archive-encoding failure and refuses overwrites. The open desktop project remains on its older Editor. Android extraction, installation, listening, touch and performance remain unverified because the phone is not connected. See [Android build and installation steps](AndroidDeployment.md).
 
 ## Feature change history
 
@@ -203,3 +203,4 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-11-05 | F-001, F-002, F-003, F-009, F-010, F-019, F-021 | Single sound hub, visible videos with controls below, midpoint default and actual whole-page scrolling | [2026-11-05-004](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md) |
 
 | 2026-11-06 | F-001, F-002, F-009, F-019, F-022, F-023, F-024 | Stopped Home visibility, attributed DHWANI future page and portable Android preparation with explicit toolchain/device blockers | [2026-11-06-001](Changes/2026-11-06-001-editor-dhwani-android.md) |
+| 2026-11-06 | F-024 | Install patched Android toolchain, verify migrated Editor, fix portable archive names and build/verify personal APK; phone test pending | [2026-11-06-002](Changes/2026-11-06-002-patched-android-build.md) |
