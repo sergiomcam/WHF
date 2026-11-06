@@ -57,3 +57,13 @@ Gravity, flap strength, sprite proportions, three-minute limit and point values 
 All game copy and menu-card descriptions now use English with plain punctuation: Tap to fly, Pause, Resume, Exit, round notices, star values and results. The live score uses two lines. Both rounds remain explicitly silent; no noise-effect conclusion is presented. See [English-copy report](Changes/2026-10-22-007-flappy-english-copy.md).
 
 Current implementation and muted native verification: in-field quiet-round choices, retry, Continue, random buffered noise playback, Pause and navigation cleanup passed. These tests do not establish an experimental noise effect or physical listening comfort. See [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
+
+## Final comparison and explanation, 2026-11-05
+
+After round 2 the game stops its sound and shows a large scrollable results panel instead of the clipped feedback strip. Quiet and soundscape points, gaps and time appear together, with the point difference explicitly defined as soundscape minus quiet. These are the actual two runs, not fabricated improvement or risk scores. Retry stays below; Exit stays above. The page explains the next choices: quiet break, Hearing Health, Retry or Home. Leaving/resetting hides the result panel and clears temporary results.
+
+Background sound can distract attention and make a task feel demanding; cognitive load is used as a plain-language explanation, not an instrument measurement. The message discusses noise, annoyance/stress and sleep/fatigue while explicitly saying this game cannot diagnose symptoms or isolate a causal noise effect. Practice, fatigue, chance and unequal play duration can affect its scores. No claim that every noise harms every task/person is made.
+
+Primary/official sources checked 2026-11-05: [WHO Europe Noise](https://www.who.int/europe/health-topics/noise) for general performance/sleep impacts; [NIOSH noise and stress](https://www.cdc.gov/niosh/bulletin/2018/noise-effects.html) for workplace stress/tiredness context; [NIOSH Fatigue and Work](https://www.cdc.gov/niosh/fatigue/about/) for fatigue and concentration; [experimental adult noise study](https://pubmed.ncbi.nlm.nih.gov/27157685/) for task/person moderation. These broader contexts do not validate this brief educational game or establish effects in its visitors.
+
+See [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).

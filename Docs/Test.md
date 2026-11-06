@@ -20,7 +20,7 @@ The regression runner leaves an interactive Editor in Play Mode at Home and rest
 
 | Area | Checks |
 | --- | --- |
-| First launch | Optional form appears once per installation/notice version; Skip, temporary continuation and explicit local save are distinct; About you reopens it |
+| First launch | Optional form appears first on every launch, before listening volume; Skip, temporary continuation and explicit local save are distinct; About you reopens it |
 | Demographics | Use synthetic values only; blank age accepted; invalid/out-of-range age rejected; Save explains local storage; Delete removes the local profile; no networking or device identifier collection |
 | HNAI | Original Spanish wording, revise answers, completion guard, scrolling and visitor reset |
 | Explorer | All 18 linked recordings, three chart-only missing-example states, no add/import/reset controls; direct version toggles |
@@ -45,3 +45,5 @@ For new findings, record the minimal reproduction, actual observation, cause if 
 ## Corrections regression, 2026-11-05
 
 PrototypeReviewRunner now exercises all 18 direct Original-toggle paths, first-round buttons inside the playfield, random round-2 audio/pause/navigation cleanup, 6 kHz preview loading, live session-gain update and Accept stopping playback. It checks modal background blocking/restoration and captures demographics, listening setup and Noise basics in both orientations. Run an isolated project copy when Main is already open; do not start a second Editor on the same locked directory. Muted playback proves engine state only. Manually review slider dragging, keyboard focus, scrolling, comfortable output, Skip, missing-file feedback and target device behavior. See [task report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
+
+2026-11-05 regression additions: verify About you before listening setup even with a prior dismissal, -12 dB preview-only amplitude factor, centered Entendido and dismissal, five inline video controls, page-background scroll forwarding, and final round comparison/next steps. Capture final game results and guided popup in both orientations. Confirm the fresh completion timestamp; never reuse an older result file as new evidence. Human touch gestures and physical listening remain separate. See [report](Changes/2026-11-05-003-results-video-and-swipe.md).

@@ -50,3 +50,5 @@ A user-reported MissingComponentException in the HNAI introduction exposed an un
 ## Research stage update (2026-10-20)
 
 The final guided popup now describes the four research tabs: INTER-NOISE pilot, reported sources, preliminary HNAI psychometrics and YANS change. Visitors can scroll through each before Finalizar returns Home. Tab changes do not change guided progression or calculate results. See [research content and limits](ResearchSources.md).
+
+2026-11-05: Entendido explicitly centers its TMP label horizontally and vertically, clears inherited margins and disables label raycasts. Its anchors fill the button. Explorer/Sound instructions now match direct version playback and removed activity-add controls. See [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).

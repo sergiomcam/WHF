@@ -7,6 +7,7 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 | [Project instructions](../AGENTS.md) | Stack, conventions, critical rules, optimization and documentation publication policy |
 | [Ethics and research integrity](ETHICS.md) | Transparency, data management, source verification, documentation and correction responsibilities |
 | [Project skill register](Skills.md) | Recurring workflows, skill locations, invocation status and validation history |
+| [Page scrolling](PageScrolling.md) | Page-wide gesture routing, fixed navigation and touch review limits |
 | [Testing and bug correction](Test.md) | On-demand computer testing, native checks, captures and issue records |
 | [Listening setup](ListeningSetup.md) | Optional 6 kHz preview, session gain and popup interaction |
 | [Noise basics](NoiseBasics.md) | dB, equivalent level, eight-hour normalization and measurement context |
