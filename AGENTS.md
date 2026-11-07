@@ -10,6 +10,7 @@ Hearing Notion is an offline hearing-health and noise-awareness prototype for th
 
 - Primary development target: Windows desktop; preserve responsive portrait/mobile previews. Android personal-test export is now prepared in a separate portable project; actual APK/device testing requires the Android toolchain. macOS remains later scope.
 - English and Spanish are intended. The current HNAI questionnaire is Spanish first; do not translate or rewrite instrument wording without instruction.
+- Current presentation is English. Preserve original Spanish HNAI items/choice labels, proper media titles, original videos and source figures; identify those language exceptions clearly. Research summaries load Research/ResearchStages.en.json, with the Spanish source retained. See Docs/HomeRedesign.md.
 - Core modules: home/navigation, Exposure Explorer, Sound Experience, Hearing Health, Awareness Check, Research & Sources, Personalized Takeaways.
 - Noise measurement is deferred; guided mode includes an informational Noise Meter stage only. Music Lab is future scope. Do not make these appear functional before implementation.
 - No cloud backend, accounts, microphone acquisition, telemetry, or persistent participant storage is required for the core prototype.
@@ -41,9 +42,11 @@ Use a single scene with modular screen-panel roots. Application Managers stays o
 | NavigationManager / ScreenView | Screen registration, transitions, Back, guided flow, and research-route guards. |
 | SessionManager / AppSession | Temporary visitor selections, draft answers, consent state and complete reset. |
 | ExposureManager | Activity filters/details and sound context; visitor add/import UI retired; general takeaways. |
-| ResearchSourcesController | Four sourced Spanish research stages, scrollable summaries and original study figures. |
+| ResearchSourcesController | Four sourced English research summaries with original-language figures, scrollable summaries and original study figures. |
 | AwarenessCheckManager | Spanish HNAI rendering, answer revision, completion and local draft responses. |
 | ResponsiveScreenLayout | Portrait/landscape positions, sizing and readable typography. |
+| HomeMenuStyle / RoundedCardGraphic / HomeIconGraphic | Approved rounded Home, shared rounded buttons and code-drawn nonblocking icons; yellow majority, two turquoise/two purple accents including Waves. |
+| EnglishPresentation | English legacy panel labels and in-memory media presentation without modifying original files or research instruments. |
 | AppTheme | Shared white/yellow/charcoal palette. |
 | RuntimeArtworkController / AppArtwork | Explicit Play Mode artwork initialization and screen artwork. |
 | GuidedJourney / GuidedExperienceController | Ordered guided stages, continuation bindings, introductions and informational meter panel. |
@@ -100,11 +103,11 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 
 - Palette: warm near-white `#FFFEF8` background, white cards, charcoal `#4A4C49` text, warm `#F6F4EB` panels, `#DFDEDD` borders, `#686B63` secondary text, `#FDD633` primary actions, `#FFF5C2` soft-yellow accents and `#EEC900` selections. Use AppTheme for runtime colors; retain readable contrast and distinct action hierarchy.
 - Maintain readable contrast, large type, clear hierarchy, comfortable padding and reachable controls. Do not shrink labels to illegibility to avoid wrapping.
-- Home uses two columns in landscape and one in portrait. Awareness Check / Conciencia auditiva is the first home option. Guided order: HNAI → Exposure Explorer → Sound Experience → Hearing Health recommendations → informational Noise Meter → Research & Resources → Home. HNAI completion enables guided continuation. Show a brief modal introduction once per stage per guided run; free exploration has no automatic popups.
+- Home uses two columns in landscape and one in portrait. Awareness Check is the first home option; its original Spanish HNAI is explicitly identified. Guided order: HNAI → Exposure Explorer → Sound Experience → Hearing Health recommendations → informational Noise Meter → Research & Resources → Home. HNAI completion enables guided continuation. Show a brief modal introduction once per stage per guided run; free exploration has no automatic popups.
 - Canvas reference sizes are 1920×1080 landscape and 1080×1920 portrait, with Expand scaling. Preserve full-viewport backgrounds and responsive anchors.
 - Long activity/questionnaire content uses ScrollRect regions. Wrapped text must grow through layout sizing instead of overflowing neighboring rows. Whole-page navigation now moves with the page as requested; keep clipping only at the outer viewport.
 - Check mouse wheel, drag/touch scrolling and pointer/keyboard operation as applicable. Preserve selected state with a visible marker in addition to color.
-- Keep motion decorative and subtle. Wave contours must not move text or buttons or intercept input. Home exposes Ondas: activas/pausadas as a session-wide reduced-motion switch; it is not a persistent app setting. Current waves sweep for 10 seconds, rest 4 seconds, and are staggered 7 seconds. Preserve explicit startup and texture-independent rendering.
+- Keep motion decorative and subtle. Wave contours must not move text or buttons or intercept input. Home exposes Waves: on/paused as a session-wide reduced-motion switch; it is not a persistent app setting. Current waves sweep for 10 seconds, rest 4 seconds, and are staggered 7 seconds. Preserve explicit startup and texture-independent rendering.
 - Flappy Cloud is an optional free-exploration game, outside the six-stage guided route. Keep game results temporary and descriptive. Its two-round flow offers Try again/Continue inside the playfield after quiet play, then a notice and randomly selected original Explorer soundscape in round 2. Pause and navigation must stop/pause owned buffered audio predictably. Results are descriptive; practice, fatigue and chance prevent causal inference from score differences. Preserve reference-art provenance and avoid importing the full Infinite Runner Engine/FMOD dependencies.
 - Avoid automatic audio playback. Provide stop, pause, optional skip and text explanations before enabling auditory demonstrations.
 
@@ -119,7 +122,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Do not infer scoring rules, reverse coding, clinical cutoffs, missing-response rules or administration timing from the response scale. Keep protocolConfirmed false until an actual protocol is confirmed.
 - HNAI is preliminary; do not present it as a fully validated diagnostic instrument. YANS is a separate instrument with separate identity, questions and scoring. The earlier pilot's 18-item questionnaire is another version, not interchangeable with the refined HNAI.
 - Keep the full HNAI and any later YANS implementation distinct from a short public educational knowledge check. Agreement responses are not correct/incorrect quiz answers.
-- Research & Sources uses Resources/Research/ResearchStages.es.json. Preserve the pilot (50), preliminary HNAI (316 complete of 318) and YANS figure evidence as distinct studies; do not infer a shared cohort. Unknown demographic sample sizes and YANS sample/error-bar/scoring metadata remain explicit. Original research figures are allowed locally; audiovisual content and raw research documents are excluded from this module.
+- Research & Sources uses Resources/Research/ResearchStages.en.json; the original Spanish source is retained in ResearchStages.es.json. Preserve the pilot (50), preliminary HNAI (316 complete of 318) and YANS figure evidence as distinct studies; do not infer a shared cohort. Unknown demographic sample sizes and YANS sample/error-bar/scoring metadata remain explicit. Original research figures are allowed locally; audiovisual content and raw research documents are excluded from this module.
 - Reported activity prevalence is not measured acoustic exposure. Do not invent prevalence, raw participant results or individual risk estimates from charts or selected activities.
 - Attitude or intention changes do not establish actual behavior change. Never fabricate personal results in Takeaways.
 - Local authored sound sources can be imported for review. Ingestion does not authorize playback or redistribution. Review provenance, distribution rights, levels and playback behavior before enabling use; keep imported files review-pending and never autoplay them.

@@ -10,21 +10,21 @@ Use this page to review app contents, find implementation details and trace feat
 
 | ID | Feature and entry point | Implementation | Verification and limits | Last updated |
 | --- | --- | --- | --- | --- |
-| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Implemented; nine cards with one sound entry | Native single-entry/hub checks; both orientations; real device review pending | 2026-11-05 |
-| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages | Implemented whole-page scrolling | Native wheel/drag moves header, Back and footer together; responsive capture review; real touch review pending | 2026-11-05 |
-| F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | Implemented under unified entry | Stable catalog and direct audio retained; separate Home entry removed | 2026-11-05 |
-| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Conciencia auditiva | Implemented prototype | Loading fix and responses need Play Mode confirmation; no scoring/research administration | 2026-10-19 |
+| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Approved rounded English Home implemented | Native palette/scroll/navigation checks and actual captures; phone review pending | 2026-11-06 |
+| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages | Rounded controls, roomy Home and whole-page scrolling | Pixel/logical Canvas settling and native scroll checks; physical touch pending | 2026-11-06 |
+| F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | English activity descriptions/categories and direct audio | 21 source-mapped records and category/GUID checks; native comparison paths; physical listening pending | 2026-11-06 |
+| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Awareness Check | Original Spanish instrument, English surrounding UI | Native revision, 22 answers, completion/recompletion and reset passed; no clinical scoring | 2026-11-06 |
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home/Continue | Partial; general reminders | Activity-add UI retired; no invented personal outcome; no full takeaway runtime retest | 2026-11-05 |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Takeaways reset | Implemented | Draft state and digital gain reset; Explorer reset removed; memory only unless explicit demographic save | 2026-11-05 |
-| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Implemented | Images inspected and code compiled; final placement review pending | 2026-10-19 inventory |
-| F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Implemented, fix unverified | CanvasRenderer dependency repaired; Play Mode confirmation pending | 2026-10-19 inventory |
-| F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Implemented split branches | Soundscapes catalog appears once; Hearing examples contains music only; native media checks | 2026-11-05 |
-| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Partial overall; videos with controls below frame | White tint fixes hidden pictures; five decoded nonblack frames verified; physical listening pending | 2026-11-05 |
+| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Rounded cards and balanced code-drawn icons | Five yellow/two turquoise/two purple accents; original headphones retained; device review pending | 2026-11-06 |
+| F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Procedural contours; reduced opacity | Renderer dependencies and native rendering checked; physical motion preference/device review pending | 2026-11-06 |
+| F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Split branches with English controls/metadata | 51 variants tested in native Editor; original recordings and common gain unchanged; device listening pending | 2026-11-06 |
+| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | English controls and four English study summaries | Five decoded videos; study numbers/figures preserved; original-language media/figures identified | 2026-11-06 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
-| F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | Partial content; settings planned | Spanish HNAI and mostly English modules; no complete language/settings UI | 2026-10-19 inventory |
-| F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): guided journey | Implemented centered dismiss control | Native centered alignment/dismissal and both-orientation captures; full human route/accessibility review pending | 2026-11-05 |
+| F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | English presentation; language selector planned | Original Spanish HNAI, original videos/figures and proper titles preserved; not a translated instrument | 2026-11-06 |
+| F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): guided journey | English explanations and centered Got it | Native alignment/dismissal checks; source-language HNAI identified; human route/device review pending | 2026-11-06 |
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Implemented two-round prototype with random soundscape | In-field choices, random playback, Pause and navigation cleanup passed; no causal research claim | 2026-11-05 |
 | F-018 | [Optional demographics](#f-018-optional-demographics): startup/About you | Implemented; always before volume step | Native startup order and synthetic local consent/save/delete checks; local-only | 2026-11-05 |
@@ -32,8 +32,8 @@ Use this page to review app contents, find implementation details and trace feat
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [DHWANI future-work information](#f-022-dhwani-future-work-information): Home | Informational page implemented; analysis planned only | Seven attributed sections; no recording, prediction, API or validation claim | 2026-11-06 |
-| F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Editor-only transient preview implemented | Actual stopped render in both orientations; no scene save/build inclusion | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | APK built; phone verification pending | Patched Editor regression: 91 checks; signed 1.44 GB APK and 57 in-package hashes verified; no device connected | 2026-11-06 |
+| F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | APK built; phone verification pending | Patched Editor regression: 93 checks; signed 1.44 GB APK and 57 in-package hashes verified; no device connected | 2026-11-06 |
 
 ## Feature details
 
@@ -41,7 +41,7 @@ Use this page to review app contents, find implementation details and trace feat
 
 A ninth card opens the attributed DHWANI informational future-work page. Outside Play Mode an Editor-only labelled Home preview displays current cards/artwork without running managers. See [preview](EditorHomePreview.md).
 
-Main.unity uses app-owned panels adapted from Menu Template 1. Home now has one Sound Experience entry opening Soundscapes / Hearing examples. Home opens modules, Conciencia auditiva is the first option, Back uses navigation history, and the guided flow now proceeds through HNAI, Exposure, Sound, Health recommendations, an informational Noise Meter stage, and Research & Resources. HNAI must be completed before guided continuation; the final stage returns Home. The 5–8-minute target has not been usability-tested. Source: AppManager, NavigationManager, ScreenView in Assets/_HearingNotion/Scripts. See [Home scene](HomeScene.md) and [Architecture](AppArchitecture.md).
+Main.unity uses app-owned panels adapted from Menu Template 1. Home now has one Sound Experience entry opening Soundscapes / Hearing examples. Home opens modules, Awareness Check is the first option, Back uses navigation history, and the guided flow now proceeds through HNAI, Exposure, Sound, Health recommendations, an informational Noise Meter stage, and Research & Resources. HNAI must be completed before guided continuation; the final stage returns Home. The 5–8-minute target has not been usability-tested. Source: AppManager, NavigationManager, ScreenView in Assets/_HearingNotion/Scripts. See [Home scene](HomeScene.md) and [Architecture](AppArchitecture.md).
 
 ### F-002 Responsive, readable UI
 
@@ -64,6 +64,8 @@ Currently provides general prevention reminders and a route back to soundscapes,
 In-memory state includes activity selections, sound context and draft HNAI answers/completion. Reset replaces the session and triggers navigation/UI reset subscribers. Returning Home preserves the current visit. Visitor state has no disk persistence, account, automatic analytics or remote participant storage. The separately authored local audio library persists across visits; it contains content assignments, not participant answers. Source: SessionManager, AppSession and module reset subscriptions. See [Architecture](AppArchitecture.md).
 
 ### F-007 Theme and artwork
+
+Current approved style: [rounded Home and English presentation](HomeRedesign.md), with five yellow/two turquoise/two purple accents, reusable rounded controls and code-drawn icons. Existing headphone artwork and source media are retained.
 
 Warm near-white backgrounds, white cards with light borders, yellow primary actions, soft-yellow takeaways and gold selections retain the supplied visual identity while reducing large yellow blocks. Shared button hover/pressed/disabled states apply to home, runtime activity controls, questionnaire controls and modal confirmation. A new transparent isolated headphone illustration replaces the tiny composite header; the static background texture is reduced to 16% opacity. Source: AppTheme and AppArtwork; headphones-hero-v2.png in Resources/Artwork. See [Artwork and prompts](Artwork.md) and [visual refresh](VisualRefresh.md). Code compiles and the image alpha was checked; actual Unity placement remains unverified.
 
@@ -103,7 +105,7 @@ Current video UX: five topic cards each contain a frame with Play/Pause and Stop
 
 Hearing Health now includes five informative video playback copies: health effects, hearing loss, protection and two tinnitus versions, alongside general prevention recommendations. Explicit select/play controls, stop/pause and cleanup use the shared media transport. The existing original video files are referenced directly; codec compatibility needs device checks. Unity/device playback, editorial and caption review remain pending. Research & Sources continues to show its four research stages separately. See [media playback](MediaPlayback.md).
 
-Hearing Health retains prevention content. Research & Sources now offers four Spanish tabs: INTER-NOISE pilot, demographic noise-source reports, preliminary HNAI psychometrics and post-awareness YANS change. Each shows a scrollable sourced summary and limitations; demographics and YANS include three original research figures. Tabs reset to the first stage on entry/visitor reset; navigation stays outside the scroll region. Prior study findings are separate from visitor responses. No audiovisual content or original DOCX/PDF files are bundled. HNAI validation remains preliminary; YANS figure metadata gaps and unknown demographic group sizes are explicit. See [research guide](ResearchSources.md). Full hearing-health lessons and broader source browsing remain partial; actual Unity interaction/figure readability requires review.
+Hearing Health retains prevention content. Research & Sources now offers four English summary tabs (with original-language figures): INTER-NOISE pilot, demographic noise-source reports, preliminary HNAI psychometrics and post-awareness YANS change. Each shows a scrollable sourced summary and limitations; demographics and YANS include three original research figures. Tabs reset to the first stage on entry/visitor reset; navigation stays outside the scroll region. Prior study findings are separate from visitor responses. No audiovisual content or original DOCX/PDF files are bundled. HNAI validation remains preliminary; YANS figure metadata gaps and unknown demographic group sizes are explicit. See [research guide](ResearchSources.md). Full hearing-health lessons and broader source browsing remain partial; actual Unity interaction/figure readability requires review.
 
 ### F-011 Public knowledge check and research mode
 
@@ -118,6 +120,8 @@ The home card remains disabled. Guided mode now includes an informational coming
 Future music-perception/DSP research module; route reserved and unavailable. No processing pipeline or interactive laboratory is implemented. See [Architecture](AppArchitecture.md).
 
 ### F-014 Bilingual controls and settings
+
+Current presentation is English across navigation, prompts, activity descriptions, media controls and research summaries. HNAI item/choice wording, proper media titles, original videos and source figures remain explicit exceptions. No language-selector or translated validated instrument is claimed. See [design](HomeRedesign.md).
 
 Spanish HNAI, Spanish Explorer activity details and bilingual-capable content fields exist; other UI remains mixed English/Spanish. Home now exposes a session-wide wave pause/resume button. A complete EN/ES language switch, translation catalog, settings screen and persistent accessibility preferences remain pending. See [Architecture](AppArchitecture.md).
 
@@ -161,7 +165,7 @@ An Editor-only transient Canvas mirrors the complete Home with artwork and curre
 
 ### F-024 Android personal-test export
 
-A separate portable project contains current source and all media with no Windows dependency in its catalog. Unity 2022.3.62f2 and its Android toolchain are installed; the migrated copy passed 91 native Editor checks. A personal IL2CPP ARM64/ARMv7 APK built successfully, its signature verifies, and all 57 packaged media hashes match. Preparation uses ASCII media paths to avoid the diagnosed archive-encoding failure and refuses overwrites. The open desktop project remains on its older Editor. Android extraction, installation, listening, touch and performance remain unverified because the phone is not connected. See [Android build and installation steps](AndroidDeployment.md).
+A separate portable project contains current source and all media with no Windows dependency in its catalog. Unity 2022.3.62f2 and its Android toolchain are installed; the migrated copy passed 93 native Editor checks. A personal IL2CPP ARM64/ARMv7 APK built successfully, its signature verifies, and all 57 packaged media hashes match. Preparation uses ASCII media paths to avoid the diagnosed archive-encoding failure and refuses overwrites. The open desktop project remains on its older Editor. Android extraction, installation, listening, touch and performance remain unverified because the phone is not connected. See [Android build and installation steps](AndroidDeployment.md).
 
 ## Feature change history
 
@@ -204,3 +208,5 @@ Future feature changes append an entry here and update the current inventory/det
 
 | 2026-11-06 | F-001, F-002, F-009, F-019, F-022, F-023, F-024 | Stopped Home visibility, attributed DHWANI future page and portable Android preparation with explicit toolchain/device blockers | [2026-11-06-001](Changes/2026-11-06-001-editor-dhwani-android.md) |
 | 2026-11-06 | F-024 | Install patched Android toolchain, verify migrated Editor, fix portable archive names and build/verify personal APK; phone test pending | [2026-11-06-002](Changes/2026-11-06-002-patched-android-build.md) |
+
+| 2026-11-06 | F-001, F-002, F-003, F-004, F-007, F-008, F-009, F-010, F-014, F-015, F-023, F-024 | Approved rounded English presentation, balanced icons, subtle background, HNAI fidelity/revision/reset checks and rebuilt personal APK | [2026-11-06-006-rounded-english-interface](Changes/2026-11-06-006-rounded-english-interface.md) |

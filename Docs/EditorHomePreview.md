@@ -7,3 +7,5 @@ The helper creates transient EditorOnly objects with DontSaveInEditor/DontSaveIn
 The isolated CaptureIsolated entry renders the stopped Home in both orientations without entering Play Mode and without saving the source scene. Native compilation can perform an initial stale dependency pass while importing new files; only a completed final import/render is verification. Review real output rather than assuming an ExecuteAlways callback displayed it.
 
 Source: Assets/_HearingNotion/Editor/StoppedHomePreview.cs; [task report](Changes/2026-11-06-001-editor-dhwani-android.md).
+
+Rounded Home update (2026-11-06): StoppedHomePreview uses HomeMenuStyle and the same rounded card/icon components, English labels and current module order. Preview decoration is marked transient after layout, and the original scene is not saved. Stopped 4K portrait/landscape captures passed; the visible first viewport uses the roomier design rather than squeezing every module on screen. See [design](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).

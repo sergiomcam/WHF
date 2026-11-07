@@ -16,3 +16,7 @@ Responses are stored in a separate local prototype draft list with item ID, choi
 Verification: source compilation and JSON structure checks passed. In Unity Play Mode, verify answer selection, revision, disabled Next for unanswered items, final completion, navigation away/back, and reset. Inspect portrait and landscape wrapping. Play Mode verification has not been performed by the agent.
 
 Guided mode now begins with HNAI. After all 22 answers, press Finalizar, then the outer Continuar button to open Exposure Explorer. In free exploration the outer action remains Salir. Starting a guided journey preserves the current visit’s draft answers; use visitor reset for a fresh participant.
+
+## English presentation — 2026-11-06
+
+Home now says Awareness Check. Surrounding prompts, domain headings and navigation are English; original Spanish statements and response labels remain unchanged and are explicitly identified. Next/Previous, Finish, Review answers and Continue/Exit replace the former Spanish UI labels. Native regression now exercises revision, all 22 answers, completion invalidation/recompletion and visitor reset. This is not an English translation or new validation of HNAI. See [report](Changes/2026-11-06-006-rounded-english-interface.md).

@@ -38,3 +38,7 @@ The original paper/Word document remain in the user's reference folder; the app 
 Content checks cover stage order, unique IDs, source fields, reported samples/statistics, figure references and absence of audiovisual files. App C# compiles for Unity 2022.3.12f1 Editor/Windows with existing Inspector CS0649 warnings only. The pilot's result pages and all three figures were visually inspected; HNAI report text was extracted directly from DOCX XML.
 
 Unity Play Mode and device/visual interaction are not verified. Check all four tabs, source text, figure loading/labels, portrait/landscape resizing, mouse/touch scrolling, scroll reset, Back/Home, visitor reset, guided introduction/Finalizar and no overlap with navigation. Wide chart lettering may be small in portrait; readable textual summaries are provided, but a full-screen zoom viewer is not implemented. Confirm research owner approval of summaries and unresolved cohort/YANS metadata before public presentation.
+
+## Current English presentation — 2026-11-06
+
+ResearchSourcesController now loads Resources/Research/ResearchStages.en.json. ResearchStages.es.json remains the source-language record. The four study IDs, figure bindings and numeric values match; uncertainty and cohort distinctions remain explicit. Original figures keep their language. Tools/Tests/validate_english_content.py checks numeric-value multisets, study identities and figures; source links/claims remain those already documented. See [English UI guide](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).

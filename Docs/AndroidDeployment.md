@@ -9,15 +9,15 @@ Updated 2026-11-06 for the user's Acer AX85 / Android 13. A real APK has been bu
 | Project | Builds/AndroidPatched-2026-11-06; separate migrated copy; original desktop project remains on 2022.3.12f1 |
 | Editor | Unity 2022.3.62f2, revision 7670c08855a9; listed as remediated for CVE-2025-59489 in Unity's advisory |
 | Toolchain | Hub Android Build Support; OpenJDK 11.0.14.1; NDK 23.1.7779620; build tools 34.0.0; SDK platforms 34/35/36 |
-| APK | Builds/AndroidPatched-2026-11-06/Builds/Android/HearingNotion.apk; 1,444,375,261 bytes, about 1.44 GB |
+| APK | Builds/AndroidPatched-2026-11-06/Builds/Android/HearingNotion.apk; 1,444,402,543 bytes, about 1.44 GB |
 | Identity | org.hearingnotion.prototype; version 1 / code 1; Hearing Notion |
 | Player | IL2CPP ARM64 + ARMv7; minimum API 23; automatic target selected API 36; Main is the build scene |
 | Signing | Personal test/default debug key; apksigner verified v1 and v2; not store-release signing |
 | Content | All 57 packaged media files match catalog SHA-256 values; 1,413,452,794 bytes of media payload |
-| Regression | Patched Windows Editor passed 91 native checks, including 51 audio variants and five decoded nonblack videos; this does not establish Android playback |
+| Regression | Patched Windows Editor passed 93 native checks, including 51 audio variants and five decoded nonblack videos; this does not establish Android playback |
 | Phone | User reported not yet connected; adb listed no device; actual ABI, installation, touch, sound, video, memory and safe-area behavior unverified |
 
-APK SHA-256: `902c21664bd198be149a84db95c9491ab602bacc9be2c9f7c99017bd32fb594c`.
+APK SHA-256: `967f40beba3b09595e406bdb5d4747df8cefda994c8747dadb54d091dcc914cf`.
 
 The first build failed because a Unity-generated AAR marked accented ANSI filenames as UTF-8. The portable preparation tool now uses ASCII SHA-256 names while retaining labels, IDs and original bytes. The corrected build completed successfully with exit 0. Gradle warned that its bundled plugin 7.4.2 was tested up to compile SDK 33; SDK 36 nevertheless built successfully with Unity's supplied AAPT2 override. This is a tested local configuration, not a general compatibility claim. Signature verification reported two META-INF entries outside v1 JAR signature protection; overall v1/v2 verification passed. No warnings were suppressed.
 
@@ -46,3 +46,7 @@ MediaAssetPath handles desktop files, local portable StreamingAssets and Android
 [Unity security advisory](https://unity.com/security/sept-2025-01), [Hub CLI reference](https://docs.unity.com/en-us/hub/hub-cli-reference), [Android environment setup](https://docs.unity3d.com/2022.3/Documentation/Manual/android-sdksetup.html), [supported dependencies](https://docs.unity3d.com/2022.3/Documentation/Manual/android-supported-dependency-versions.html), [StreamingAssets](https://docs.unity3d.com/2022.3/Documentation/Manual/StreamingAssets.html), and [build/run workflow](https://docs.unity3d.com/2022.3/Documentation/Manual/android-BuildProcess.html).
 
 See [initial preparation report](Changes/2026-11-06-001-editor-dhwani-android.md) and [patched build report](Changes/2026-11-06-002-patched-android-build.md).
+
+## Approved interface build — 2026-11-06
+
+The current APK includes the rounded English presentation and balanced icon palette. Native regression passed 93 checks; actual top/lower-page/stopped renders were reviewed. The previous APK is retained locally as Builds/Android/HearingNotion-before-rounded-ui.apk inside the patched project. Signature v1/v2 and all 57 media hashes verify for the new APK. Original Spanish HNAI and original-language media/figures remain identified exceptions. Phone verification is still pending. See [design](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).

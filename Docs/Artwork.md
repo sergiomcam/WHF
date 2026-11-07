@@ -33,3 +33,7 @@ Generated using the built-in image generation tool and saved as Assets/_HearingN
 
 Final prompt:
 Use case: product-mockup. Asset type: transparent headphone header illustration for Hearing Notion, a youth noise awareness app with a white and warm yellow interface. A single premium pair of over-ear headphones, three-quarter front view, compact sculptural silhouette, rich warm yellow #FDD633 headband and earcups, warm white soft cushioning, charcoal #4A4C49 fine accents. Sophisticated clean 3D editorial illustration with gently rounded forms, crisp edges and beautiful soft lighting. Headphones alone, fully visible with generous transparent margin, centered in a square 1024x1024 image. No city, no people, no speaker, no sound waves, no text, no logo, no watermark, no cast shadow plane, no scene background. Genuine transparent background, designed to remain recognizable at 180px.
+
+## Approved interface accents — 2026-11-06
+
+Existing headphone artwork is retained. New HomeIconGraphic geometry draws the module icons; no icon image asset or font dependency is imported. Yellow #F6C800: Awareness, Sound, Health, About you, DHWANI. Turquoise #16AFA5: Noise basics and Research. Purple #A58ADB: Flappy and Waves. Meter remains neutral. RoundedCardGraphic draws cards and borders; decoration is nonblocking. Existing background/wave opacity is reduced while timing and reduced-motion behavior remain. See [design](HomeRedesign.md).

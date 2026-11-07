@@ -27,3 +27,7 @@ Welcome and Home now include a seventh module card, Flappy Cloud. FlappyCloudCon
 2026-11-05: eight home cards now include one Sound Experience entry; Exposure Explorer’s separate card is hidden after startup template cloning. Sound Experience opens Soundscapes / Hearing examples. Home itself participates in whole-page scrolling. See [hub](SoundExperienceHub.md) and [scrolling](PageScrolling.md).
 
 2026-11-06: stopped Main shows a complete transient Home preview, labelled as a preview and removed before Play. Runtime Home now has nine module cards including DHWANI (future work). The helper does not save or regenerate the scene. See [preview](EditorHomePreview.md) and [DHWANI](DhwaniFuture.md).
+
+## Current rounded Home — 2026-11-06
+
+The approved rounded design replaces the compact card arrangement described in older sections. Home has five yellow module icons, two turquoise icons, purple Flappy/Waves icons and a neutral meter; English labels; chevrons; roomy portrait/two-column landscape layout and lower-page scrolling. HNAI remains the original Spanish instrument. The same transient stopped preview uses HomeMenuStyle. See [current design](HomeRedesign.md) and [verification report](Changes/2026-11-06-006-rounded-english-interface.md).

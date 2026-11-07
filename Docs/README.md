@@ -40,3 +40,5 @@ Start with the [feature catalog](FEATURES.md) for current app contents, implemen
 The feature catalog describes the current source baseline; module notes may retain historical design context. Implemented code does not imply verified Unity Play Mode behavior. Each feature task must update the affected documents and publish the changed documentation to GitHub, as specified in AGENTS.md. This policy is an agent workflow, not a background watcher or scheduled automation.
 
 See [Offline audio and informative videos](MediaPlayback.md) for packaged media, controls, scientific caveats and the device review checklist.
+
+Current interface: [Approved rounded Home and English presentation](HomeRedesign.md).
