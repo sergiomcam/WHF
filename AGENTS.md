@@ -45,7 +45,8 @@ Use a single scene with modular screen-panel roots. Application Managers stays o
 | ResearchSourcesController | Four sourced English research summaries with original-language figures, scrollable summaries and original study figures. |
 | AwarenessCheckManager | Spanish HNAI rendering, answer revision, completion and local draft responses. |
 | ResponsiveScreenLayout | Portrait/landscape positions, sizing and readable typography. |
-| HomeMenuStyle / RoundedCardGraphic / HomeIconGraphic | Approved rounded Home, shared rounded buttons and code-drawn nonblocking icons; yellow majority, two turquoise/two purple accents including Waves. |
+| HomeMenuStyle / RoundedCardGraphic / HomeIconGraphic | Approved rounded Home, shared rounded buttons and code-drawn nonblocking icons; yellow majority, two turquoise/two purple module accents; DHWANI and Flappy purple; no Waves button. |
+| WindowStyle / InterfaceStyleController | Shared Home typography, rounded module/modal cards and form fields; preserve content, selections and input bindings; initialize after runtime builders. |
 | EnglishPresentation | English legacy panel labels and in-memory media presentation without modifying original files or research instruments. |
 | AppTheme | Shared white/yellow/charcoal palette. |
 | RuntimeArtworkController / AppArtwork | Explicit Play Mode artwork initialization and screen artwork. |
@@ -107,7 +108,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 - Canvas reference sizes are 1920×1080 landscape and 1080×1920 portrait, with Expand scaling. Preserve full-viewport backgrounds and responsive anchors.
 - Long activity/questionnaire content uses ScrollRect regions. Wrapped text must grow through layout sizing instead of overflowing neighboring rows. Whole-page navigation now moves with the page as requested; keep clipping only at the outer viewport.
 - Check mouse wheel, drag/touch scrolling and pointer/keyboard operation as applicable. Preserve selected state with a visible marker in addition to color.
-- Keep motion decorative and subtle. Wave contours must not move text or buttons or intercept input. Home exposes Waves: on/paused as a session-wide reduced-motion switch; it is not a persistent app setting. Current waves sweep for 10 seconds, rest 4 seconds, and are staggered 7 seconds. Preserve explicit startup and texture-independent rendering.
+- Keep motion decorative and subtle. Wave contours must not move text or buttons or intercept input. The Waves visitor control is removed at user request; an engine SetReducedMotion method remains without preference UI or OS integration. Current waves sweep for 10 seconds, rest 4 seconds, and are staggered 7 seconds. Preserve explicit startup and texture-independent rendering.
 - Flappy Cloud is an optional free-exploration game, outside the six-stage guided route. Keep game results temporary and descriptive. Its two-round flow offers Try again/Continue inside the playfield after quiet play, then a notice and randomly selected original Explorer soundscape in round 2. Pause and navigation must stop/pause owned buffered audio predictably. Results are descriptive; practice, fatigue and chance prevent causal inference from score differences. Preserve reference-art provenance and avoid importing the full Infinite Runner Engine/FMOD dependencies.
 - Avoid automatic audio playback. Provide stop, pause, optional skip and text explanations before enabling auditory demonstrations.
 

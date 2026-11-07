@@ -31,3 +31,5 @@ Welcome and Home now include a seventh module card, Flappy Cloud. FlappyCloudCon
 ## Current rounded Home — 2026-11-06
 
 The approved rounded design replaces the compact card arrangement described in older sections. Home has five yellow module icons, two turquoise icons, purple Flappy/Waves icons and a neutral meter; English labels; chevrons; roomy portrait/two-column landscape layout and lower-page scrolling. HNAI remains the original Spanish instrument. The same transient stopped preview uses HomeMenuStyle. See [current design](HomeRedesign.md) and [verification report](Changes/2026-11-06-006-rounded-english-interface.md).
+
+2026-11-06 shared styling: Home simplification: Waves control is removed from runtime/stopped preview; footer follows Takeaways without its former gap. DHWANI and Flappy are purple, Noise basics and Research turquoise, four other module icons yellow and the deferred meter neutral. See [report](Changes/2026-11-06-007-shared-window-style.md).

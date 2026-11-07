@@ -37,3 +37,5 @@ Use case: product-mockup. Asset type: transparent headphone header illustration 
 ## Approved interface accents — 2026-11-06
 
 Existing headphone artwork is retained. New HomeIconGraphic geometry draws the module icons; no icon image asset or font dependency is imported. Yellow #F6C800: Awareness, Sound, Health, About you, DHWANI. Turquoise #16AFA5: Noise basics and Research. Purple #A58ADB: Flappy and Waves. Meter remains neutral. RoundedCardGraphic draws cards and borders; decoration is nonblocking. Existing background/wave opacity is reduced while timing and reduced-motion behavior remain. See [design](HomeRedesign.md).
+
+2026-11-06 shared styling: The current purple module icons are DHWANI and Flappy Cloud; the Waves button no longer exists. Other accents retain the approved palette. Module/popup rounded surfaces and form fields reuse RoundedCardGraphic; no new raster artwork or fonts were imported. See [report](Changes/2026-11-06-007-shared-window-style.md).

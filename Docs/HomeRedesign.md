@@ -4,11 +4,11 @@ Implemented from the user-approved first-phone reference and the yellow/turquois
 
 ## Layout and interaction
 
-Home retains nine modules and the existing routes: Awareness Check first, Noise basics, Sound Experience, deferred Noise Meter, Hearing Health, Research & Sources, Flappy Cloud, About you and informational DHWANI. Guided mode and the Soundscapes/Hearing examples split are unchanged. Personalized Takeaways and the session Waves control follow the modules.
+Home retains nine modules and the existing routes: Awareness Check first, Noise basics, Sound Experience, deferred Noise Meter, Hearing Health, Research & Sources, Flappy Cloud, About you and informational DHWANI. Guided mode and the Soundscapes/Hearing examples split are unchanged. Personalized Takeaways and the footer follow the modules; the Waves button has been removed.
 
-Warm white background, white rounded cards, thin neutral borders, charcoal text and yellow primary actions follow the approved reference. Existing headphone artwork is retained. Five module icons are yellow (Awareness, Sound, Health, About you, DHWANI); Noise basics and Research are turquoise; Flappy Cloud and the Waves control are purple. Noise Meter stays neutral and deferred. Color is reinforced by labels and distinct icons; it conveys no personal risk score.
+Warm white background, white rounded cards, thin neutral borders, charcoal text and yellow primary actions follow the approved reference. Existing headphone artwork is retained. Four module icons are yellow (Awareness, Sound, Health, About you); Noise basics and Research are turquoise; Flappy Cloud and DHWANI are purple. Noise Meter stays neutral and deferred. Color is reinforced by labels and distinct icons; it conveys no personal risk score.
 
-Portrait uses one roomy column; landscape uses two columns. Cards and text are not reduced to squeeze all modules into one viewport. Header, cards, Takeaways, Waves and footer scroll together. Home's page height includes the lower controls. Responsive layout observes both pixel size and logical Canvas size so CanvasScaler settling cannot leave stale geometry after orientation changes. The stopped Editor preview uses the same Home layout, is transient and is removed before Play.
+Portrait uses one roomy column; landscape uses two columns. Cards and text are not reduced to squeeze all modules into one viewport. Header, cards, Takeaways and footer scroll together. Home's page height includes the lower controls. Responsive layout observes both pixel size and logical Canvas size so CanvasScaler settling cannot leave stale geometry after orientation changes. The stopped Editor preview uses the same Home layout, is transient and is removed before Play.
 
 ## Components and ownership
 
@@ -19,6 +19,7 @@ Portrait uses one roomy column; landscape uses two columns. Cards and text are n
 | HomeIconGraphic.cs | Code-drawn module/play/arrow icons; explicit RectTransform/CanvasRenderer dependency and nonblocking decoration |
 | AppTheme.cs | Shared colors and rounded button attachment; existing focus/pressed behavior retained |
 | ResponsiveScreenLayout.cs / WholePageScroll.cs | Orientation, logical-size settling and lower-page extent |
+| WindowStyle.cs / InterfaceStyleController.cs | Shared Home font, heading/action weights, rounded module/modal cards and fields; explicit startup/navigation/size refresh |
 | EnglishPresentation.cs | Initial legacy panel labels and ID/category-based English media presentation; no modification of file paths, recordings or scientific DSP |
 
 Graphics are reused rather than recreated on each frame. Layout changes happen on viewport/input changes; the pre-existing wave animation remains decorative and has lower visual opacity. No performance speedup is claimed without profiling. Rounded surfaces belong to their buttons, icons belong to their cards; imported artwork remains shared. No extra textures, dependencies or scene regeneration are needed.
@@ -34,3 +35,9 @@ ResearchSourcesController loads Research/ResearchStages.en.json. The Spanish sou
 ## Verification and remaining checks
 
 Use [Test.md](Test.md) and the [QA skill](Skills/unity-prototype-review/SKILL.md). Capture genuine top/after-scroll Home renders in portrait, landscape and a tall viewport. Verify icons do not intercept navigation, all lower controls are reachable, popup order/media lifecycle persist and HNAI revision/completion/reset works. English-content checks do not prove acoustic safety or device usability. See the [task report](Changes/2026-11-06-006-rounded-english-interface.md) for actual outcomes and the [Android guide](AndroidDeployment.md) for the latest build/device state.
+
+## Shared windows — 2026-11-06
+
+All module pages, game notices/results and the three existing popup families now share the Home font and typography hierarchy, charcoal headings/actions, muted explanations, white rounded content cards, neutral borders and spacing. Popup backdrops use consistent translucency. Form fields are rounded; inner scroll backgrounds are transparent. Topic titles remain bold and Sound Experience branch cards are white like Home modules. Bindings, selection colors, input values, consent controls and original research wording are preserved. Shared styling starts after runtime builders and refreshes for navigation and logical Canvas-size changes. No continuous hierarchy scan is introduced.
+
+The removed Waves action is not replaced. RuntimeArtworkController retains an engine SetReducedMotion method, but visitor preference UI/OS integration is unavailable. Background animation otherwise continues unchanged. DHWANI receives the second purple module icon. See [follow-up report](Changes/2026-11-06-007-shared-window-style.md).

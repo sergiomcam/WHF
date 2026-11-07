@@ -9,3 +9,5 @@ The isolated CaptureIsolated entry renders the stopped Home in both orientations
 Source: Assets/_HearingNotion/Editor/StoppedHomePreview.cs; [task report](Changes/2026-11-06-001-editor-dhwani-android.md).
 
 Rounded Home update (2026-11-06): StoppedHomePreview uses HomeMenuStyle and the same rounded card/icon components, English labels and current module order. Preview decoration is marked transient after layout, and the original scene is not saved. Stopped 4K portrait/landscape captures passed; the visible first viewport uses the roomier design rather than squeezing every module on screen. See [design](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).
+
+2026-11-06 shared styling: The stopped preview no longer adds a Waves card and uses the updated DHWANI purple icon. The preview remains transient, noninteractive and excluded from Main saves/builds. See [report](Changes/2026-11-06-007-shared-window-style.md).
