@@ -12,3 +12,7 @@ The hub offers two choices:
 The player no longer repeats the 18-item soundscape catalog. Opening an activity shows only its selected comparison; opening Hearing examples shows the hearing-example list. A Sound Experience menu action returns to the hub. Existing stable activity IDs, source mappings, files and processing are unchanged. Three chart-only activities still have no invented recording. This is navigation consolidation, not new or newly validated DSP. The six-stage guided sequence remains unchanged; free exploration uses the hub.
 
 Sources: Assets/_HearingNotion/Scripts/Audio/SoundHubController.cs, MediaExperienceController.cs, AppSession.cs, ResponsiveScreenLayout.cs and PageGestureInstaller.cs. See [report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md), [Explorer](ExposureExplorer.md) and [media](MediaPlayback.md).
+
+## Footer, source volume and game update — 2026-11-10
+
+SoundHub footer actions are rebound even when the panel was cloned after chrome creation. Runtime UnityEvent listeners do not survive Instantiate, so existing footer children are no longer treated as proof of valid bindings. Home, Sounds, Research, Learn and You stay available without duplicated Home cards. Bottom-note spacing follows the pinned footer instead of an artificial page tail. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).

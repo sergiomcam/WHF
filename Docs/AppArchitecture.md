@@ -166,3 +166,7 @@ AppManager explicitly installs ListeningSetupController and NoiseBasicsControlle
 ## Android interaction refinement — 2026-11-10
 
 NavigationManager owns Escape/Android Back dispatch with startup/guided modal priority. ExposureManager supplies the inline comparison host; MediaExperienceController owns its transport and explicit Android native video entry using the existing cache. ResearchSourcesController uses stable top selector offsets and layout-managed summary/figures. LayoutAspectHeight supplies figure height from current width. ScreenChrome/ScreenBandGraphic supply runtime dark bands and real footer destinations without changing route IDs or authored scene bindings. See [report](Changes/2026-11-10-001-android-interaction-corrections.md).
+
+## Footer, source volume and game update — 2026-11-10
+
+ScreenChrome rewires footer UnityEvents on every application, including cloned SoundHub roots. WholePageScroll measures the note/content lower edge and reserves the pinned footer plus 28 logical units instead of a fixed tail. MediaExperienceController and game output use unity source gain; legacy ListeningGain now affects only the optional tinnitus preview. Flappy shares each dynamic pair’s simulated gap center between collision and rendering and keeps Pause/Resume inside the arena. No scene, source-media, dependency or persistence schema changes are introduced. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).

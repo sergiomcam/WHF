@@ -79,3 +79,7 @@ Final refinement retest passed on AX85: correct source-figure proportions; left-
 ## Pinned navigation and simplified media — 2026-11-10
 
 Check that header/footer world positions remain unchanged after wheel/swipe and that last content is reachable. Test all five footer actions, including Research and You with no duplicate Home cards. Verify four distinct video sections, explicit native Return to page and hardware Back, paused inline restoration, song list before playback and absence of hearing-example Play/Pause/Rewind controls. Preserve real profiles and use synthetic scratch storage for save/delete tests. See [modification report](Changes/2026-11-10-002-pinned-navigation-and-media.md).
+
+## Footer, gain and moving-game regression — 2026-11-10
+
+From the cloned SoundHub, invoke all five footer actions and test actual phone touch hit targets. At the bottom of short and long pages, measure note-to-footer spacing (28 logical units) and confirm content remains reachable. Muted transport checks verify gain 1 for media and game while the preview keeps its separate slider/trim. Verify Pause/Resume is inside the playfield, motion freezes/resumes, upper/lower penguins move together without changing the gap, and 38-unit star values remain readable on device. Keep human difficulty, acoustic output and all-device coverage separate from model checks.

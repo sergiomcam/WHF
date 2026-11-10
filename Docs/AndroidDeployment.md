@@ -70,3 +70,9 @@ Current correction APK (2026-11-10): 1,444,588,487 bytes; SHA-256 `f74190e9069d6
 The app-owned Android library adds a non-exported full-screen video activity without new permissions. Native transport controls and Return to page use platform UI. Source compilation, Java checks and physical-device results for this task are recorded in the linked report; historical APK hashes above describe earlier builds. See [modification report](Changes/2026-11-10-002-pinned-navigation-and-media.md).
 
 Latest task APK: 1,444,604,960 bytes; SHA-256 `e867b1283786a0b6dc081b60909fbf31205bbca4628d00557e86f762cc6e9a54`. Unity 2022.3.62f2 IL2CPP ARM64/ARMv7, min API 23/target 36. Build, v1/v2 signatures, all 57 packaged media hashes and native Activity DEX presence passed. Initial native packaging failure was corrected by using Gradle-standard `src/main/java`. See the task report for installation/device results.
+
+## Footer, source volume and game update — 2026-11-10
+
+The next personal-test build includes clone-safe footer actions, content-sized bottom spacing, unity-gain media and a larger moving-pair Flappy game. Build, integrity and actual device outcomes are recorded in the task report; earlier APK hashes above are historical. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).
+
+Latest correction APK (2026-11-10-003): 1,444,605,149 bytes; SHA-256 `338a5173cc06ba956b5bb5151882223925e119742856a19dbbc879f8119860d1`. Patched Unity build, v1/v2 signatures, 57 media hashes and native video class passed. Pre-task backup hash matches the earlier verified delivery APK. Installation/device evidence is in the linked report.

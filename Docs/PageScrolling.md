@@ -23,3 +23,7 @@ Flappy gameplay has no artificial page-height tail; Pause/Ready/Retry remain wit
 DockedScreenChrome caches chrome references and compensates outer ScrollRect travel after page reflow. It preserves direct-child lookup contracts and modal layering. The footer is 180 logical units in portrait (130 landscape) and touches the viewport bottom; the old 500-unit page allowance is reduced to 250. Flappy retains its immersive game layout. This replaces earlier requirements that branded chrome move with the page. See [modification report](Changes/2026-11-10-002-pinned-navigation-and-media.md).
 
 Requested content targets clear the pinned header (270 logical units portrait, 150 landscape; immersive game retains 80), so automatic navigation does not hide the first song-menu row beneath chrome.
+
+## Content-sized lower edge — 2026-11-10
+
+The fixed 250-unit tail is removed. Module page height follows measured content growth and bottom-note bounds plus the pinned footer height and a 28-unit gap. At the bottom of the page the note ends 28 logical units above the footer box. Required content height is tracked separately from total overflow, so a changing panel still reflows when extra page travel remains zero. Home and immersive game layouts retain their own bounds. ScreenChrome rebuilds footer callbacks on application to each screen, including cloned roots whose runtime UnityEvent listeners do not survive Instantiate. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).
