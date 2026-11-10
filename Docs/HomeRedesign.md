@@ -44,4 +44,8 @@ The removed Waves action is not replaced. RuntimeArtworkController retains an en
 
 ## Dark chrome — 2026-11-10
 
-Reference-inspired dark header/footer bands have curved yellow edges, existing headphone artwork and nonblocking procedural decoration. Footer Home, Sounds, Research, Learn and You lead to existing routes/profile entry; no Analyze measurement feature is implied. The footer scrolls with the page. Module heading spacing and shared rounded-card radius were adjusted; HNAI response text is left-aligned. Immersive Flappy Cloud retains its game-owned layout.
+Reference-inspired dark header/footer bands have curved yellow edges, existing headphone artwork and nonblocking procedural decoration. Footer Home, Sounds, Research, Learn and You lead to existing routes/profile entry; no Analyze measurement feature is implied. The footer now remains at the bottom viewport edge, with the header pinned above; Research and About you cards are removed from the Home grid because those routes remain in the footer. Module heading spacing and shared rounded-card radius were adjusted; HNAI response text is left-aligned. Immersive Flappy Cloud retains its game-owned layout.
+
+## Pinned navigation and simplified media — 2026-11-10
+
+Seven packed Home cards remain. Research and You are footer entries. Module icons are 84 logical units with 1.5-times stroke thickness; the remaining palette is three yellow, one turquoise, two purple and the gray deferred meter. Existing routes and questionnaire wording are preserved. See [modification report](Changes/2026-11-10-002-pinned-navigation-and-media.md).

@@ -1,6 +1,6 @@
 # Whole-page scrolling
 
-Updated 2026-11-05. WholePageScroll replaces gesture forwarding as the main-screen architecture. Each ScreenView is itself the content of an outer full-viewport ScrollRect and RectMask2D. The screen’s original direct-child hierarchy stays intact for existing manager lookups. Header, artwork, content, Back/Home/Exit buttons and bottom note move together when the page scrolls. Navigation is no longer fixed.
+Updated 2026-11-05. WholePageScroll replaces gesture forwarding as the main-screen architecture. Each ScreenView is itself the content of an outer full-viewport ScrollRect and RectMask2D. The screen’s original direct-child hierarchy stays intact for existing manager lookups. Page content, Back/Home/Exit and the bottom note scroll together. As of 2026-11-10, the branded header and five-action footer remain pinned to viewport edges; this supersedes the earlier all-elements scrolling design.
 
 PageGestureInstaller waits for runtime content, wraps all screen roots once, and leaves the saved scene untouched. Inner module ScrollRects and their viewport masks are disabled; their content expands into the page. Long content extends the module panel and moves navigation/footer below it. Clipping occurs at the full viewport. Short screens retain some scroll travel. Game pages retain their tap mechanics while drag gestures reach the outer page; final results expand for reading.
 
@@ -14,6 +14,12 @@ Rounded Home update (2026-11-06): Home overflow now includes the lower Takeaways
 
 ## Research and footer expansion — 2026-11-10
 
-Whole-page sizing includes the research selector offset and a footer allowance. The App footer participates in lower-page placement. Research summaries/figures remain layout-managed; navigation and notes remain part of the scrolling page.
+Whole-page sizing includes the research selector offset and a footer allowance. The App footer is pinned by DockedScreenChrome rather than participating in lower-page travel. Research summaries/figures remain layout-managed; navigation and notes remain part of the scrolling page.
 
 Flappy gameplay has no artificial page-height tail; Pause/Ready/Retry remain within the viewport, while long result text may expand its page when needed.
+
+## Pinned navigation and simplified media — 2026-11-10
+
+DockedScreenChrome caches chrome references and compensates outer ScrollRect travel after page reflow. It preserves direct-child lookup contracts and modal layering. The footer is 180 logical units in portrait (130 landscape) and touches the viewport bottom; the old 500-unit page allowance is reduced to 250. Flappy retains its immersive game layout. This replaces earlier requirements that branded chrome move with the page. See [modification report](Changes/2026-11-10-002-pinned-navigation-and-media.md).
+
+Requested content targets clear the pinned header (270 logical units portrait, 150 landscape; immersive game retains 80), so automatic navigation does not hide the first song-menu row beneath chrome.
