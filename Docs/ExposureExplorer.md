@@ -13,3 +13,9 @@ Editor/Windows compilation, catalog integrity and muted native tests passed, inc
 Current entry is Home → Sound Experience → Soundscapes. The activity screen is retained internally, with its full-page content and existing classifications. Opening an example enters the shared selected-comparison player; no duplicate soundscape list appears there. See [hub](SoundExperienceHub.md) and [report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
 
 English interface update (2026-11-06): Soundscapes categories, controls, prevention tips and activity descriptions use English. Existing English title/prevention fields are selected explicitly; the 21 English descriptions/classification notes are maintained from Tools/Content/ActivityEnglish.json. Stable IDs, original Spanish descriptions, sources and category overlaps remain. No imported audio or recordings were rewritten. See [design](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).
+
+## Inline comparison — 2026-11-10
+
+Activity description, prevention and source context precede the comparison within the same Soundscapes page. Its Original and Protection 3M 1260 actions toggle playback; menu and video/recommendation links follow. Stop and rewind is hidden for protection comparisons. The shared media transport still owns buffered decoding and navigation cleanup.
+
+The inline comparison retains its published-laboratory FIR illustration/fit/common-gain explanation before the version controls.

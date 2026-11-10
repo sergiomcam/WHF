@@ -1,6 +1,6 @@
 # Hearing Notion feature catalog
 
-Last reviewed: 2026-11-09 (America/Mexico_City).
+Last reviewed: 2026-11-10 (America/Mexico_City).
 
 Use this page to review app contents, find implementation details and trace feature changes. This initial inventory is reconstructed from current source, scene configuration and project notes; it is not a claim that all features were added or tested today. Detailed modification records start in [Modification history](Changes/README.md).
 
@@ -10,34 +10,36 @@ Use this page to review app contents, find implementation details and trace feat
 
 | ID | Feature and entry point | Implementation | Verification and limits | Last updated |
 | --- | --- | --- | --- | --- |
-| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Rounded English Home; Waves action removed | DHWANI/Flappy purple, two turquoise, four yellow module icons; physical device review pending | 2026-11-06 |
-| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages/popups | Shared Home typography, rounded module/modal cards and fields | 94 native checks and actual page/popup captures; physical touch review pending | 2026-11-06 |
-| F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | English activity descriptions/categories and direct audio | 21 source-mapped records and category/GUID checks; native comparison paths; physical listening pending | 2026-11-06 |
-| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Awareness Check | Original Spanish instrument, English surrounding UI | Native revision, 22 answers, completion/recompletion and reset passed; no clinical scoring | 2026-11-06 |
+| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Hardware Back, modal priority and dark footer routes | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
+| F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages/popups | Responsive spacing, soft popups and whole-page footer | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
+| F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | Context then same-page protection comparison | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
+| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Awareness Check | Original Spanish instrument with left-aligned responses | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home/Continue | Partial; general reminders | Activity-add UI retired; no invented personal outcome; no full takeaway runtime retest | 2026-11-05 |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Takeaways reset | Implemented | Draft state and digital gain reset; Explorer reset removed; memory only unless explicit demographic save | 2026-11-05 |
-| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Shared rounded surfaces and balanced module icons | DHWANI receives former Waves purple accent; existing artwork retained | 2026-11-06 |
+| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Dark curved chrome, yellow edges and retained artwork | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Procedural contours remain; visitor control retired | Engine SetReducedMotion retained without UI/OS preference integration | 2026-11-06 |
-| F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Split branches with English controls/metadata | 51 variants tested in native Editor; original recordings and common gain unchanged; device listening pending | 2026-11-06 |
-| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | English controls and four English study summaries | Five decoded videos; study numbers/figures preserved; original-language media/figures identified | 2026-11-06 |
+| F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Inline soundscape toggles; separate hearing examples | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
+| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Stable research stages; Android native full-screen video option | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
 | F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | English presentation; language selector planned | Original Spanish HNAI, original videos/figures and proper titles preserved; not a translated instrument | 2026-11-06 |
-| F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): guided journey | Shared rounded popup, Home font and bold centered Got it | Inactive-popup action lookup corrected; native centering/dismiss checks | 2026-11-06 |
+| F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): guided journey | Rounded guided popup with hardware Back dismissal | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
-| F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Implemented two-round prototype with random soundscape | In-field choices, random playback, Pause and navigation cleanup passed; no causal research claim | 2026-11-05 |
+| F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Larger field; explicit Ready starts noisy round | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 | F-018 | [Optional demographics](#f-018-optional-demographics): startup/About you | Shared Home typography, rounded fields/card | Optional consent/save/delete flow unchanged; synthetic test storage only | 2026-11-06 |
 | F-019 | [Listening setup](#f-019-listening-setup): after About you | Shared popup hierarchy and centered actions | Midpoint/range, -12 dB preview-only trim and explicit playback unchanged | 2026-11-06 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [DHWANI future-work information](#f-022-dhwani-future-work-information): Home | Informational page implemented; analysis planned only | Seven attributed sections; no recording, prediction, API or validation claim | 2026-11-06 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | APK installed on AX85; first smoke test passed | Android 13 ARM64 launch, portrait navigation, user-confirmed original audio/stop and visible video output; full device regression pending | 2026-11-09 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 
 ## Feature details
 
 ### F-001 Home and navigation
+
+Android hardware Back uses the same history action as the screen Back control; open startup/guided modals dismiss first. Dark footer links lead to implemented sections. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
 
 A ninth card opens the attributed DHWANI informational future-work page. Outside Play Mode an Editor-only labelled Home preview displays current cards/artwork without running managers. See [preview](EditorHomePreview.md).
 
@@ -45,15 +47,21 @@ Main.unity uses app-owned panels adapted from Menu Template 1. Home now has one 
 
 ### F-002 Responsive, readable UI
 
+Module portrait headings and introductions use separate vertical positions; dark footer participates in page scrolling. Shared popup cards use a softer 48-unit corner radius. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
+
 Current shared style: module and popup typography, bold action/headings, white rounded cards/form fields and transparent inner viewports follow Home. Selection colors, inputs, route bindings and original wording remain. See [design](HomeRedesign.md).
 
 WholePageScroll wraps each screen as the content of a full-viewport ScrollRect. Header, artwork, module content, Back/Home/Exit and bottom note move together. Inner module scrolling/masks are disabled and long content expands, preserving direct-child lookup bindings. Responsive template layout handles orientation and delayed CanvasScaler viewport updates. Native tests verify actual positions move together; physical touch feel and keyboard usability remain unverified. See [scrolling](PageScrolling.md) and [report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
 
 ### F-003 Exposure Explorer
 
-Within Sound Experience → Soundscapes, three category filters expose 21 source-mapped records, including 18 original/protected soundscapes and three chart-only labels. Visitors inspect activity descriptions and prevention tips, then open an existing comparison. Original/Protection 3M 1260 buttons directly start or stop their version. Add activities, audio-edit/import and Explorer reset controls are removed. Activity selection is no longer collected by this UI. Data provenance and category overlap remain intact; no personal risk estimate is inferred. See [Explorer](ExposureExplorer.md), [media](MediaPlayback.md) and [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
+After category/example selection, context, prevention and source information appear before inline original/protection toggle buttons and menu/video links. Protection comparisons omit Stop and rewind. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
+
+Within Sound Experience → Soundscapes, three category filters expose 21 source-mapped records, including 18 original/protected soundscapes and three chart-only labels. Visitors inspect activity descriptions and prevention tips, then use the comparison at the end of the same page. Original/Protection 3M 1260 buttons directly start or stop their version. Add activities, audio-edit/import and Explorer reset controls are removed. Activity selection is no longer collected by this UI. Data provenance and category overlap remain intact; no personal risk estimate is inferred. See [Explorer](ExposureExplorer.md), [media](MediaPlayback.md) and [corrections report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-004 Spanish HNAI questionnaire
+
+All five original Spanish response labels are left-aligned and retain their numeric values, selection marker and exact wording. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
 
 The 22 supplied Spanish statements use the confirmed five-point agreement scale. Visitors select/revise answers, navigate Anterior/Siguiente, complete all items with Finalizar and review responses. Answers remain local draft state for the visit. No score, clinical result or export is produced. In guided mode HNAI is first; Finalizar completes the questionnaire and enables the outer Continuar button to open Exposure Explorer. The controller loads Resources/Questionnaires/HNAI.es.json and has startup recovery. This full instrument prototype is separate from a future short public quiz and consented research administration. Source: AwarenessCheckManager and AppSession. See [Spanish questionnaire](SpanishQuestionnaire.md).
 
@@ -66,6 +74,8 @@ Currently provides general prevention reminders and a route back to soundscapes,
 In-memory state includes activity selections, sound context and draft HNAI answers/completion. Reset replaces the session and triggers navigation/UI reset subscribers. Returning Home preserves the current visit. Visitor state has no disk persistence, account, automatic analytics or remote participant storage. The separately authored local audio library persists across visits; it contains content assignments, not participant answers. Source: SessionManager, AppSession and module reset subscriptions. See [Architecture](AppArchitecture.md).
 
 ### F-007 Theme and artwork
+
+Procedural dark header/footer bands have yellow curved edges; existing headphones and balanced module accents remain. Footer labels use real destinations rather than implying an unimplemented analysis tool. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
 
 Current approved style: [rounded Home and English presentation](HomeRedesign.md), with four yellow/two turquoise/two purple module accents, reusable rounded controls and code-drawn icons. Existing headphone artwork and source media are retained.
 
@@ -82,6 +92,8 @@ The previous low-opacity fixed-position sprite drift has been replaced by two pr
 Wave graphics now explicitly require RectTransform/CanvasRenderer, create the renderer before the graphic, and repair missing renderers during initialization and activation. This addresses the reported clipping exception; Unity runtime confirmation is pending. See [renderer fix report](Changes/2026-10-19-010-wave-canvasrenderer-fix.md).
 
 ### F-009 Sound Experience
+
+Soundscape original/protection controls now live at the end of the Explorer activity details; the same buffered transport and stop-on-navigation behavior remain. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
 
 **Current navigation:** the hub splits Soundscapes and Hearing examples; the player no longer repeats the soundscape catalog. See [hub](SoundExperienceHub.md).
 
@@ -104,6 +116,8 @@ Explorer passes the active activity ID and the destination displays its descript
 WHIS-DTVF is the selected hearing-loss authoring method. An offline MATLAB wrapper calls pinned WHIS v302/GCFB v234 reference code with explicit seven-point dB HL, compression health and calibration assumptions. It saves review-pending source/processed pairs and local processing metadata, handles mono/stereo without autoplay, and rejects unsupported input, clipping and overwrites. Reference checkouts/output are local and ignored. MATLAB numerical checks and their actual status are recorded in the [report](Changes/2026-10-20-002-whis-dtvf-offline-processing.md); this does not establish perceptual/device validation or Unity playback. See [steps, sources and use](WHIS.md).
 
 ### F-010 Hearing Health and sources
+
+Research stage selectors occupy two stable rows above layout-managed summaries and aspect-preserving figures. Android video cards additionally offer full-screen native playback with phone player controls; native playback starts from the beginning and uses phone media volume. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
 
 Current video UX: five topic cards each contain a frame with Play/Pause and Stop directly below it. White RawImage tint replaces black modulation that hid decoded pictures even while playing. No separate selection step; one shared decoder renders only the explicitly played card. Scrolling does not autoplay. See [media playback](MediaPlayback.md) and [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).
 
@@ -131,6 +145,8 @@ Spanish HNAI, Spanish Explorer activity details and bilingual-capable content fi
 
 ### F-015 Guided screen introductions
 
+Guided/startup modal dismissal participates in hardware Back routing, with rounded card surfaces and retained consent/input behavior. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
+
 Entendido now explicitly centers its TMP label with zero margins; its inherited template alignment no longer offsets the text. See [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).
 
 Six Spanish popups briefly explain the purpose, controls and limitations of each guided stage. Each appears once per stage per guided run; Back does not repeat a dismissed introduction, and restarting the journey/reset allows them again. Entendido or Escape dismisses the modal. The popup blocks underlying controls and focuses its dismiss button. Free exploration does not show these popups. Source: GuidedJourney and GuidedExperienceController; see [Guided experience](GuidedExperience.md). The Noise Meter remains informational; sound playback is implemented separately. Fixed a user-reported CanvasGroup MissingComponentException by using a Unity-aware null check before adding the component. Popup rendering, keyboard/touch behavior and this runtime fix still require Unity verification.
@@ -140,6 +156,8 @@ Six Spanish popups briefly explain the purpose, controls and limitations of each
 Visitor assignment/import controls are retired as of 2026-11-05. LocalSoundSourceLibrary, LocalAudioFilePicker and import-rule code remain available as authoring infrastructure; existing files and manifests are preserved and still survive session reset. This change does not delete imported content or approve it for playback/distribution. No new visitor upload path is offered. See [catalog](SoundscapeCatalog.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
 ### F-017 Flappy Cloud attention game
+
+The fitted playfield bounds are larger without changing sprite ratios. Continue displays a notice that waits indefinitely for its Ready button; no countdown starts noisy play. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
 
 Tap/Space starts and flaps; a separate Pause button pauses. Two seeded rounds retain varied obstacles/stars, +10 blue/−10 red scoring, progressive speed and a maximum 180 seconds each. At first game over, Try again and Continue appear inside the playfield, with Continue below. Try again restarts quiet play; Continue opens a six-second notice then loads one randomly chosen available original Explorer soundscape for round 2. It loops at the common listening gain, pauses on interruption and stops/releases on navigation/reset/game over. Missing audio shows an explicit unavailable notice and blocks sound-round startup. A large scrollable final panel compares both actual points, gaps and times and gives a point difference, sourced focus/cognitive-load/stress/fatigue context, and explicit Retry/Exit/Hearing Health next steps. Final Retry restarts both rounds. Scores are temporary/descriptive: practice, fatigue and chance prevent causal attribution to noise. Compilation/model tests and muted native action/playback/cleanup checks passed; physical listening and human difficulty remain unverified. See [game guide](FlappyCloud.md) and [report](Changes/2026-11-05-002-direct-listening-and-noise-basics.md).
 
@@ -168,6 +186,8 @@ A Home page describes proposed inputs, computed indicators, model estimates, sou
 An Editor-only transient Canvas mirrors the complete Home with artwork and current cards while Main is stopped. It clears actions, labels preview status, is removed before Play and excluded from builds/saving. Actual stopped captures are separate from runtime verification. See [preview guide](EditorHomePreview.md).
 
 ### F-024 Android personal-test export
+
+Updated portable Android source is rebuilt separately from the open desktop project; final APK/device evidence appears in the task report. See [2026-11-10 correction report](Changes/2026-11-10-001-android-interaction-corrections.md).
 
 A separate portable project contains current source and all media with no Windows dependency in its catalog. Unity 2022.3.62f2 and its Android toolchain are installed; the migrated copy passed 94 native Editor checks. A personal IL2CPP ARM64/ARMv7 APK built successfully, its signature verifies, and all 57 packaged media hashes match. Preparation uses ASCII media paths to avoid the diagnosed archive-encoding failure and refuses overwrites. The open desktop project remains on its older Editor. On 2026-11-09 the verified APK installed and launched on AX85/Android 13. Portrait navigation and page swipe worked, the user confirmed Airport original audio/stop, and educational video frames rendered. Full media, game, orientation, interruption, offline and performance verification remain pending. See [Android build and installation steps](AndroidDeployment.md).
 
@@ -218,3 +238,11 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-11-06 | F-001, F-002, F-007, F-008, F-009, F-010, F-015, F-018, F-019, F-022, F-023, F-024 | Remove Waves action, purple DHWANI icon, shared module/popup typography and rounded surfaces/fields; original data/audio preserved | [2026-11-06-007](Changes/2026-11-06-007-shared-window-style.md) |
 
 | 2026-11-09 | F-024 | Install unchanged APK on AX85 and record first physical smoke test; full regression and category wrapping remain open | [2026-11-09-001](Changes/2026-11-09-001-ax85-device-smoke-test.md) |
+
+## Android interaction corrections — 2026-11-10
+
+F-001/F-002: hardware Back routing and shared dark chrome; F-003/F-009: inline protection comparison follows activity information; F-004: left-aligned Spanish response labels; F-007/F-015: rounded surfaces and reference-inspired bands; F-010: stable research layout and native Android full-screen video entry; F-017: larger field and explicit noisy-round Ready; F-024: updated Android source under validation. Source compilation, 95 native checks, APK signature/media verification and targeted final AX85 retest passed. Full media, rotation and interruption coverage remains limited; see the report.
+
+| Date | Affected IDs | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-10 | F-001, F-002, F-003, F-004, F-007, F-009, F-010, F-015, F-017, F-024 | Android interaction, inline media, research layout and dark chrome corrections | [2026-11-10-001](Changes/2026-11-10-001-android-interaction-corrections.md) |

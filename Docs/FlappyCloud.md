@@ -67,3 +67,7 @@ Background sound can distract attention and make a task feel demanding; cognitiv
 Primary/official sources checked 2026-11-05: [WHO Europe Noise](https://www.who.int/europe/health-topics/noise) for general performance/sleep impacts; [NIOSH noise and stress](https://www.cdc.gov/niosh/bulletin/2018/noise-effects.html) for workplace stress/tiredness context; [NIOSH Fatigue and Work](https://www.cdc.gov/niosh/fatigue/about/) for fatigue and concentration; [experimental adult noise study](https://pubmed.ncbi.nlm.nih.gov/27157685/) for task/person moderation. These broader contexts do not validate this brief educational game or establish effects in its visitors.
 
 See [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).
+
+## Phone interaction correction — 2026-11-10
+
+Playfield bounds expand from 86% × 50% to 93% × 59% of the page slot while preserving the .85 aspect ratio and original sprite proportions. Continue after round one displays a notice with a Ready button and waits indefinitely; taps outside that button do not start the sound round. Ready loads a random original soundscape and starts round two. There is no transition countdown. The regression waits beyond the former countdown before pressing Ready and checks playback promptly to avoid a test-only unattended collision.

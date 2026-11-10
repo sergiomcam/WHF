@@ -67,3 +67,11 @@ Install/launch passed on Android 13 ARM64, 720 × 1640. Actual portrait Home/HNA
 | Bug ID | Trigger | Observation | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | QA-005 | Soundscapes category row on AX85 portrait | Environmental word splits across two lines inside button | Open cosmetic layout issue; no source change in this task | Local device screenshot; [report](Changes/2026-11-09-001-ax85-device-smoke-test.md) |
+
+## Android interaction correction checks — 2026-11-10
+
+Verify physical Back dismisses the top modal or follows app history; HNAI choices remain left-aligned after selection/re-entry; switch all four research selectors without button movement or summary/figure overlap; check inline comparison after description/prevention/source and absence of its rewind button; check native full-screen video Play/Pause/seek/Back with low phone volume and inline fallback; wait at least seven seconds at Flappy Ready before starting; check dark header/footer and all links in portrait and landscape. See [report](Changes/2026-11-10-001-android-interaction-corrections.md).
+
+Targeted AX85 retest: first corrected APK installed in place; startup modal Back, route Back, all research selectors, separated figures, inline controls, visible native video player and eight-second Ready wait/final feedback passed. Native video controls can consume the first Back by hiding themselves. Automated media-key pause was not conclusively verified; use the native on-screen control for the final touch test. The final refinement build is tracked in the task report. No profile saved/deleted.
+
+Final refinement retest passed on AX85: correct source-figure proportions; left-aligned five HNAI responses; reachable game Pause/Resume; centered Ready waits; native touch Pause shows Play icon; no crash/Unity exception in checked app log filters. Hardware media-key and precise seek behavior remain unconfirmed. Phone left at Home. All 95 final native checks passed. Earlier Environmental wrapping remains open.

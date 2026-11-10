@@ -42,3 +42,9 @@ Unity Play Mode and device/visual interaction are not verified. Check all four t
 ## Current English presentation — 2026-11-06
 
 ResearchSourcesController now loads Resources/Research/ResearchStages.en.json. ResearchStages.es.json remains the source-language record. The four study IDs, figure bindings and numeric values match; uncertainty and cohort distinctions remain explicit. Original figures keep their language. Tools/Tests/validate_english_content.py checks numeric-value multisets, study identities and figures; source links/claims remain those already documented. See [English UI guide](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).
+
+## Stable stage layout — 2026-11-10
+
+Four selectors occupy two fixed-height rows anchored to the top of the module; selection no longer uses proportional positions in an expanding panel. Summaries use measured wrapped-text layout, and figures use width-derived aspect-preserving heights inside a vertical stack. Whole-page expansion includes the selector offset. Research wording, numbers, figure paths and provenance remain unchanged.
+
+Research PNG imports explicitly retain non-power-of-two source dimensions; original bytes and GUIDs are preserved. This prevents texture import from stretching charts before aspect-based layout.

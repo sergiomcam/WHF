@@ -11,3 +11,9 @@ Activity details and selected audio can request ScrollTo on the outer page. Root
 Native checks compare header, Back and bottom-note positions before/after scrolling, exercise wheel and drag, and capture both orientations. Real touchscreen feel, long-page usability and keyboard access still require device review. See [task report](Changes/2026-11-05-004-unified-sounds-and-whole-pages.md).
 
 Rounded Home update (2026-11-06): Home overflow now includes the lower Takeaways, Waves and footer rather than compressing all cards. Responsive sizing watches logical Canvas dimensions as well as pixel dimensions. Native captures settle scaler/layout before reflow and distinguish top from bottom; physical device swipe feel remains pending. See [design](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).
+
+## Research and footer expansion — 2026-11-10
+
+Whole-page sizing includes the research selector offset and a footer allowance. The App footer participates in lower-page placement. Research summaries/figures remain layout-managed; navigation and notes remain part of the scrolling page.
+
+Flappy gameplay has no artificial page-height tail; Pause/Ready/Retry remain within the viewport, while long result text may expand its page when needed.

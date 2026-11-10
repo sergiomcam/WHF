@@ -20,3 +20,7 @@ Guided mode now begins with HNAI. After all 22 answers, press Finalizar, then th
 ## English presentation — 2026-11-06
 
 Home now says Awareness Check. Surrounding prompts, domain headings and navigation are English; original Spanish statements and response labels remain unchanged and are explicitly identified. Next/Previous, Finish, Review answers and Continue/Exit replace the former Spanish UI labels. Native regression now exercises revision, all 22 answers, completion invalidation/recompletion and visitor reset. This is not an English translation or new validation of HNAI. See [report](Changes/2026-11-06-006-rounded-english-interface.md).
+
+## Response alignment — 2026-11-10
+
+The five HNAI response buttons use left-aligned labels under shared styling. Numeric mappings, original Spanish text, selection marker and questionnaire behavior are unchanged.
