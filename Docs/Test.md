@@ -59,3 +59,11 @@ Patched-Editor migration: the separate AndroidPatched-2026-11-06 copy passed all
 2026-11-06 shared styling: Shared-window checks now verify absence of Waves, the new 4 yellow/2 turquoise/2 purple module palette, matching Home fonts in module headings and all three popup families, nonblocking rounded surfaces and rounded TMP input target graphics. Retain HNAI revision/reset, synthetic consent save/delete, media lifecycle and game checks; inspect actual modal/page renders in both orientations. See [report](Changes/2026-11-06-007-shared-window-style.md).
 
 Text-encoding regression: validate_english_content.py now rejects known mojibake markers in app-owned runtime/Editor C# sources. Use explicit UTF-8 when editing and visually check labels/durations/separators in native renders. A passing compiler does not establish correct text encoding. See [report](Changes/2026-11-06-007-shared-window-style.md).
+
+## AX85 physical smoke test — 2026-11-09
+
+Install/launch passed on Android 13 ARM64, 720 × 1640. Actual portrait Home/HNAI/sound hub/activity navigation and page swipe passed. User confirmed Airport original audio playback and stop; nonblack Health effects and Hearing loss video output captured. No profile saved/deleted. Full media, game, rotation, startup/volume, interruption and offline checks remain pending.
+
+| Bug ID | Trigger | Observation | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| QA-005 | Soundscapes category row on AX85 portrait | Environmental word splits across two lines inside button | Open cosmetic layout issue; no source change in this task | Local device screenshot; [report](Changes/2026-11-09-001-ax85-device-smoke-test.md) |

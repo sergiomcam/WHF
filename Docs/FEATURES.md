@@ -1,6 +1,6 @@
 # Hearing Notion feature catalog
 
-Last reviewed: 2026-11-06 (America/Mexico_City).
+Last reviewed: 2026-11-09 (America/Mexico_City).
 
 Use this page to review app contents, find implementation details and trace feature changes. This initial inventory is reconstructed from current source, scene configuration and project notes; it is not a claim that all features were added or tested today. Detailed modification records start in [Modification history](Changes/README.md).
 
@@ -33,7 +33,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [DHWANI future-work information](#f-022-dhwani-future-work-information): Home | Informational page implemented; analysis planned only | Seven attributed sections; no recording, prediction, API or validation claim | 2026-11-06 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | APK built; phone verification pending | Patched Editor regression: 94 checks; signed 1.44 GB APK and 57 in-package hashes verified; no device connected | 2026-11-06 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | APK installed on AX85; first smoke test passed | Android 13 ARM64 launch, portrait navigation, user-confirmed original audio/stop and visible video output; full device regression pending | 2026-11-09 |
 
 ## Feature details
 
@@ -169,7 +169,7 @@ An Editor-only transient Canvas mirrors the complete Home with artwork and curre
 
 ### F-024 Android personal-test export
 
-A separate portable project contains current source and all media with no Windows dependency in its catalog. Unity 2022.3.62f2 and its Android toolchain are installed; the migrated copy passed 94 native Editor checks. A personal IL2CPP ARM64/ARMv7 APK built successfully, its signature verifies, and all 57 packaged media hashes match. Preparation uses ASCII media paths to avoid the diagnosed archive-encoding failure and refuses overwrites. The open desktop project remains on its older Editor. Android extraction, installation, listening, touch and performance remain unverified because the phone is not connected. See [Android build and installation steps](AndroidDeployment.md).
+A separate portable project contains current source and all media with no Windows dependency in its catalog. Unity 2022.3.62f2 and its Android toolchain are installed; the migrated copy passed 94 native Editor checks. A personal IL2CPP ARM64/ARMv7 APK built successfully, its signature verifies, and all 57 packaged media hashes match. Preparation uses ASCII media paths to avoid the diagnosed archive-encoding failure and refuses overwrites. The open desktop project remains on its older Editor. On 2026-11-09 the verified APK installed and launched on AX85/Android 13. Portrait navigation and page swipe worked, the user confirmed Airport original audio/stop, and educational video frames rendered. Full media, game, orientation, interruption, offline and performance verification remain pending. See [Android build and installation steps](AndroidDeployment.md).
 
 ## Feature change history
 
@@ -216,3 +216,5 @@ Future feature changes append an entry here and update the current inventory/det
 | 2026-11-06 | F-001, F-002, F-003, F-004, F-007, F-008, F-009, F-010, F-014, F-015, F-023, F-024 | Approved rounded English presentation, balanced icons, subtle background, HNAI fidelity/revision/reset checks and rebuilt personal APK | [2026-11-06-006-rounded-english-interface](Changes/2026-11-06-006-rounded-english-interface.md) |
 
 | 2026-11-06 | F-001, F-002, F-007, F-008, F-009, F-010, F-015, F-018, F-019, F-022, F-023, F-024 | Remove Waves action, purple DHWANI icon, shared module/popup typography and rounded surfaces/fields; original data/audio preserved | [2026-11-06-007](Changes/2026-11-06-007-shared-window-style.md) |
+
+| 2026-11-09 | F-024 | Install unchanged APK on AX85 and record first physical smoke test; full regression and category wrapping remain open | [2026-11-09-001](Changes/2026-11-09-001-ax85-device-smoke-test.md) |

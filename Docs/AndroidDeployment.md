@@ -1,6 +1,6 @@
 # Android personal test build
 
-Updated 2026-11-06 for the user's Acer AX85 / Android 13. A real APK has been built and verified. The phone was not connected, so installation and physical-device behavior remain pending.
+Updated 2026-11-09: the verified APK is installed on the Acer AX85 / Android 13. Launch, portrait navigation, audible Airport original playback/stop and visible educational video output passed a first phone smoke test. Full device regression remains pending. Earlier build records below retain their original dates.
 
 ## Verified build
 
@@ -52,3 +52,9 @@ See [initial preparation report](Changes/2026-11-06-001-editor-dhwani-android.md
 The current APK includes the rounded English presentation and balanced icon palette. Native regression passed 94 checks; actual top/lower-page/stopped renders were reviewed. The previous APK is retained locally as Builds/Android/HearingNotion-before-rounded-ui.apk inside the patched project. Signature v1/v2 and all 57 media hashes verify for the new APK. Original Spanish HNAI and original-language media/figures remain identified exceptions. Phone verification is still pending. See [design](HomeRedesign.md) and [report](Changes/2026-11-06-006-rounded-english-interface.md).
 
 Shared-window build update (2026-11-06): current APK removes the Waves button, makes DHWANI purple and shares Home typography/rounded cards and fields across modules/popups. Final 94-check native run and stopped renders passed; corrected UTF-8 labels were inspected. Signature v1/v2 and all 57 media hashes verify. The preceding APK is retained as HearingNotion-before-shared-windows.apk inside the build output folder. Device checks remain pending. See [report](Changes/2026-11-06-007-shared-window-style.md).
+
+## First physical-device test — 2026-11-09
+
+USB-authorized AX85 reports Android 13, ARM64 and 720 × 1640. The unchanged verified APK installed successfully with `adb install -r`; package version/code 1 launched. Home, original Spanish HNAI, sound hub, Airport details and page swipes were inspected on-device. The user confirmed original Airport sound plays and stops; Health effects and Hearing loss videos produced visible nonblack frames. No profile was saved or deleted.
+
+Full game, rotation, all media, interruptions, volume setup and offline isolation remain pending. Environmental category text wraps awkwardly in its button. Testing paused when concurrent exploration changed screen positions. See [device smoke-test report](Changes/2026-11-09-001-ax85-device-smoke-test.md).
