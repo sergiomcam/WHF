@@ -10,7 +10,7 @@ Use this page to review app contents, find implementation details and trace feat
 
 | ID | Feature and entry point | Implementation | Verification and limits | Last updated |
 | --- | --- | --- | --- | --- |
-| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Hardware Back, modal priority and pinned footer routes | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
+| F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Hardware Back, modal priority and pinned footer routes | Compiled; 100 native checks and authentic renders passed; Android build/device verification recorded in the report | 2026-11-11 |
 | F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages/popups | Responsive body, soft popups and pinned header/footer | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
 | F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | Context then same-page protection comparison | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 | F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Awareness Check | Original Spanish instrument with left-aligned responses | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
@@ -27,13 +27,14 @@ Use this page to review app contents, find implementation details and trace feat
 | F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): guided journey | Rounded guided popup with hardware Back dismissal | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Taller field, in-arena pause and mixed moving penguin pairs | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
-| F-018 | [Optional demographics](#f-018-optional-demographics): startup/footer You | Shared Home typography, rounded fields/card | Optional consent/save/delete flow unchanged; synthetic test storage only | 2026-11-06 |
-| F-019 | [Listening setup](#f-019-listening-setup): after About you | Shared popup hierarchy and centered actions | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
+| F-018 | [Optional demographics](#f-018-optional-demographics): startup/footer You | Content-fitted scrolling form, collapsed empty feedback | Consent/save/delete unchanged; native/phone layout review in progress | 2026-11-10 |
+| F-019 | [Listening setup](#f-019-listening-setup): after About you | Shared popup hierarchy and centered actions | Compiled; 100 native checks and authentic renders passed; Android build/device verification recorded in the report | 2026-11-11 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
-| F-022 | [DHWANI future-work information](#f-022-dhwani-future-work-information): Home | Informational page implemented; analysis planned only | Seven attributed sections; no recording, prediction, API or validation claim | 2026-11-06 |
+| F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Compiled; 100 native checks and authentic renders passed; Android build/device verification recorded in the report | 2026-11-11 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Compiled; 100 native checks and authentic renders passed; Android build/device verification recorded in the report | 2026-11-11 |
+| F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Full-screen inert Dwani views with Continue/Back | Compiled; 100 native checks and authentic renders passed; Android build/device verification recorded in the report | 2026-11-11 |
 
 ## Feature details
 
@@ -262,3 +263,23 @@ F-001/F-002: footer callbacks rebound on cloned screens and content-sized lower-
 | Date | Affected IDs | Change | Report |
 | --- | --- | --- | --- |
 | 2026-11-10 | F-001, F-002, F-009, F-010, F-017, F-019, F-024 | Clone-safe footer, compact lower spacing, authored media levels and larger moving-pair game | [2026-11-10-003](Changes/2026-11-10-003-footer-volume-and-flappy.md) |
+
+### F-025 DHWANI interface mockups
+
+Home → Hearing Notion 2.0 → Dwani opens full-screen reference interfaces 3 Audio Upload, 4 Psychoacoustic Indicators and 5 Sound Analysis. Continue and Back are the active mockup navigation controls; the third Continue returns to the existing sourced overview. Reentry/reset returns to the three-button 2.0 hub. All curves, metrics and predicted-looking labels are static illustrations explicitly marked MOCKUP ONLY; they are not personal results. No file picker, microphone, upload, saving, analysis, prediction, network or new permission is implemented. See [DHWANI guide](DhwaniFuture.md) and [report](Changes/2026-11-10-004-compact-about-you-and-dhwani-mockups.md).
+
+## Compact About you and DHWANI preview — 2026-11-10
+
+F-018 removes fixed empty message/footer space through content-fit layout. F-022 retains the existing attributed future overview after the preview. F-025 adds the requested inert three-screen sequence. F-024 records the personal Android rebuild/device verification in the report.
+
+| Date | Affected IDs | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-10 | F-002, F-018, F-022, F-024, F-025 | Compact demographic form and clearly inert DHWANI interfaces 3/4/5 | [2026-11-10-004](Changes/2026-11-10-004-compact-about-you-and-dhwani-mockups.md) |
+
+## Hearing Notion 2.0 hub — 2026-11-11
+
+F-001/F-022: the Home entry is renamed Hearing Notion 2.0, with Multilanguage validation, Dwani and Music for hearing loss. The language/music branches are informational only; Dwani opens F-025 full-screen mockups. F-025 uses full-Canvas modal blocking and Back/Continue navigation, with no recording or analysis. F-019 adds headphone placement guidance in startup popup 2. F-024 tracks the personal build/device outcome. The compact About you work from the previous task is retained.
+
+| Date | Affected IDs | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-11 | F-001, F-019, F-022, F-024, F-025 | 2.0 hub, full-screen Dwani and headphone placement guidance; complete pending documentation | [2026-11-11-001](Changes/2026-11-11-001-hearing-notion-2-hub.md) |

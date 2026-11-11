@@ -6,7 +6,7 @@ All fields are optional. Age, if supplied, must be an integer from 0 to 120. Ski
 
 The notice explains purpose, local-only saving, computer-owner access, retention until deletion and possible external backups. No network transfer is implemented. Delete saved profile removes that local file and current session demographic state, but cannot remove copies in OS/cloud backups. No retention duration or institutional approval is invented. Do not use this convenience profile as consent for a formal study or recruit minors without appropriate procedures.
 
-The legacy preference flag records dismissal only; it no longer suppresses the form at startup and contains no answers. About you on Home reopens the form to review the notice or delete the local profile. Saved values are not automatically reloaded into the form or linked to HNAI responses. Session reset clears temporary demographics while leaving the explicitly saved local profile until deletion. Optional research export and telemetry remain absent.
+The legacy preference flag records dismissal only; it no longer suppresses the form at startup and contains no answers. You in the footer reopens the form to review the notice or delete the local profile. Saved values are not automatically reloaded into the form or linked to HNAI responses. Session reset clears temporary demographics while leaving the explicitly saved local profile until deletion. Optional research export and telemetry remain absent.
 
 Source: DemographicPromptController, DemographicProfile, AppSession and explicit AppManager startup. Review synthetic-value save/delete and both orientations in [Test.md](Test.md). Physical storage/permissions vary by device; the app shows an error if saving or deletion fails.
 
@@ -15,3 +15,7 @@ Source: DemographicPromptController, DemographicProfile, AppSession and explicit
 Current sequence: About you always opens first, including after earlier dismissals. Continue/Skip then opens listening setup. The scrollable form also accepts drag/wheel gestures from its surrounding overlay through FullScreenSwipeSurface. No new storage, consent scope or fields. See [correction report](Changes/2026-11-05-003-results-video-and-swipe.md).
 
 2026-11-06 shared styling: About you now shares Home typography, rounded white card/field surfaces, neutral borders and bold action labels. Optional fields, validation, Skip, explicit local-save consent and deletion are unchanged. The nested scroll viewport is transparent inside its card; synthetic test storage remains isolated. See [report](Changes/2026-11-06-007-shared-window-style.md).
+
+## Compact content flow — 2026-11-10
+
+The policy text, fields, optional validation message and two action rows share one scrolling content column. The empty message is collapsed rather than reserving a blank strip; action rows use fixed 112-unit preferred heights with 12-unit spacing rather than expanding into a large footer. The centered panel fits its measured content up to 90% of the available height; smaller screens scroll the complete form, including actions. Cached references and size-change checks avoid forced layout rebuilds every frame. All five optional fields, consent/save/delete behavior, storage path, startup order and synthetic-test boundary are unchanged. See [report](Changes/2026-11-10-004-compact-about-you-and-dhwani-mockups.md).

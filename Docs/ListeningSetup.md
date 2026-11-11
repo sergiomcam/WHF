@@ -21,3 +21,7 @@ The preview still requires explicit Play and retains its separate -12 dB trim. D
 ## Preserve authored multimedia levels — 2026-11-10
 
 The legacy temporary AppSession.ListeningGain field now stores preview volume only; its range/midpoint and preview-only -12 dB trim remain. Inline music/soundscapes/video and game background sound use AudioSource.volume = 1 during playback, matching native Android video. No runtime normalization or media-file rewriting is introduced. The original/protection/WHIS differences are preserved. Stop/pause/navigation still silence owned output. Device media volume remains under the visitor’s control; the preview does not calibrate broadband media. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).
+
+## Headphone placement — 2026-11-11
+
+The second startup popup (after About you) now recommends placing headphones comfortably over both ears, matching L/R markings, following the manufacturer’s instructions for earbuds, and beginning at low device volume. The L/R/manufacturer wording is an application setup instruction; WHO’s [safe-listening guidance](https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening) supports using well-fitted headphones and keeping volume down. This is not fit testing, acoustic calibration or a guarantee of protection. Preview-only slider range/midpoint, -12 dB trim, optional playback and unchanged multimedia gain remain intact. See [report](Changes/2026-11-11-001-hearing-notion-2-hub.md).

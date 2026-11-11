@@ -76,3 +76,13 @@ Latest task APK: 1,444,604,960 bytes; SHA-256 `e867b1283786a0b6dc081b60909fbf312
 The next personal-test build includes clone-safe footer actions, content-sized bottom spacing, unity-gain media and a larger moving-pair Flappy game. Build, integrity and actual device outcomes are recorded in the task report; earlier APK hashes above are historical. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).
 
 Latest correction APK (2026-11-10-003): 1,444,605,149 bytes; SHA-256 `338a5173cc06ba956b5bb5151882223925e119742856a19dbbc879f8119860d1`. Patched Unity build, v1/v2 signatures, 57 media hashes and native video class passed. Pre-task backup hash matches the earlier verified delivery APK. Installation/device evidence is in the linked report.
+
+## Compact form and inert DHWANI preview — 2026-11-10
+
+The app-owned update adds a content-fitted demographic form and three clearly labelled reference mockups. No new recording, analysis, upload, permissions or participant data path is added. Actual APK integrity/signature/installation/device results are recorded in [the task report](Changes/2026-11-10-004-compact-about-you-and-dhwani-mockups.md); earlier APK hashes above are historical.
+
+Latest compact-form/mockup APK: 1,444,628,871 bytes; SHA-256 `2c5fe4296c93f537addf5c20d76564912c63632bf0434a104071ca4174531093`. Patched Unity build, v1/v2 signatures, all 57 media hashes, retained native video class and verified pre-task backup passed. The task report records installation/device checks.
+
+## Hearing Notion 2.0 hub update — 2026-11-11
+
+Personal-test APK: 1,444,636,734 bytes; SHA-256 `d37085ac322299b61cef13133c3b19f567915a8ea8d465682505a6d25423f3ae`. Patched Unity build, v1/v2 signatures, all 57 media hashes, retained native video class and pre-task backup passed. APK version remains the personal-test version; 2.0 names the future-work section. Installation and physical checks are recorded in [the task report](Changes/2026-11-11-001-hearing-notion-2-hub.md).

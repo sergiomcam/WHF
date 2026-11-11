@@ -15,3 +15,7 @@ Reviewed 2026-11-05. Original downloaded pages/PDFs and retrieval-records.json a
 ## Maintenance
 
 Tools/Tests/fetch_who_references.py re-downloads only these official WHO origins and records failures rather than substituting secondary material. Inspect new versions, supporting passages, publication dates and rights before changing app claims. Numeric values above are source-specific reference points, not acoustic measurements from Hearing Notion. Preserve units and averaging periods; the future microphone module remains deferred. Do not embed WHO logos or imply endorsement. See [ETHICS.md](../ETHICS.md) for source-veracity procedures.
+
+## Headphone placement in startup popup 2 — 2026-11-11
+
+WHO’s [Safe listening Q&A](https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening), web-checked 2026-11-11, recommends well-fitted headphones and keeping volume down. The app adds practical L/R and manufacturer-fitting instructions; this is not a fit test, calibration or protection claim. This check did not create a new archived download or retrieval hash. See [implementation report](../Changes/2026-11-11-001-hearing-notion-2-hub.md).

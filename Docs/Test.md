@@ -83,3 +83,11 @@ Check that header/footer world positions remain unchanged after wheel/swipe and 
 ## Footer, gain and moving-game regression — 2026-11-10
 
 From the cloned SoundHub, invoke all five footer actions and test actual phone touch hit targets. At the bottom of short and long pages, measure note-to-footer spacing (28 logical units) and confirm content remains reachable. Muted transport checks verify gain 1 for media and game while the preview keeps its separate slider/trim. Verify Pause/Resume is inside the playfield, motion freezes/resumes, upper/lower penguins move together without changing the gap, and 38-unit star values remain readable on device. Keep human difficulty, acoustic output and all-device coverage separate from model checks.
+
+## Compact form and inert preview QA — 2026-11-10
+
+Measure the privacy-text/action gap after text wrapping; blank feedback must be inactive, action rows must not expand and all actions must remain reachable by form scrolling. Preserve synthetic-only save/delete tests and startup ordering. Check reference interfaces 3 → 4 → 5 → overview, reentry/reset to 3, exactly one active Continue in the mockup and no Slider/InputField/AudioSource or operational upload/record/save controls. Capture genuine portrait/landscape screens and inspect labels/Continue visibility. For capture-time viewport changes, explicitly tick the form sizing controller on Application Managers (it is outside Canvas), then settle text/layout; this is separate from normal per-frame runtime behavior.
+
+## Hearing Notion 2.0 continuation — 2026-11-11
+
+Test all three hub buttons, planned-only labels, unchanged Spanish HNAI, full-Canvas mockup bounds in both orientations, underlying modal blocking, inert Select/Record controls, Continue 3/4/5/overview, on-screen/phone Back and return to the hub. Verify the second startup popup shows headphone placement text without clipping while preview settings stay unchanged. Keep prior incomplete physical checks separate from new verified evidence. See [report](Changes/2026-11-11-001-hearing-notion-2-hub.md).

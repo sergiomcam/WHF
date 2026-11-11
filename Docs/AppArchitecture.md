@@ -170,3 +170,11 @@ NavigationManager owns Escape/Android Back dispatch with startup/guided modal pr
 ## Footer, source volume and game update — 2026-11-10
 
 ScreenChrome rewires footer UnityEvents on every application, including cloned SoundHub roots. WholePageScroll measures the note/content lower edge and reserves the pinned footer plus 28 logical units instead of a fixed tail. MediaExperienceController and game output use unity source gain; legacy ListeningGain now affects only the optional tinnitus preview. Flappy shares each dynamic pair’s simulated gap center between collision and rendering and keeps Pause/Resume inside the arena. No scene, source-media, dependency or persistence schema changes are introduced. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).
+
+## Compact form and inert DHWANI preview — 2026-11-10
+
+DemographicPromptController now owns one content-sized scrolling form with collapsed empty feedback and non-expanding action rows. It preserves the existing local-save consent/storage contract. DhwaniFutureController explicitly initializes DhwaniMockupController on an app-owned preview root; three Continue-only states lead to the unchanged overview. DhwaniMockupGraphic is decorative, not a signal-processing component. There is no new ScreenId, data schema, service, permission or dependency. WindowStyle preserves the isolated mockup palette; normal module/footer behavior is unchanged. See [report](Changes/2026-11-10-004-compact-about-you-and-dhwani-mockups.md).
+
+## 2.0 hub and full-screen preview — 2026-11-11
+
+The legacy DhwaniFuture route presents Hearing Notion 2.0. DhwaniMockupController owns the hub’s future-work sections and a separate full-Canvas preview root, initialized by DhwaniFutureController. ModalScreenScope blocks underlying ScreenViews while the overlay is visible; exit, navigation and reset release it. NavigationManager dispatches Back to the current future-work section before route history. No new route ID, schema or dependency is introduced. See [report](Changes/2026-11-11-001-hearing-notion-2-hub.md).
