@@ -92,3 +92,7 @@ Personal-test APK: 1,444,636,734 bytes; SHA-256 `d37085ac322299b61cef13133c3b19f
 Personal APK: 1,444,995,129 bytes; SHA-256 `472e859c49abe9165ec76b32e2a5f6103293983cccaed59113e470a95f3c46d4`. Final 100-check native regression and portrait/landscape render review passed. IL2CPP build, v1/v2 signatures, all 57 packaged media hashes/sizes and native video DEX class passed; the two existing META-INF signature-coverage warnings remain. Previous verified APK is retained as HearingNotion-before-20261111-002.apk, hash `d37085ac322299b61cef13133c3b19f567915a8ea8d465682505a6d25423f3ae`. See [current delivery/device results](Changes/2026-11-11-002-reference-frames-and-startup.md).
 
 The corrected APK installed in place successfully on AX85. After user unlock, targeted startup, four-page Dwani, scroll, inert controls and Back checks passed; see the report.
+
+## Enhanced artwork and video posters — 2026-11-12
+
+Personal APK: 1,448,859,399 bytes; SHA-256 `b285f5599640a1cf5297fe14ecc478d16317cf0c18d5957ff078bc7c42af262c`. Build result and v1/v2 signature verification passed, with all 57 media hashes/sizes and native video DEX class retained. Existing two META-INF coverage warnings remain. 100 native regression checks and authentic portrait/landscape renders passed. User deferred phone installation/testing; this update has not been installed. Pre-task APK HearingNotion-before-20261112-002.apk is retained with hash `472e859c49abe9165ec76b32e2a5f6103293983cccaed59113e470a95f3c46d4`. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).

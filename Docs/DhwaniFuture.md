@@ -25,3 +25,7 @@ Dwani opens the three reference mockups over the full Canvas/display instead of 
 ## Reference-frame and startup refinement — 2026-11-11
 
 The supplied composite is bundled locally as Artwork/dwani-reference. Aspect-preserved RawImage UV regions show the exact original graph/waveform artwork for interfaces 3/4/5, with crisp native text and inert control replicas. The image is low resolution, so it cannot provide high-resolution source detail. Public redistribution rights are not inferred. Continue and Back are inside each outlined page. The fourth page is a dark, mint-accented scrollable overview retaining all seven sourced descriptions. Reference controls and values remain inert illustrations. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).
+
+## Enhanced artwork, cards and video previews — 2026-11-12
+
+A new 2172×724 AI-enhanced atlas keeps the three original visual themes (upload waves/microphone, illustrative loudness chart, layered SoundScape ribbons). The original composite remains unchanged. The enhanced chart is decorative artwork, not recovered measurement data or a numerically faithful trace; native labels/values remain separate and unchanged. All pages retain mockup disclaimers. New rounded, slate-bordered card surfaces replace harsh outlines. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).

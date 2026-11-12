@@ -95,3 +95,7 @@ Test all three hub buttons, planned-only labels, unchanged Spanish HNAI, full-Ca
 ## Reference-frame and startup refinement — 2026-11-11
 
 Verify exactly two demographic actions Skip/Save, explicit consent, no persistence through Skip and synthetic-only save/delete tests. Check headphone artwork/short legend fits portrait and landscape. Verify original Dwani texture/UV regions, in-frame Back on all four pages, overview scrolling, inert controls, modal release and reentry. Capture actual rendered pages. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).
+
+## Enhanced artwork, cards and video previews — 2026-11-12
+
+Verify all four posters before any playback; the center action selects and plays the correct topic without autoplay on entry/scroll. Verify visible decoded frames replace the poster, Stop and navigation restore it, pause offers Resume and controls below/native fullscreen still work. Inspect original vs enhanced artwork and >2K atlas import. Verify decorative surfaces do not intercept gestures or contribute layout height. Review portrait/landscape and tall phone renders. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).

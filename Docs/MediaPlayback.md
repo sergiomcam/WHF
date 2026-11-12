@@ -84,3 +84,9 @@ The second tinnitus video is omitted from the presentation, while source files/c
 ## Unity gain and consistent transports — 2026-11-10
 
 Inline multimedia and game soundscape playback no longer apply the preview slider’s 0–0.25 attenuation or a sustained gain ramp. They use unity source gain, consistent with native full-screen video. Source samples, common-gain comparison exports, media hashes and distribution boundaries are unchanged. The optional tinnitus preview retains its own slider and -12 dB trim. Use device media volume; no calibrated SPL or safety guarantee follows from gain 1. See [report](Changes/2026-11-10-003-footer-volume-and-flappy.md).
+
+## Enhanced artwork, cards and video previews — 2026-11-12
+
+Each of the four presented video topics loads a bundled 1280×720 poster extracted at 5 seconds from its actual reviewed playback file. A centered, large play button starts that topic directly; below-video controls and native full-screen action remain. Posters remain while preparing, yield only when decoded frames arrive, return on Stop/navigation/reset and leave a resume action over paused video. One decoder/RenderTexture remains shared. Source videos and source gain are unchanged. Missing posters log an actionable error. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
+
+Poster authoring: run Tools/Audio/extract_video_posters.py with --ffmpeg pointing to an existing local executable and optional --second (default 5). It uses the active authored catalog, preserves existing poster GUIDs, writes only poster assets/local provenance and never edits source video bytes. Review every extracted frame before use.

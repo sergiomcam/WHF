@@ -53,3 +53,7 @@ Seven packed Home cards remain. Research and You are footer entries. Module icon
 ## Reference-frame and startup refinement — 2026-11-11
 
 Shared card/window surfaces use warm ivory #FAF7E9 instead of pure white; input surfaces use near-white #FFFEF8. Accent colors and dark chrome are preserved. The dark Dwani reference palette remains separate. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).
+
+## Enhanced artwork, cards and video previews — 2026-11-12
+
+Shared module/modal cards now have soft elevation, neutral/slate hairline borders, larger rounded corners and a short yellow/turquoise accent. Inputs and action buttons retain their existing role, contrast and bindings. Dark Dwani cards stay dark; video topics have padded individual cards. Decoration is nonblocking and ignored by layout groups. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).

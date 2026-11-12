@@ -182,3 +182,7 @@ The legacy DhwaniFuture route presents Hearing Notion 2.0. DhwaniMockupControlle
 ## Reference-frame and startup refinement — 2026-11-11
 
 All four Dwani pages remain inside the Canvas modal: original raster graph/waveform artwork with native labels for the first three, then the sourced scrollable dark overview. Each outlined page owns Back. The demographic visitor form exposes only Skip/Save, with explicit consent and manual deletion guidance; no schema changes. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).
+
+## Enhanced artwork, cards and video previews — 2026-11-12
+
+MediaExperienceController caches imported posters by stable media ID and owns each center action. A VideoPlayer frameReady callback swaps the visible poster only when output frames arrive; Stop/reset restores imported textures without destroying shared assets. The shared RoundedCardGraphic supports optional elevation/accent surfaces; decoration remains nonblocking and layout-ignored. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
