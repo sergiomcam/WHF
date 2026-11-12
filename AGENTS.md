@@ -14,7 +14,7 @@ Hearing Notion is an offline hearing-health and noise-awareness prototype for th
 - Core modules: home/navigation, Exposure Explorer, Sound Experience, Hearing Health, Awareness Check, Research & Sources, Personalized Takeaways.
 - Noise measurement is deferred; guided mode includes an informational Noise Meter stage only. Music Lab is future scope. Do not make these appear functional before implementation.
 - No cloud backend, accounts, microphone acquisition, telemetry, or persistent participant storage is required for the core prototype.
-- The explicitly requested optional demographic form is an exception to default non-persistence: save only on Save locally (I consent), retain no identifiers, provide Skip/temporary continuation and deletion, and do not link it to HNAI or treat it as formal research consent. See Docs/Demographics.md.
+- The explicitly requested optional demographic form is an exception to default non-persistence: save only on Save after the explicit local-consent notice, retain no identifiers, provide Skip and explain manual/Android clear-storage deletion in the requested two-action popup, and do not link it to HNAI or treat it as formal research consent. See Docs/Demographics.md.
 
 ## Stack and repository map
 
@@ -102,7 +102,7 @@ Optimize for a responsive, readable and reliable experience on the intended demo
 
 ## UI and accessibility
 
-- Palette: warm near-white `#FFFEF8` background, white cards, charcoal `#4A4C49` text, warm `#F6F4EB` panels, `#DFDEDD` borders, `#686B63` secondary text, `#FDD633` primary actions, `#FFF5C2` soft-yellow accents and `#EEC900` selections. Use AppTheme for runtime colors; retain readable contrast and distinct action hierarchy.
+- Palette: warm near-white `#FFFEF8` background, warm ivory `#FAF7E9` cards, charcoal `#4A4C49` text, warm `#F6F4EB` panels, `#DFDEDD` borders, `#686B63` secondary text, `#FDD633` primary actions, `#FFF5C2` soft-yellow accents and `#EEC900` selections. Use AppTheme for runtime colors; retain readable contrast and distinct action hierarchy.
 - Maintain readable contrast, large type, clear hierarchy, comfortable padding and reachable controls. Do not shrink labels to illegibility to avoid wrapping.
 - Home uses two columns in landscape and one in portrait. Awareness Check is the first home option; its original Spanish HNAI is explicitly identified. Guided order: HNAI → Exposure Explorer → Sound Experience → Hearing Health recommendations → informational Noise Meter → Research & Resources → Home. HNAI completion enables guided continuation. Show a brief modal introduction once per stage per guided run; free exploration has no automatic popups.
 - Canvas reference sizes are 1920×1080 landscape and 1080×1920 portrait, with Expand scaling. Preserve full-viewport backgrounds and responsive anchors.
@@ -250,3 +250,5 @@ ScreenChrome must rebind footer UnityEvents for reused/cloned screens, not only 
 DHWANI includes a clearly marked, Continue-only mockup sequence for reference interfaces 3/4/5 before its seven-section overview. Static graphs and reference values are illustrative, never participant measurements or model outputs. Do not attach recording, selection, upload, analysis, saving or permissions to decorative controls without a new authorized feature and documented scientific/privacy review. Preserve the preview palette within DhwaniMockupController and keep the shared app chrome outside it. About you uses one content-sized scroll with collapsed empty feedback and fixed preferred action-row heights; do not restore a blank message/footer reservation. Synthetic save/delete testing remains isolated.
 
 The former DHWANI Home entry is displayed as Hearing Notion 2.0, with Multilanguage validation, Dwani and Music for hearing loss. Preserve the legacy route/object keys. Dwani’s inert mockups use a full-Canvas modal root; block underlying screens and release the modal on Back, navigation, reset and destruction. Multilanguage and music entries describe future work only. The second startup popup includes comfortable headphone placement/L-R/manufacturer instructions; no fit-test or calibrated-output claim follows.
+
+Dwani uses original supplied raster graph/waveform regions with aspect-preserved UV regions. All four pages retain the dark style and own Back inside their outline. Step 1 exposes only Skip/Save, explicit Save consent and manual deletion guidance. Step 2 has the short headphone suggestion beneath existing artwork; preserve optional-preview warnings and gain.

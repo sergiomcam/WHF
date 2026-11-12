@@ -25,3 +25,7 @@ The legacy temporary AppSession.ListeningGain field now stores preview volume on
 ## Headphone placement — 2026-11-11
 
 The second startup popup (after About you) now recommends placing headphones comfortably over both ears, matching L/R markings, following the manufacturer’s instructions for earbuds, and beginning at low device volume. The L/R/manufacturer wording is an application setup instruction; WHO’s [safe-listening guidance](https://www.who.int/news-room/questions-and-answers/item/deafness-and-hearing-loss-safe-listening) supports using well-fitted headphones and keeping volume down. This is not fit testing, acoustic calibration or a guarantee of protection. Preview-only slider range/midpoint, -12 dB trim, optional playback and unchanged multimedia gain remain intact. See [report](Changes/2026-11-11-001-hearing-notion-2-hub.md).
+
+## Reference-frame and startup refinement — 2026-11-11
+
+The existing headphone artwork appears at top right with the requested legend beneath it: “It is suggested to use headphones when adjusting the following slider and while using the app”. This replaces the long placement sentence. Low-volume, optional 6 kHz, skip, no-calibration and preview-only warnings remain. Startup order, midpoint, trim and multimedia gain are unchanged. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).

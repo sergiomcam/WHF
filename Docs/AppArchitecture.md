@@ -178,3 +178,7 @@ DemographicPromptController now owns one content-sized scrolling form with colla
 ## 2.0 hub and full-screen preview — 2026-11-11
 
 The legacy DhwaniFuture route presents Hearing Notion 2.0. DhwaniMockupController owns the hub’s future-work sections and a separate full-Canvas preview root, initialized by DhwaniFutureController. ModalScreenScope blocks underlying ScreenViews while the overlay is visible; exit, navigation and reset release it. NavigationManager dispatches Back to the current future-work section before route history. No new route ID, schema or dependency is introduced. See [report](Changes/2026-11-11-001-hearing-notion-2-hub.md).
+
+## Reference-frame and startup refinement — 2026-11-11
+
+All four Dwani pages remain inside the Canvas modal: original raster graph/waveform artwork with native labels for the first three, then the sourced scrollable dark overview. Each outlined page owns Back. The demographic visitor form exposes only Skip/Save, with explicit consent and manual deletion guidance; no schema changes. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).

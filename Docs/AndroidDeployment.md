@@ -86,3 +86,9 @@ Latest compact-form/mockup APK: 1,444,628,871 bytes; SHA-256 `2c5fe4296c93f537ad
 ## Hearing Notion 2.0 hub update — 2026-11-11
 
 Personal-test APK: 1,444,636,734 bytes; SHA-256 `d37085ac322299b61cef13133c3b19f567915a8ea8d465682505a6d25423f3ae`. Patched Unity build, v1/v2 signatures, all 57 media hashes, retained native video class and pre-task backup passed. APK version remains the personal-test version; 2.0 names the future-work section. Installation and physical checks are recorded in [the task report](Changes/2026-11-11-001-hearing-notion-2-hub.md).
+
+## Reference-frame/startup correction — 2026-11-11
+
+Personal APK: 1,444,995,129 bytes; SHA-256 `472e859c49abe9165ec76b32e2a5f6103293983cccaed59113e470a95f3c46d4`. Final 100-check native regression and portrait/landscape render review passed. IL2CPP build, v1/v2 signatures, all 57 packaged media hashes/sizes and native video DEX class passed; the two existing META-INF signature-coverage warnings remain. Previous verified APK is retained as HearingNotion-before-20261111-002.apk, hash `d37085ac322299b61cef13133c3b19f567915a8ea8d465682505a6d25423f3ae`. See [current delivery/device results](Changes/2026-11-11-002-reference-frames-and-startup.md).
+
+The corrected APK installed in place successfully on AX85. After user unlock, targeted startup, four-page Dwani, scroll, inert controls and Back checks passed; see the report.

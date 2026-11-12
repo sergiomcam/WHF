@@ -49,3 +49,7 @@ Reference-inspired dark header/footer bands have curved yellow edges, existing h
 ## Pinned navigation and simplified media — 2026-11-10
 
 Seven packed Home cards remain. Research and You are footer entries. Module icons are 84 logical units with 1.5-times stroke thickness; the remaining palette is three yellow, one turquoise, two purple and the gray deferred meter. Existing routes and questionnaire wording are preserved. See [modification report](Changes/2026-11-10-002-pinned-navigation-and-media.md).
+
+## Reference-frame and startup refinement — 2026-11-11
+
+Shared card/window surfaces use warm ivory #FAF7E9 instead of pure white; input surfaces use near-white #FFFEF8. Accent colors and dark chrome are preserved. The dark Dwani reference palette remains separate. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).

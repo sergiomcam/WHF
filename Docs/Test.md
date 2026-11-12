@@ -91,3 +91,7 @@ Measure the privacy-text/action gap after text wrapping; blank feedback must be 
 ## Hearing Notion 2.0 continuation — 2026-11-11
 
 Test all three hub buttons, planned-only labels, unchanged Spanish HNAI, full-Canvas mockup bounds in both orientations, underlying modal blocking, inert Select/Record controls, Continue 3/4/5/overview, on-screen/phone Back and return to the hub. Verify the second startup popup shows headphone placement text without clipping while preview settings stay unchanged. Keep prior incomplete physical checks separate from new verified evidence. See [report](Changes/2026-11-11-001-hearing-notion-2-hub.md).
+
+## Reference-frame and startup refinement — 2026-11-11
+
+Verify exactly two demographic actions Skip/Save, explicit consent, no persistence through Skip and synthetic-only save/delete tests. Check headphone artwork/short legend fits portrait and landscape. Verify original Dwani texture/UV regions, in-frame Back on all four pages, overview scrolling, inert controls, modal release and reentry. Capture actual rendered pages. See [report](Changes/2026-11-11-002-reference-frames-and-startup.md).
