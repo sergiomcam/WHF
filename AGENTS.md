@@ -255,6 +255,8 @@ Dwani preserves the original raster reference and uses approved enhanced decorat
 
 Dwani may use the approved AI-enhanced reference atlas for decorative wave/chart/ribbon imagery; preserve the original reference and label graphics as illustrative, never recovered measurement data. Video cards use actual authored-file posters and explicit center play; retain a poster until decoded frame availability and restore it on Stop/reset/navigation. Shared decorative card surfaces must ignore layout and pointer input.
 
-Module option containers use borderless warm-ivory sheets with larger upper corners and near-white option surfaces. Do not restore wireframe borders, decorative accent strokes or shadow-only changes in place of the requested integrated sheet/card structure. Preserve role/selection colors, inputs, callbacks, Home layout and original media/research content.
+Module option containers use borderless warm-ivory sheets with matching upper and lower corners and near-white option surfaces. Do not restore wireframe borders, decorative accent strokes or shadow-only changes in place of the requested integrated sheet/card structure. Preserve role/selection colors, inputs, callbacks, Home layout and original media/research content.
 
 Module sheet backgrounds span the full scaled ScreenView width with rounded corners; inner content keeps its existing padding. Calculate width from the current screen and include inactive ancestors for reused screens; do not substitute a fixed 20-unit overhang or widen content/hit targets merely to stretch the background.
+
+Rounded section/popup sheets use the same corner radius at the top and bottom; do not reintroduce a smaller lower-edge radius. Full screen width and inner padding remain independent.

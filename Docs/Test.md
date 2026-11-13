@@ -107,3 +107,7 @@ Inspect the actual options, not only border mesh output: SoundHub, HNAI, Explore
 ## Full-width rounded sections — 2026-11-12
 
 Measure each module surface against its actual scaled ScreenView width after layout, including inactive/reused screen roots, portrait, landscape and tall phone captures. Inspect that both edges align and corners remain rounded, while content padding and scroll/navigation stay intact. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).
+
+## Matching upper and lower corners — 2026-11-12
+
+Inspect both upper and lower panel corners. For long sections, scroll to the bottom before assessing the lower edge; confirm controls remain inside the padded content and the full-width background still aligns with the screen. See [report](Changes/2026-11-12-005-matching-panel-corners.md).

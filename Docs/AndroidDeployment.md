@@ -104,3 +104,7 @@ Verified APK: 1,448,861,554 bytes; SHA-256 `9d6be6ddfc0d3eefd87e816c067ea3337b8c
 ## Full-width rounded panels — 2026-11-12
 
 Verified APK: 1,448,861,726 bytes; SHA-256 `6fa23d68d7d5a6b9e9f7ab373545098364fafe34c49008dd9b674ecd2f811cc0`. Build exited 0; v1/v2 signatures, 57 media hashes/sizes and native video DEX class passed. Existing two META-INF signature-coverage warnings remain. Final 100 native checks and actual portrait/landscape renders passed. Phone install/testing remains deferred. Prior APK HearingNotion-before-20261112-004.apk is retained, hash `9d6be6ddfc0d3eefd87e816c067ea3337b8c223aebb3989a389fe3ef8cf6ad1c`. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).
+
+## Matching upper/lower panel corners — 2026-11-12
+
+Verified APK: 1,448,860,553 bytes; SHA-256 `7481b598c8f5af15f5528e2de0cc1114a443c60c9b46077ce43cf54d8a3ea458`. Build exited 0; v1/v2 signatures, 57 media hashes/sizes and native video DEX class passed. Two existing META-INF signature-coverage warnings remain. 100 native checks and actual renders passed. Phone installation/testing remains deferred. Prior APK HearingNotion-before-20261112-005.apk is retained, hash `6fa23d68d7d5a6b9e9f7ab373545098364fafe34c49008dd9b674ecd2f811cc0`. See [report](Changes/2026-11-12-005-matching-panel-corners.md).

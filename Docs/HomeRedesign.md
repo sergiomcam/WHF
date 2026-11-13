@@ -65,3 +65,7 @@ Section containers now use continuous borderless warm-ivory sheets, wider backgr
 ## Full-width rounded sections — 2026-11-12
 
 Main section backgrounds now reach both horizontal screen edges, retaining their rounded corners and warm-ivory fill. Inner options, text and media keep their existing comfortable padding. The width follows the actual scaled screen root rather than a fixed pixel overhang, in portrait and landscape. Popup/Home layouts are unchanged. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).
+
+## Matching upper and lower corners — 2026-11-12
+
+Rounded section/popup surfaces now use matching corner radii at the top and bottom. The former 28-unit lower-corner cap is removed; each surface keeps its configured radius at every corner. Full-width module backgrounds, padded contents and the selected palette stay unchanged. See [report](Changes/2026-11-12-005-matching-panel-corners.md).

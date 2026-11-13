@@ -39,3 +39,5 @@ Video-poster regression: inspect each stable-ID poster before playback, trigger 
 For reference-driven container redesigns, inspect representative option screens after runtime builders/layout settle. A changed border/shadow alone does not verify a requested sheet/card structure. Check surface hierarchy, corner treatment, selection markers and actual pointer/scroll behavior; preserve the approved palette and content.
 
 For full-width rounded backgrounds, compare actual sheet width with the scaled ScreenView after layout in both orientations. Include inactive screen ancestors when resolving ownership, and verify content padding separately from decorative bleed.
+
+When rounding section sheets, inspect the lower edge after scrolling long content as well as the initial top edge; confirm intended upper/lower radii match and controls remain padded.

@@ -194,3 +194,7 @@ RoundedCardGraphic supports asymmetric sheet corners through the Sheet flag. Win
 ## Full-width rounded sections — 2026-11-12
 
 WindowStyle.Card calculates module-background horizontal bleed from its ScreenView width and panel width. It includes inactive screen parents so reused screens also receive correct width during responsive layout. The decorative surface alone expands; content RectTransforms, scroll geometry and hit targets remain unchanged. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).
+
+## Matching upper and lower corners — 2026-11-12
+
+RoundedCardGraphic passes the same clamped radius to all four fill corners. The Sheet marker and current layout bindings remain compatible; no serialized asset migration is required. See [report](Changes/2026-11-12-005-matching-panel-corners.md).
