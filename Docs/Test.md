@@ -111,3 +111,10 @@ Measure each module surface against its actual scaled ScreenView width after lay
 ## Matching upper and lower corners — 2026-11-12
 
 Inspect both upper and lower panel corners. For long sections, scroll to the bottom before assessing the lower edge; confirm controls remain inside the padded content and the full-width background still aligns with the screen. See [report](Changes/2026-11-12-005-matching-panel-corners.md).
+
+
+## Physical full-screen video check — 2026-11-12
+
+AX85 Android 13: latest APK installed in place; all four topics opened in native full screen. Inline play/pause/stop and poster restoration, native pause, Return to page, Android Back and completion return passed. User confirmed audible audio. Seeking, rotation, interruptions and other devices remain unverified.
+
+The existing Android-only **Full screen · phone player** button is below each video’s Play/Stop row; it does not appear in desktop preview. No source or media changes were needed. See [device report](Changes/2026-11-12-006-android-fullscreen-video-check.md).

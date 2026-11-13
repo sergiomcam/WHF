@@ -108,3 +108,10 @@ Verified APK: 1,448,861,726 bytes; SHA-256 `6fa23d68d7d5a6b9e9f7ab373545098364fa
 ## Matching upper/lower panel corners — 2026-11-12
 
 Verified APK: 1,448,860,553 bytes; SHA-256 `7481b598c8f5af15f5528e2de0cc1114a443c60c9b46077ce43cf54d8a3ea458`. Build exited 0; v1/v2 signatures, 57 media hashes/sizes and native video DEX class passed. Two existing META-INF signature-coverage warnings remain. 100 native checks and actual renders passed. Phone installation/testing remains deferred. Prior APK HearingNotion-before-20261112-005.apk is retained, hash `6fa23d68d7d5a6b9e9f7ab373545098364fafe34c49008dd9b674ecd2f811cc0`. See [report](Changes/2026-11-12-005-matching-panel-corners.md).
+
+
+## Physical full-screen video check — 2026-11-12
+
+AX85 Android 13: latest APK installed in place; all four topics opened in native full screen. Inline play/pause/stop and poster restoration, native pause, Return to page, Android Back and completion return passed. User confirmed audible audio. Seeking, rotation, interruptions and other devices remain unverified.
+
+The existing Android-only **Full screen · phone player** button is below each video’s Play/Stop row; it does not appear in desktop preview. No source or media changes were needed. See [device report](Changes/2026-11-12-006-android-fullscreen-video-check.md).

@@ -1,6 +1,6 @@
 # Hearing Notion feature catalog
 
-Last reviewed: 2026-11-10 (America/Mexico_City).
+Last reviewed: 2026-11-12 (America/Mexico_City).
 
 Use this page to review app contents, find implementation details and trace feature changes. This initial inventory is reconstructed from current source, scene configuration and project notes; it is not a claim that all features were added or tested today. Detailed modification records start in [Modification history](Changes/README.md).
 
@@ -19,7 +19,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Full-width panels with matching top/bottom corner radii | Matching-corner renders, 100 native checks and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Procedural contours remain; visitor control retired | Engine SetReducedMotion retained without UI/OS preference integration | 2026-11-06 |
 | F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Unity-gain direct version toggles; song menu first | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
-| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Stable research stages; four video topics and native touch-return player | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Stable research stages; four video topics and native touch-return player | AX85 install and four native full-screen topics passed; pause/return and audible audio confirmed; seek/rotation unverified | 2026-11-12 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
@@ -33,7 +33,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Matching-corner renders, 100 native checks and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | AX85 install and four native full-screen topics passed; pause/return and audible audio confirmed; seek/rotation unverified | 2026-11-12 |
 | F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Enhanced illustrative artwork, dark overview and in-frame Back | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 
 ## Feature details
@@ -323,3 +323,11 @@ F-007: full-width sheets now use equally rounded top and bottom corners instead 
 | Date | Affected IDs | Change | Report |
 | --- | --- | --- | --- |
 | 2026-11-12 | F-007, F-024 | Matching upper/lower corner radii on full-width sheets | [2026-11-12-005](Changes/2026-11-12-005-matching-panel-corners.md) |
+
+### Physical video verification — 2026-11-12
+
+AX85 Android 13: latest APK installed in place; all four topics opened in native full screen. Inline play/pause/stop and poster restoration, native pause, Return to page, Android Back and completion return passed. User confirmed audible audio. Seeking, rotation, interruptions and other devices remain unverified.
+
+| Date | Features | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-12 | F-010, F-024 | Verify existing Android full-screen video controls on AX85; no runtime changes | [2026-11-12-006](Changes/2026-11-12-006-android-fullscreen-video-check.md) |

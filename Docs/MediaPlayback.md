@@ -90,3 +90,10 @@ Inline multimedia and game soundscape playback no longer apply the preview slide
 Each of the four presented video topics loads a bundled 1280×720 poster extracted at 5 seconds from its actual reviewed playback file. A centered, large play button starts that topic directly; below-video controls and native full-screen action remain. Posters remain while preparing, yield only when decoded frames arrive, return on Stop/navigation/reset and leave a resume action over paused video. One decoder/RenderTexture remains shared. Source videos and source gain are unchanged. Missing posters log an actionable error. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
 
 Poster authoring: run Tools/Audio/extract_video_posters.py with --ffmpeg pointing to an existing local executable and optional --second (default 5). It uses the active authored catalog, preserves existing poster GUIDs, writes only poster assets/local provenance and never edits source video bytes. Review every extracted frame before use.
+
+
+## Physical full-screen video check — 2026-11-12
+
+AX85 Android 13: latest APK installed in place; all four topics opened in native full screen. Inline play/pause/stop and poster restoration, native pause, Return to page, Android Back and completion return passed. User confirmed audible audio. Seeking, rotation, interruptions and other devices remain unverified.
+
+The existing Android-only **Full screen · phone player** button is below each video’s Play/Stop row; it does not appear in desktop preview. No source or media changes were needed. See [device report](Changes/2026-11-12-006-android-fullscreen-video-check.md).
