@@ -96,3 +96,7 @@ The corrected APK installed in place successfully on AX85. After user unlock, ta
 ## Enhanced artwork and video posters — 2026-11-12
 
 Personal APK: 1,448,859,399 bytes; SHA-256 `b285f5599640a1cf5297fe14ecc478d16317cf0c18d5957ff078bc7c42af262c`. Build result and v1/v2 signature verification passed, with all 57 media hashes/sizes and native video DEX class retained. Existing two META-INF coverage warnings remain. 100 native regression checks and authentic portrait/landscape renders passed. User deferred phone installation/testing; this update has not been installed. Pre-task APK HearingNotion-before-20261112-002.apk is retained with hash `472e859c49abe9165ec76b32e2a5f6103293983cccaed59113e470a95f3c46d4`. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
+
+## Borderless option-sheet correction — 2026-11-12
+
+Verified APK: 1,448,861,554 bytes; SHA-256 `9d6be6ddfc0d3eefd87e816c067ea3337b8c223aebb3989a389fe3ef8cf6ad1c`. IL2CPP build exited 0; v1/v2 signatures, 57 media hashes/sizes and native video DEX class passed. Existing two META-INF signature-coverage warnings remain. Final 100 native regression checks and portrait/landscape renders passed. Phone installation/testing remains deferred by user. The verified prior APK is HearingNotion-before-20261112-003.apk, hash `b285f5599640a1cf5297fe14ecc478d16317cf0c18d5957ff078bc7c42af262c`. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).

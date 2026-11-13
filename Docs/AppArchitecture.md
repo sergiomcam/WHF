@@ -186,3 +186,7 @@ All four Dwani pages remain inside the Canvas modal: original raster graph/wavef
 ## Enhanced artwork, cards and video previews — 2026-11-12
 
 MediaExperienceController caches imported posters by stable media ID and owns each center action. A VideoPlayer frameReady callback swaps the visible poster only when output frames arrive; Stop/reset restores imported textures without destroying shared assets. The shared RoundedCardGraphic supports optional elevation/accent surfaces; decoration remains nonblocking and layout-ignored. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
+
+## Borderless option sheets — 2026-11-12
+
+RoundedCardGraphic supports asymmetric sheet corners through the Sheet flag. WindowStyle.Card separates module sheets, popup sheets, topic cards and input surfaces. StyleOptions removes outlines without replacing callbacks or selection colors. Background overhangs are decorative only and do not change layout measurements. Screen roots, controls and routes stay intact. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).

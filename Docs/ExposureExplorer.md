@@ -19,3 +19,7 @@ English interface update (2026-11-06): Soundscapes categories, controls, prevent
 Activity description, prevention and source context precede the comparison within the same Soundscapes page. Its Original and Protection 3M 1260 actions toggle playback; menu and video/recommendation links follow. Stop and rewind is hidden for protection comparisons. The shared media transport still owns buffered decoding and navigation cleanup.
 
 The inline comparison retains its published-laboratory FIR illustration/fit/common-gain explanation before the version controls.
+
+## Borderless option sheets — 2026-11-12
+
+Category/activity options sit inside a wide borderless warm sheet with lighter rounded activity cards. Compact category labels no longer reserve extra side margins, preserving readable type and avoiding the Environmental word split. Existing selected category colors, activity mappings and audio comparison flow are unchanged. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).

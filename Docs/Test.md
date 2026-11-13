@@ -99,3 +99,7 @@ Verify exactly two demographic actions Skip/Save, explicit consent, no persisten
 ## Enhanced artwork, cards and video previews — 2026-11-12
 
 Verify all four posters before any playback; the center action selects and plays the correct topic without autoplay on entry/scroll. Verify visible decoded frames replace the poster, Stop and navigation restore it, pause offers Resume and controls below/native fullscreen still work. Inspect original vs enhanced artwork and >2K atlas import. Verify decorative surfaces do not intercept gestures or contribute layout height. Review portrait/landscape and tall phone renders. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
+
+## Borderless option sheets — 2026-11-12
+
+Inspect the actual options, not only border mesh output: SoundHub, HNAI, Explorer categories/activity buttons, research stages, 2.0 hub and video topics. Confirm large borderless section sheets, differentiated neutral options, no accent-stroke/shadow substitute, readable contrast, unaltered selected state and nonblocking decoration. Check both orientations and touch/wheel behavior. Phone testing remains separately deferred unless the user resumes it. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).

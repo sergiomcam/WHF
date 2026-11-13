@@ -24,3 +24,7 @@ Home now says Awareness Check. Surrounding prompts, domain headings and navigati
 ## Response alignment — 2026-11-10
 
 The five HNAI response buttons use left-aligned labels under shared styling. Numeric mappings, original Spanish text, selection marker and questionnaire behavior are unchanged.
+
+## Borderless option sheets — 2026-11-12
+
+The HNAI panel now uses a borderless warm sheet and distinct near-white unselected answer cards. Selected fill/marker and left alignment remain. All original Spanish items/response labels, IDs, draft response behavior and no-scoring boundary are unchanged. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).

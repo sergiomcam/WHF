@@ -12,29 +12,29 @@ Use this page to review app contents, find implementation details and trace feat
 | --- | --- | --- | --- | --- |
 | F-001 | [Home and navigation](#f-001-home-and-navigation): Main scene | Hardware Back, modal priority and pinned footer routes | Compiled; 100 native checks and authentic renders passed; Android build/device verification recorded in the report | 2026-11-11 |
 | F-002 | [Responsive, readable UI](#f-002-responsive-readable-ui): all pages/popups | Responsive body, soft popups and pinned header/footer | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
-| F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | Context then same-page protection comparison | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
-| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Awareness Check | Original Spanish instrument with left-aligned responses | Compiled; 95 native checks and targeted AX85 retest passed; full orientation/media regression remains limited | 2026-11-10 |
+| F-003 | [Exposure Explorer](#f-003-exposure-explorer): Sound Experience → Soundscapes | Context then same-page protection comparison | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Awareness Check | Original Spanish instrument with left-aligned responses | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home/Continue | Partial; general reminders | Activity-add UI retired; no invented personal outcome; no full takeaway runtime retest | 2026-11-05 |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Takeaways reset | Implemented | Draft state and digital gain reset; Explorer reset removed; memory only unless explicit demographic save | 2026-11-05 |
-| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Pinned dark chrome, stronger icons and retained artwork | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
+| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Pinned dark chrome, stronger icons and retained artwork | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Procedural contours remain; visitor control retired | Engine SetReducedMotion retained without UI/OS preference integration | 2026-11-06 |
-| F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Unity-gain direct version toggles; song menu first | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
-| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Stable research stages; four video topics and native touch-return player | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
+| F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Unity-gain direct version toggles; song menu first | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Stable research stages; four video topics and native touch-return player | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
 | F-012 | [Noise Meter](#f-012-noise-meter): guided information screen; disabled home card | Partial; measurement deferred | Informational stage implemented; no microphone measurement/calibration | 2026-10-19 |
 | F-013 | [Music Lab](#f-013-music-lab) | Planned, future | No functioning laboratory | 2026-10-19 inventory |
 | F-014 | [Bilingual controls and settings](#f-014-bilingual-controls-and-settings) | English presentation; language selector planned | Original Spanish HNAI, original videos/figures and proper titles preserved; not a translated instrument | 2026-11-06 |
-| F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): guided journey | Rounded guided popup with hardware Back dismissal | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
+| F-015 | [Guided screen introductions](#f-015-guided-screen-introductions): guided journey | Rounded guided popup with hardware Back dismissal | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Taller field, in-arena pause and mixed moving penguin pairs | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
-| F-018 | [Optional demographics](#f-018-optional-demographics): startup/footer You | Content-fitted scrolling form, collapsed empty feedback | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
-| F-019 | [Listening setup](#f-019-listening-setup): after About you | Shared popup hierarchy and centered actions | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
+| F-018 | [Optional demographics](#f-018-optional-demographics): startup/footer You | Content-fitted scrolling form, collapsed empty feedback | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-019 | [Listening setup](#f-019-listening-setup): after About you | Shared popup hierarchy and centered actions | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
-| F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Compiled; 100 native checks, portrait/landscape renders and targeted AX85 checks passed; see current report | 2026-11-12 |
+| F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
-| F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Enhanced illustrative artwork, dark overview and in-frame Back | Compiled; 100 native/render checks and APK verification passed; current phone retest deferred by user | 2026-11-12 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Enhanced illustrative artwork, dark overview and in-frame Back | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 
 ## Feature details
 
@@ -299,3 +299,11 @@ F-007/F-015: enriched rounded surfaces with gentle elevation and role-colored ac
 | Date | Affected IDs | Change | Report |
 | --- | --- | --- | --- |
 | 2026-11-12 | F-007, F-009, F-010, F-015, F-018, F-019, F-024, F-025 | Enhanced Dwani artwork, richer frames and actual video previews | [2026-11-12-002](Changes/2026-11-12-002-enhanced-artwork-video-previews.md) |
+
+## Borderless option sheets — 2026-11-12
+
+F-007/F-015/F-018/F-019: larger borderless section/popup sheets, near-white options/fields and removal of the previous accent-stroke/shadow treatment. F-022/F-025: borderless hub/preview surfaces. F-024: corrected personal APK tracked separately. Source content, answers, media and behaviors are unchanged. Validation is recorded in the report.
+
+| Date | Affected IDs | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-12 | F-003, F-004, F-007, F-009, F-010, F-015, F-018, F-019, F-022, F-024, F-025 | Integrated borderless sheets and option surfaces within the existing palette | [2026-11-12-003](Changes/2026-11-12-003-borderless-option-sheets.md) |

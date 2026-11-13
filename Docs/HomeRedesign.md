@@ -57,3 +57,7 @@ Shared card/window surfaces use warm ivory #FAF7E9 instead of pure white; input 
 ## Enhanced artwork, cards and video previews — 2026-11-12
 
 Shared module/modal cards now have soft elevation, neutral/slate hairline borders, larger rounded corners and a short yellow/turquoise accent. Inputs and action buttons retain their existing role, contrast and bindings. Dark Dwani cards stay dark; video topics have padded individual cards. Decoration is nonblocking and ignored by layout groups. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
+
+## Borderless option sheets — 2026-11-12
+
+Section containers now use continuous borderless warm-ivory sheets, wider backgrounds and 80-unit upper corners with smaller lower corners. Neutral options use near-white rounded surfaces rather than outlined rectangles. Small accent strokes and card shadows from the earlier attempt are removed from these surfaces. Video topics use borderless near-white cards within the warm sheet. Home retains its separate established layout; existing primary/selection colors are preserved. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).

@@ -35,3 +35,5 @@ For full-screen future-work previews, verify Canvas bounds, blocking of underlyi
 For supplied raster interfaces, verify source texture/UV regions and preserved aspect ratio rather than procedural resemblance. Check each page owns its in-frame close control and following information retains the requested style and scrolling. Verify visitor action count separately from underlying synthetic save/delete infrastructure.
 
 Video-poster regression: inspect each stable-ID poster before playback, trigger the centered action, verify decoded nonblack frames replace it and Stop/Back/reset restore it. Ensure extraction used actual source content; distinguish AI-enhanced decorative artwork from scientific data and preserve originals. Verify decoration is nonblocking and layout-ignored.
+
+For reference-driven container redesigns, inspect representative option screens after runtime builders/layout settle. A changed border/shadow alone does not verify a requested sheet/card structure. Check surface hierarchy, corner treatment, selection markers and actual pointer/scroll behavior; preserve the approved palette and content.

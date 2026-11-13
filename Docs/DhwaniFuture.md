@@ -29,3 +29,7 @@ The supplied composite is bundled locally as Artwork/dwani-reference. Aspect-pre
 ## Enhanced artwork, cards and video previews — 2026-11-12
 
 A new 2172×724 AI-enhanced atlas keeps the three original visual themes (upload waves/microphone, illustrative loudness chart, layered SoundScape ribbons). The original composite remains unchanged. The enhanced chart is decorative artwork, not recovered measurement data or a numerically faithful trace; native labels/values remain separate and unchanged. All pages retain mockup disclaimers. New rounded, slate-bordered card surfaces replace harsh outlines. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
+
+## Borderless option sheets — 2026-11-12
+
+The Hearing Notion 2.0 hub uses lighter borderless option cards against a warm sheet. Inert Dwani frames also lose their outlines/accent strips while retaining the established dark artwork presentation and in-frame Back. No recording or analysis is enabled. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).
