@@ -16,7 +16,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-004 | [Spanish HNAI questionnaire](#f-004-spanish-hnai-questionnaire): Awareness Check | Original Spanish instrument with left-aligned responses | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home/Continue | Partial; general reminders | Activity-add UI retired; no invented personal outcome; no full takeaway runtime retest | 2026-11-05 |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Takeaways reset | Implemented | Draft state and digital gain reset; Explorer reset removed; memory only unless explicit demographic save | 2026-11-05 |
-| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Pinned dark chrome, stronger icons and retained artwork | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Full-width rounded section backgrounds with padded options | Full-width geometry, 100 native checks, portrait/landscape renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Procedural contours remain; visitor control retired | Engine SetReducedMotion retained without UI/OS preference integration | 2026-11-06 |
 | F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Unity-gain direct version toggles; song menu first | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): home/guided | Stable research stages; four video topics and native touch-return player | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
@@ -33,7 +33,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | Full-width geometry, 100 native checks, portrait/landscape renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Enhanced illustrative artwork, dark overview and in-frame Back | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 
 ## Feature details
@@ -307,3 +307,11 @@ F-007/F-015/F-018/F-019: larger borderless section/popup sheets, near-white opti
 | Date | Affected IDs | Change | Report |
 | --- | --- | --- | --- |
 | 2026-11-12 | F-003, F-004, F-007, F-009, F-010, F-015, F-018, F-019, F-022, F-024, F-025 | Integrated borderless sheets and option surfaces within the existing palette | [2026-11-12-003](Changes/2026-11-12-003-borderless-option-sheets.md) |
+
+## Full-width rounded section backgrounds — 2026-11-12
+
+F-007: rounded module backgrounds reach both screen edges while content padding stays intact. F-024 records the corresponding APK; phone retest remains deferred. Current validation is in the report.
+
+| Date | Affected IDs | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-12 | F-007, F-024 | Full-width rounded module backgrounds with padded content | [2026-11-12-004](Changes/2026-11-12-004-full-width-rounded-panels.md) |

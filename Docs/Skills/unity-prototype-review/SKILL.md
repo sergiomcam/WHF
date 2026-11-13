@@ -37,3 +37,5 @@ For supplied raster interfaces, verify source texture/UV regions and preserved a
 Video-poster regression: inspect each stable-ID poster before playback, trigger the centered action, verify decoded nonblack frames replace it and Stop/Back/reset restore it. Ensure extraction used actual source content; distinguish AI-enhanced decorative artwork from scientific data and preserve originals. Verify decoration is nonblocking and layout-ignored.
 
 For reference-driven container redesigns, inspect representative option screens after runtime builders/layout settle. A changed border/shadow alone does not verify a requested sheet/card structure. Check surface hierarchy, corner treatment, selection markers and actual pointer/scroll behavior; preserve the approved palette and content.
+
+For full-width rounded backgrounds, compare actual sheet width with the scaled ScreenView after layout in both orientations. Include inactive screen ancestors when resolving ownership, and verify content padding separately from decorative bleed.

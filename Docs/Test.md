@@ -103,3 +103,7 @@ Verify all four posters before any playback; the center action selects and plays
 ## Borderless option sheets — 2026-11-12
 
 Inspect the actual options, not only border mesh output: SoundHub, HNAI, Explorer categories/activity buttons, research stages, 2.0 hub and video topics. Confirm large borderless section sheets, differentiated neutral options, no accent-stroke/shadow substitute, readable contrast, unaltered selected state and nonblocking decoration. Check both orientations and touch/wheel behavior. Phone testing remains separately deferred unless the user resumes it. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).
+
+## Full-width rounded sections — 2026-11-12
+
+Measure each module surface against its actual scaled ScreenView width after layout, including inactive/reused screen roots, portrait, landscape and tall phone captures. Inspect that both edges align and corners remain rounded, while content padding and scroll/navigation stay intact. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).

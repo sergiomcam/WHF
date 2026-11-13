@@ -190,3 +190,7 @@ MediaExperienceController caches imported posters by stable media ID and owns ea
 ## Borderless option sheets — 2026-11-12
 
 RoundedCardGraphic supports asymmetric sheet corners through the Sheet flag. WindowStyle.Card separates module sheets, popup sheets, topic cards and input surfaces. StyleOptions removes outlines without replacing callbacks or selection colors. Background overhangs are decorative only and do not change layout measurements. Screen roots, controls and routes stay intact. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).
+
+## Full-width rounded sections — 2026-11-12
+
+WindowStyle.Card calculates module-background horizontal bleed from its ScreenView width and panel width. It includes inactive screen parents so reused screens also receive correct width during responsive layout. The decorative surface alone expands; content RectTransforms, scroll geometry and hit targets remain unchanged. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).

@@ -61,3 +61,7 @@ Shared module/modal cards now have soft elevation, neutral/slate hairline border
 ## Borderless option sheets — 2026-11-12
 
 Section containers now use continuous borderless warm-ivory sheets, wider backgrounds and 80-unit upper corners with smaller lower corners. Neutral options use near-white rounded surfaces rather than outlined rectangles. Small accent strokes and card shadows from the earlier attempt are removed from these surfaces. Video topics use borderless near-white cards within the warm sheet. Home retains its separate established layout; existing primary/selection colors are preserved. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).
+
+## Full-width rounded sections — 2026-11-12
+
+Main section backgrounds now reach both horizontal screen edges, retaining their rounded corners and warm-ivory fill. Inner options, text and media keep their existing comfortable padding. The width follows the actual scaled screen root rather than a fixed pixel overhang, in portrait and landscape. Popup/Home layouts are unchanged. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).

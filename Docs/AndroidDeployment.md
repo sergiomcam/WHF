@@ -100,3 +100,7 @@ Personal APK: 1,448,859,399 bytes; SHA-256 `b285f5599640a1cf5297fe14ecc478d16317
 ## Borderless option-sheet correction — 2026-11-12
 
 Verified APK: 1,448,861,554 bytes; SHA-256 `9d6be6ddfc0d3eefd87e816c067ea3337b8c223aebb3989a389fe3ef8cf6ad1c`. IL2CPP build exited 0; v1/v2 signatures, 57 media hashes/sizes and native video DEX class passed. Existing two META-INF signature-coverage warnings remain. Final 100 native regression checks and portrait/landscape renders passed. Phone installation/testing remains deferred by user. The verified prior APK is HearingNotion-before-20261112-003.apk, hash `b285f5599640a1cf5297fe14ecc478d16317cf0c18d5957ff078bc7c42af262c`. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).
+
+## Full-width rounded panels — 2026-11-12
+
+Verified APK: 1,448,861,726 bytes; SHA-256 `6fa23d68d7d5a6b9e9f7ab373545098364fafe34c49008dd9b674ecd2f811cc0`. Build exited 0; v1/v2 signatures, 57 media hashes/sizes and native video DEX class passed. Existing two META-INF signature-coverage warnings remain. Final 100 native checks and actual portrait/landscape renders passed. Phone install/testing remains deferred. Prior APK HearingNotion-before-20261112-004.apk is retained, hash `9d6be6ddfc0d3eefd87e816c067ea3337b8c223aebb3989a389fe3ef8cf6ad1c`. See [report](Changes/2026-11-12-004-full-width-rounded-panels.md).
