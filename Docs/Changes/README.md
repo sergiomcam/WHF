@@ -68,3 +68,4 @@ This history starts on 2026-10-19. File summaries for earlier entries were added
 | 2026-11-12 | [2026-11-12-005](2026-11-12-005-matching-panel-corners.md) | Match bottom panel rounding to the upper corners | RoundedCardGraphic.cs; Docs/HomeRedesign.md; Docs/FEATURES.md |
 | 2026-11-12 | [2026-11-12-006](2026-11-12-006-android-fullscreen-video-check.md) | Verify existing full-screen videos and controls on AX85 | Docs/MediaPlayback.md; Docs/AndroidDeployment.md; Docs/Test.md; Docs/FEATURES.md |
 | 2026-11-17 | [2026-11-17-001](2026-11-17-001-traffic-noise-references.md) | Add four traffic-noise references to Research & Sources | ResearchStages.en.json; ResearchStages.es.json; Docs/ResearchSources.md; Docs/FEATURES.md |
+| 2026-11-17 | [2026-11-17-002](2026-11-17-002-generate-1khz-noise.md) | Generate ten-second 1 kHz-centred noise without fades | LocalAudio/GeneratedPreview/generate_bb_1khz.m; standalone WAV; verification.json |
