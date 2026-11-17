@@ -67,3 +67,4 @@ This history starts on 2026-10-19. File summaries for earlier entries were added
 | 2026-11-12 | [2026-11-12-004](2026-11-12-004-full-width-rounded-panels.md) | Extend rounded section backgrounds to the screen edges, preserving content padding | WindowStyle.cs; PrototypeReviewRunner.cs; Docs/FEATURES.md |
 | 2026-11-12 | [2026-11-12-005](2026-11-12-005-matching-panel-corners.md) | Match bottom panel rounding to the upper corners | RoundedCardGraphic.cs; Docs/HomeRedesign.md; Docs/FEATURES.md |
 | 2026-11-12 | [2026-11-12-006](2026-11-12-006-android-fullscreen-video-check.md) | Verify existing full-screen videos and controls on AX85 | Docs/MediaPlayback.md; Docs/AndroidDeployment.md; Docs/Test.md; Docs/FEATURES.md |
+| 2026-11-17 | [2026-11-17-001](2026-11-17-001-traffic-noise-references.md) | Add four traffic-noise references to Research & Sources | ResearchStages.en.json; ResearchStages.es.json; Docs/ResearchSources.md; Docs/FEATURES.md |

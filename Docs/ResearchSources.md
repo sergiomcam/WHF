@@ -48,3 +48,22 @@ ResearchSourcesController now loads Resources/Research/ResearchStages.en.json. R
 Four selectors occupy two fixed-height rows anchored to the top of the module; selection no longer uses proportional positions in an expanding panel. Summaries use measured wrapped-text layout, and figures use width-derived aspect-preserving heights inside a vertical stack. Whole-page expansion includes the selector offset. Research wording, numbers, figure paths and provenance remain unchanged.
 
 Research PNG imports explicitly retain non-power-of-two source dimensions; original bytes and GUIDs are preserved. This prevents texture import from stretching charts before aspect-based layout.
+
+
+## Additional traffic-noise references — 2026-11-17
+
+All four existing research tabs now end with a separately labelled additional-reading bibliography, following each stage’s original source. English and Spanish catalogs retain the same citations and original publication titles. No fifth tab, scoring change or new scientific result is introduced. URLs are readable plain text in the existing non-rich-text summary; clickable external browsing is not implemented.
+
+1. Manohare, M., Garg, B., Rajasekar, E., & Parida, M. (2022). An Experimental Investigation of Change in Human Brain Waves Due to Heterogeneous Traffic Noise. Proceedings of the 24th International Congress on Acoustics, Gyeongju, Korea, ABS-0650. [Source](https://www.researchgate.net/publication/364364200_An_Experimental_Investigation_of_Change_in_Human_Brain_Waves_Due_to_Heterogeneous_Traffic_Noise).
+
+2. Manohare, M., Aletta, F., Oberman, T., Elangovan, R., Parida, M., & Kang, J. (2024). Cross-country variation in psychophysiological responses to traffic noise exposure: Laboratory experiments in India and the UK. The Journal of the Acoustical Society of America, 156(5), 3067–3079. [Source](https://doi.org/10.1121/10.0034242).
+
+3. Manohare, M., Rajasekar, E., & Parida, M. (2023). Electroencephalography based classification of emotions associated with road traffic noise using Gradient boosting algorithm. Applied Acoustics, 206, 109306. [Source](https://doi.org/10.1016/j.apacoust.2023.109306).
+
+4. Manohare, M., Rajasekar, E., & Parida, M. (2023). Analysing the Change in Brain Waves due to Heterogeneous Road Traffic Noise Exposure Using Electroencephalography Measurements. Noise & Health, 25(116), 36–54. [Source](https://doi.org/10.4103/nah.nah_58_22).
+
+### Source review
+
+Reviewed 2026-11-17. ICA metadata/title/authors and ABS-0650 were checked against the author-uploaded proceedings text; no DOI was established. JASA metadata/DOI were checked against the publisher PDF. Noise & Health DOI resolves to the publisher; title spelling, volume/issue/pages are corroborated by bibliographic records. Applied Acoustics DOI/title/authors were corroborated by the author ORCID record, but publisher retrieval failed, so direct publisher verification remains pending. These are bibliography entries only: no findings, sample sizes, model accuracy, causal effects or validation claims are imported. Full methodological appraisal and redistribution rights are not established; no papers, figures or raw data are copied.
+
+See [modification report](Changes/2026-11-17-001-traffic-noise-references.md).
