@@ -41,3 +41,10 @@ For reference-driven container redesigns, inspect representative option screens 
 For full-width rounded backgrounds, compare actual sheet width with the scaled ScreenView after layout in both orientations. Include inactive screen ancestors when resolving ownership, and verify content padding separately from decorative bleed.
 
 When rounding section sheets, inspect the lower edge after scrolling long content as well as the initial top edge; confirm intended upper/lower radii match and controls remain padded.
+
+
+## Demonstration-device review refinements (2026-11-17)
+
+If a graphical batch review stalls before the executeMethod/runner starts, retain its log and require a fresh completion timestamp; old COMPLETE files are not current evidence. After bounded equivalent failures, stop only the task-owned batch process. A separate -nographics build can establish compilation/packaging, but cannot validate renders, decoded video frames or Play Mode UI; use actual device checks and state remaining native-suite gaps.
+
+On Android, let scroll inertia and Unity page reflow settle before capturing coordinates, and allow Unity to resume after returning from a native Activity before swiping. Re-observe when a previously captured card has moved; a tap alone is not evidence that the intended video opened. Verify the actual native video frame/topic. Native MediaController can consume the first Back by hiding controls; visible Return and a subsequent Back provide separate exit checks. Confirm audible output with the user during a clearly timed replay, rather than equating a Playing label or numerical nonzero signal with listening verification. Keep phone volume under the visitor's control.

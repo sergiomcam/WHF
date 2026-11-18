@@ -260,3 +260,6 @@ Module option containers use borderless warm-ivory sheets with matching upper an
 Module sheet backgrounds span the full scaled ScreenView width with rounded corners; inner content keeps its existing padding. Calculate width from the current screen and include inactive ancestors for reused screens; do not substitute a fixed 20-unit overhang or widen content/hit targets merely to stretch the background.
 
 Rounded section/popup sheets use the same corner radius at the top and bottom; do not reintroduce a smaller lower-edge radius. Full screen width and inner padding remain independent.
+
+
+Traveling wave geometry excludes the full-width module-sheet vertical bounds with a 36-unit clearance, using cached section references/corners. Keep contours behind content and out of section frames; preserve the timed sweep, transparent tips, nonblocking graphics and reduced-motion engine behavior.

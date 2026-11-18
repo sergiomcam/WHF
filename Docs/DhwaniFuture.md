@@ -33,3 +33,8 @@ A new 2172×724 AI-enhanced atlas keeps the three original visual themes (upload
 ## Borderless option sheets — 2026-11-12
 
 The Hearing Notion 2.0 hub uses lighter borderless option cards against a warm sheet. Inert Dwani frames also lose their outlines/accent strips while retaining the established dark artwork presentation and in-frame Back. No recording or analysis is enabled. See [report](Changes/2026-11-12-003-borderless-option-sheets.md).
+
+
+## Demonstration build/device review - 2026-11-17
+
+AX85 review passed all four full-screen mockup pages, inert Record control, Continue flow and phone Back to the hub. Multilanguage validation and Music for hearing loss information pages opened. This verifies presentation/navigation, not analysis functionality. See [full report](Changes/2026-11-17-004-demo-device-and-wave-clearance.md) for current APK and coverage limits.

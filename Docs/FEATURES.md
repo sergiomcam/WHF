@@ -17,7 +17,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-005 | [Personalized Takeaways](#f-005-personalized-takeaways): home/Continue | Partial; general reminders | Activity-add UI retired; no invented personal outcome; no full takeaway runtime retest | 2026-11-05 |
 | F-006 | [Visitor session and reset](#f-006-visitor-session-and-reset): Takeaways reset | Implemented | Draft state and digital gain reset; Explorer reset removed; memory only unless explicit demographic save | 2026-11-05 |
 | F-007 | [Theme and artwork](#f-007-theme-and-artwork): all screens | Full-width panels with matching top/bottom corner radii | Matching-corner renders, 100 native checks and APK verification passed; phone retest deferred | 2026-11-12 |
-| F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Procedural contours remain; visitor control retired | Engine SetReducedMotion retained without UI/OS preference integration | 2026-11-06 |
+| F-008 | [Animated wave sprites](#f-008-animated-wave-sprites): background | Procedural waves with module-sheet exclusion and transparent tips | Compiled and AX85 portrait visually checked; profiling not run | 2026-11-17 |
 | F-009 | [Sound Experience](#f-009-sound-experience): unified hub/player | Unity-gain direct version toggles; song menu first | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-010 | [Hearing Health and sources](#f-010-hearing-health-and-sources): footer/guided | Four research stages plus four additional traffic-noise references; four video topics | Reference JSON/content checks passed; new bibliography runtime/phone verification pending; prior video checks retained | 2026-11-17 |
 | F-011 | [Public knowledge check and research mode](#f-011-public-knowledge-check-and-research-mode) | Planned, foundations only | Separate public check, approved consent, scoring, YANS and export pending | 2026-10-19 inventory |
@@ -28,12 +28,12 @@ Use this page to review app contents, find implementation details and trace feat
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Taller field, in-arena pause and mixed moving penguin pairs | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
 | F-018 | [Optional demographics](#f-018-optional-demographics): startup/footer You | Content-fitted scrolling form, collapsed empty feedback | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
-| F-019 | [Listening setup](#f-019-listening-setup): after About you | Bundled 1 kHz noise; same -12 dB trim, 50 ms fades and midpoint | Compilation passed; current native review recorded in report; rebuilt phone APK pending | 2026-11-17 |
+| F-019 | [Listening setup](#f-019-listening-setup): after About you | Bundled 1 kHz noise; same -12 dB trim, 50 ms fades and midpoint | Installed AX85 preview audible at midpoint, user confirmed; no acoustic calibration | 2026-11-17 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Corrected APK installed; targeted AX85 retest passed | AX85 install and four native full-screen topics passed; pause/return and audible audio confirmed; seek/rotation unverified | 2026-11-12 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Latest personal APK built and installed in place | Signing/media/DEX passed; broad AX85 portrait walkthrough passed; full native suite and landscape unverified | 2026-11-17 |
 | F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Enhanced illustrative artwork, dark overview and in-frame Back | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 
 ## Feature details
@@ -348,3 +348,11 @@ F-019 replaces the startup 6 kHz tone with the bundled 10-second 1 kHz-centred n
 | Date | Features | Change | Report |
 | --- | --- | --- | --- |
 | 2026-11-17 | F-019, F-024 | Integrate generated 1 kHz noise with unchanged preview attenuation/fades | [2026-11-17-003](Changes/2026-11-17-003-integrate-1khz-preview.md) |
+
+### Demonstration verification and wave clearance - 2026-11-17
+
+F-008 now excludes module sheet bounds with 36-unit clearance. The latest APK includes the new preview and bibliography and passed a broad AX85 portrait walkthrough. This supersedes pending phone coverage for the specific paths tested, not all-device/full-suite verification. Detailed F-001-F-010, F-015, F-017-F-025 checks and remaining limits are in the report.
+
+| Date | Features | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-17 | F-008, F-019, F-024; tested F-001-F-010, F-015, F-017-F-025 | Wave clearance, latest signed APK and end-to-end AX85 review | [2026-11-17-004](Changes/2026-11-17-004-demo-device-and-wave-clearance.md) |

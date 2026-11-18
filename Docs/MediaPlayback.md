@@ -97,3 +97,8 @@ Poster authoring: run Tools/Audio/extract_video_posters.py with --ffmpeg pointin
 AX85 Android 13: latest APK installed in place; all four topics opened in native full screen. Inline play/pause/stop and poster restoration, native pause, Return to page, Android Back and completion return passed. User confirmed audible audio. Seeking, rotation, interruptions and other devices remain unverified.
 
 The existing Android-only **Full screen · phone player** button is below each video’s Play/Stop row; it does not appear in desktop preview. No source or media changes were needed. See [device report](Changes/2026-11-12-006-android-fullscreen-video-check.md).
+
+
+## Demonstration build/device review - 2026-11-17
+
+AX85 checks showed original/protection switching, all three music version toggles and audible music (user confirmed). All four video topics opened with actual native frames. Inline pause/stop, native pause, seek from 00:30 to 00:09, Return and Back behavior were checked. Video audio was not separately reconfirmed for every topic. See [full report](Changes/2026-11-17-004-demo-device-and-wave-clearance.md) for current APK and coverage limits.

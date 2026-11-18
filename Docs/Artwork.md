@@ -43,3 +43,8 @@ Existing headphone artwork is retained. New HomeIconGraphic geometry draws the m
 ## Enhanced artwork, cards and video previews — 2026-11-12
 
 Enhanced Dwani atlas: Resources/Artwork/dwani-enhanced-atlas-v1.png, 2172×724, generated with the built-in image tool from the unchanged supplied six-phone reference. Three equal-width UV regions contain the existing visual themes without text. This is an illustrative AI-assisted enhancement, not an exact restoration of lost pixels, original high-resolution source or measured chart data. Preserve the original dwani-reference.png. Four VideoPosters PNGs are actual source-video frames, not AI-generated thumbnails; extraction receipts stay local. See [report](Changes/2026-11-12-002-enhanced-artwork-video-previews.md).
+
+
+## Module-sheet wave clearance - 2026-11-17
+
+AmbientWaveAnimation caches the owning Module introduction RectTransform and corner buffer. It updates a full-width exclusion interval for TravelingWaveGraphic; contour segments within the sheet's vertical bounds plus 36 reference units are omitted. This follows responsive resizing and whole-page panel growth, including reduced-motion layout updates. Animation timing, pale palette, transparent ends and nonblocking raycast state remain. Home has no module-sheet exclusion. No new texture, material or scene is introduced. Actual AX85 portrait HNAI, Sound Hub, hearing examples, Noise Meter, Research and future-work frames were inspected with clear interiors/edges. Performance was not profiled; no speedup claim. See [report](Changes/2026-11-17-004-demo-device-and-wave-clearance.md).

@@ -67,3 +67,8 @@ All four existing research tabs now end with a separately labelled additional-re
 Reviewed 2026-11-17. ICA metadata/title/authors and ABS-0650 were checked against the author-uploaded proceedings text; no DOI was established. JASA metadata/DOI were checked against the publisher PDF. Noise & Health DOI resolves to the publisher; title spelling, volume/issue/pages are corroborated by bibliographic records. Applied Acoustics DOI/title/authors were corroborated by the author ORCID record, but publisher retrieval failed, so direct publisher verification remains pending. These are bibliography entries only: no findings, sample sizes, model accuracy, causal effects or validation claims are imported. Full methodological appraisal and redistribution rights are not established; no papers, figures or raw data are copied.
 
 See [modification report](Changes/2026-11-17-001-traffic-noise-references.md).
+
+
+## Demonstration build/device review - 2026-11-17
+
+AX85 review passed all four selectors with unchanged row positions and no summary overlap. Added references and both original YANS figures are visible after scrolling; Finish returned Home. Text/figure provenance and limitations remain unchanged. See [full report](Changes/2026-11-17-004-demo-device-and-wave-clearance.md) for current APK and coverage limits.
