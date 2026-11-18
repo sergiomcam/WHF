@@ -133,3 +133,14 @@ Physical portrait checks passed: startup order, audible 1 kHz preview at midpoin
 Two graphical Unity reviews stalled at initialization and were stopped without fresh runner output; the full native suite was not completed. The -nographics Android build passed. Physical landscape, long human gameplay and every audio variant's perceived output remain unverified. No real demographic profile was saved/deleted. Current details, offline status and limitations: [report](Changes/2026-11-17-004-demo-device-and-wave-clearance.md).
 
 Offline follow-up (same review): after the user disconnected networks, Android reported no active default network. Cold launch, Airport original Playing state and full-screen Health video with decoded frames passed; returned Home. Existing private video cache retained, so this is not first-install cache-extraction testing.
+
+
+## Three-source game and community-map update - 2026-11-17
+
+New review adds three distinct original game soundscapes with shared headroom, all-voice interruption/cleanup, and a five-page Dwani flow with a fictional community-map preview before the final overview. Prior tested build is retained as HearingNotion-before-20261117-005.apk. Current build identity, actual checks and remaining limits: [report](Changes/2026-11-17-005-three-soundscape-and-community-map.md).
+
+## Headphones launcher icon - 2026-11-17
+
+The personal Android build now uses the same yellow headphones artwork as Home, on palette charcoal #4A4C49. AndroidLauncherIcons.Configure creates app-owned 512-pixel textures under UI/AndroidIcons and assigns all 18 legacy, round and adaptive slots; AndroidPrototypeBuild.Configure invokes it automatically. Adaptive layers are background then foreground, with source artwork at 60% canvas size for mask clearance; legacy/round composites use 82%. No Home source image is overwritten or made CPU-readable. This changes the launcher icon, not the Unity startup splash. Existing package ID/debug signing remain; install with -r to preserve data.
+
+Use Hearing Notion > Android > Apply headphones launcher icon in an Editor with Android Build Support, or the existing portable Build personal APK action. Source: [Unity SetPlatformIcons](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/PlayerSettings.SetPlatformIcons.html). Final APK/device evidence is in the [current report](Changes/2026-11-17-005-three-soundscape-and-community-map.md).

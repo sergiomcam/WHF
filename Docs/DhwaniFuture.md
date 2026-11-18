@@ -38,3 +38,12 @@ The Hearing Notion 2.0 hub uses lighter borderless option cards against a warm s
 ## Demonstration build/device review - 2026-11-17
 
 AX85 review passed all four full-screen mockup pages, inert Record control, Continue flow and phone Back to the hub. Multilanguage validation and Music for hearing loss information pages opened. This verifies presentation/navigation, not analysis functionality. See [full report](Changes/2026-11-17-004-demo-device-and-wave-clearance.md) for current APK and coverage limits.
+
+
+## Fictional community sound map - 2026-11-17
+
+Dwani now has five mockup pages: Audio Upload, Psychoacoustic Indicators, Sound Analysis, Community sound map, then the retained future-work overview. The added fourth page matches the dark/mint mockup style and fills the display. It shows a code-drawn fictional neighbourhood, five illustrative community recording pins and a sixth demo pin. A 1.2-second cosmetic progress bar changes from Simulating upload - no data sent to Demo soundscape added - preview only. Continue opens the final overview; Back returns to the 2.0 hub. Re-entry restarts this cosmetic animation.
+
+DhwaniCommunityMapGraphic draws roads, a park, water and pins with no online tiles, map SDK, real coordinates or imported map imagery. Labels explicitly mark the place/recordings as fictional. No audio/file is selected, uploaded or stored; no GPS, permissions, community service, user identity or analysis is implemented. Map points are not interactive. Leaving the page cancels the cosmetic coroutine; original three reference-art pages and final source text remain.
+
+This is a UI concept for possible community contributions, not an implemented crowdsourcing feature. Any future collection/publication needs a separate privacy, consent, rights and scientific review. See [report](Changes/2026-11-17-005-three-soundscape-and-community-map.md).

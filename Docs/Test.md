@@ -136,3 +136,8 @@ Physical portrait checks passed: startup order, audible 1 kHz preview at midpoin
 Two graphical Unity reviews stalled at initialization and were stopped without fresh runner output; the full native suite was not completed. The -nographics Android build passed. Physical landscape, long human gameplay and every audio variant's perceived output remain unverified. No real demographic profile was saved/deleted. Current details, offline status and limitations: [report](Changes/2026-11-17-004-demo-device-and-wave-clearance.md).
 
 Offline follow-up (same review): after the user disconnected networks, Android reported no active default network. Cold launch, Airport original Playing state and full-screen Health video with decoded frames passed; returned Home. Existing private video cache retained, so this is not first-install cache-extraction testing.
+
+
+## Three-source game and community-map update - 2026-11-17
+
+New review adds three distinct original game soundscapes with shared headroom, all-voice interruption/cleanup, and a five-page Dwani flow with a fictional community-map preview before the final overview. Prior tested build is retained as HearingNotion-before-20261117-005.apk. Current build identity, actual checks and remaining limits: [report](Changes/2026-11-17-005-three-soundscape-and-community-map.md).
