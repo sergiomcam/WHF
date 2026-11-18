@@ -70,7 +70,7 @@ Local evidence: tmp/20261117-004 and LocalEvidence/Android-2026-11-17-004 contai
 | Landscape | not verified | Temporary rotation override did not produce a landscape capture; restored original free rotation. Do not count portrait output as landscape evidence. |
 | Diagnostics | passed with scope | Checked current app-PID Unity/AndroidRuntime log: no exception/fatal line. Android exit history for this review showed intentional install/force-stop reasons; no observed crash. Logs are not proof of absence of every defect. |
 | Skill structural validation | passed | Bundled quick_validate.py with existing local PyYAML dependency: Skill is valid. Applied workflow evidence is the current build/device review; no independent subagent evaluation. |
-| Offline disconnection | not run | Requested user disable networks; not confirmed at report preparation. Bundled-file verification alone is not a physical offline run. |
+| Offline disconnection | passed for targeted paths | User confirmed disconnected networks; Android reported Active default network: none before/after. Fresh launch, About you/preview Skip flow, Airport original Playing state, native Health video with actual decoded frames and return to Home passed. Existing app-private video cache retained; first-ever cache extraction was not retested. |
 | Persistent profile Save/delete | not run | Per guidance, never test these against a real phone profile; redirected synthetic native suite was not completed today. Historical tests remain separate. |
 
 ## Performance
@@ -79,7 +79,7 @@ Not profiled; no FPS, CPU/GPU improvement or memory-budget claim. Functional dev
 
 ## Limitations and demonstration use
 
-Use the tested portrait flow. Core module paths passed, but the complete native suite, physical landscape, disconnected-network run and long human gameplay remain unverified. Current questionnaire is Spanish; videos retain original language. Noise Meter, language validation, Dwani analysis and Music Lab remain informational/future work. HNAI responses have no clinical score; game differences are descriptive, not evidence of a causal noise effect.
+Use the tested portrait flow. Core module paths passed, but the complete native suite, physical landscape and long human gameplay remain unverified. Current questionnaire is Spanish; videos retain original language. Noise Meter, language validation, Dwani analysis and Music Lab remain informational/future work. HNAI responses have no clinical score; game differences are descriptive, not evidence of a causal noise effect.
 
 For the demonstration: launch the installed app, Skip or intentionally Save optional demographics, use low comfortable device volume/headphones and the optional preview, then choose guided mode or independent modules. Full-screen videos have native controls and Return; after closing native playback allow the page to settle before scrolling. Restart the app between visitors to clear temporary answers. No real saved profile is erased by restart. The previous verified APK remains a local fallback; public distribution/media rights are outside this personal demonstration build.
 

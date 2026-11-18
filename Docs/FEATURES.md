@@ -33,7 +33,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
-| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Latest personal APK built and installed in place | Signing/media/DEX passed; broad AX85 portrait walkthrough passed; full native suite and landscape unverified | 2026-11-17 |
+| F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Latest personal APK built and installed in place | Signing/media/DEX passed; broad AX85 portrait and targeted offline cold-start/media checks passed; full native suite and landscape unverified | 2026-11-17 |
 | F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Enhanced illustrative artwork, dark overview and in-frame Back | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 
 ## Feature details
