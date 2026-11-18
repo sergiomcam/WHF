@@ -28,7 +28,7 @@ Use this page to review app contents, find implementation details and trace feat
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Taller field, in-arena pause and mixed moving penguin pairs | Compiled; 96 native checks passed; targeted AX85 footer/spacing/game checks passed; acoustic output and all-device coverage unverified | 2026-11-10 |
 | F-018 | [Optional demographics](#f-018-optional-demographics): startup/footer You | Content-fitted scrolling form, collapsed empty feedback | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
-| F-019 | [Listening setup](#f-019-listening-setup): after About you | Shared popup hierarchy and centered actions | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
+| F-019 | [Listening setup](#f-019-listening-setup): after About you | Bundled 1 kHz noise; same -12 dB trim, 50 ms fades and midpoint | Compilation passed; current native review recorded in report; rebuilt phone APK pending | 2026-11-17 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
@@ -340,3 +340,11 @@ F-010: each Research & Sources tab includes four additional Manohare and colleag
 | Date | Features | Change | Report |
 | --- | --- | --- | --- |
 | 2026-11-17 | F-010 | Add four traffic-noise/psychophysiology references to both catalogs | [2026-11-17-001](Changes/2026-11-17-001-traffic-noise-references.md) |
+
+### Startup noise preview - 2026-11-17
+
+F-019 replaces the startup 6 kHz tone with the bundled 10-second 1 kHz-centred noise. Preserves -12 dB preview-only trim, 50 ms playback edge fades, gain preparation and midpoint. F-024 portable source/assets synchronized; APK/device update pending.
+
+| Date | Features | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-17 | F-019, F-024 | Integrate generated 1 kHz noise with unchanged preview attenuation/fades | [2026-11-17-003](Changes/2026-11-17-003-integrate-1khz-preview.md) |

@@ -115,3 +115,10 @@ Verified APK: 1,448,860,553 bytes; SHA-256 `7481b598c8f5af15f5528e2de0cc1114a443
 AX85 Android 13: latest APK installed in place; all four topics opened in native full screen. Inline play/pause/stop and poster restoration, native pause, Return to page, Android Back and completion return passed. User confirmed audible audio. Seeking, rotation, interruptions and other devices remain unverified.
 
 The existing Android-only **Full screen · phone player** button is below each video’s Play/Stop row; it does not appear in desktop preview. No source or media changes were needed. See [device report](Changes/2026-11-12-006-android-fullscreen-video-check.md).
+
+
+## Bundled 1 kHz preview - 2026-11-17
+
+The startup preview now uses the generated ten-second mono 24 kHz PCM noise centred at 1 kHz (source half-power edges 750/1250 Hz), bundled at Resources/Audio/bb_25dB_1kHz.wav. The original generated file has no envelope; playback preserves the existing 50 ms edge fades, 0.25-peak headroom preparation, volume ramp and separate -12 dB trim (0.25118864). Slider range 0-0.25 and fresh midpoint 0.125 remain. This replaces the former 6 kHz startup example only; original tinnitus media and all multimedia/game gains remain unchanged. No acoustic calibration or tinnitus-model validity is claimed. The 25dB filename is an uncalibrated authoring-preset label.
+
+Imported audio is preloaded/decompressed PCM. The controller creates and owns a processed buffer, preserving the shared imported asset, and stops on Accept, Skip, reset, interruption or destruction. No external library/catalog fallback is used for startup. Portable Android source/assets are synchronized; the installed APK has not been rebuilt or retested. See [report](Changes/2026-11-17-003-integrate-1khz-preview.md).
