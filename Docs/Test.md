@@ -141,3 +141,7 @@ Offline follow-up (same review): after the user disconnected networks, Android r
 ## Three-source game and community-map update - 2026-11-17
 
 New review adds three distinct original game soundscapes with shared headroom, all-voice interruption/cleanup, and a five-page Dwani flow with a fictional community-map preview before the final overview. Prior tested build is retained as HearingNotion-before-20261117-005.apk. Current build identity, actual checks and remaining limits: [report](Changes/2026-11-17-005-three-soundscape-and-community-map.md).
+
+## Dwani visual contribution controls - 2026-11-17
+
+Check Record audio pulse/timer, manual stop and six-second completion; leave during recording and reenter idle. Upload must wait for a tap, disable while progressing, add the fictional pin and show the rounded +50 points popup. Repeated upload reopens the same amount. Verify popup blocks underlying Continue, its Continue dismisses it, hardware Back dismisses it first, then page Back returns to the hub. Confirm no microphone/location permission, audio source, network or persistent points. See [report](Changes/2026-11-17-009-dwani-record-upload-rewards.md).

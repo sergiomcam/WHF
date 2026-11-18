@@ -28,14 +28,14 @@ Use this page to review app contents, find implementation details and trace feat
 | F-016 | [Local sound-source assignment](#f-016-local-sound-source-assignment) | Visitor UI retired; storage infrastructure retained | No deletion/migration; existing authored library survives | 2026-11-05 |
 | F-017 | [Flappy Cloud attention game](#f-017-flappy-cloud-attention-game): home | Quiet then three distinct original soundscapes with shared mix headroom; in-arena pause | Compilation/model and targeted AX85 play/pause/results/interruption checks passed; not a validated distraction protocol | 2026-11-17 |
 | F-018 | [Optional demographics](#f-018-optional-demographics): startup/footer You | Content-fitted scrolling form, collapsed empty feedback | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
-| F-019 | [Listening setup](#f-019-listening-setup): after About you | Bundled 1 kHz noise; same -12 dB trim, 50 ms fades and midpoint | Installed AX85 preview audible at midpoint, user confirmed; no acoustic calibration | 2026-11-17 |
+| F-019 | [Listening setup](#f-019-listening-setup): after About you | Bundled 1 kHz noise; -6 dB trim (+6 dB), same 50 ms fades and midpoint | New -6 dB gain math and APK build passed; new listening check not run; prior -12 dB audible check retained separately | 2026-11-17 |
 | F-020 | [Noise basics](#f-020-noise-basics): Home | Implemented sourced education | Seven entries; native navigation/renders; human scroll/device review pending | 2026-11-05 |
 | F-021 | [Unified sound hub](#f-021-unified-sound-hub): Home → Sound Experience | Implemented | Native single entry and two choices; reuses existing media/catalog without duplicated lists | 2026-11-05 |
 | F-022 | [Hearing Notion 2.0](#f-022-dhwani-future-work-information): Home | Three-button future-work hub with sourced Dwani overview | Borderless presentation compiled; 100 native checks, actual renders and APK verification passed; phone retest deferred | 2026-11-12 |
 | F-023 | [Stopped Home preview](#f-023-stopped-home-preview): Main in Editor | Shared rounded English Home preview | Stopped portrait/landscape renders passed; transient; Main unchanged | 2026-11-06 |
 | F-024 | [Android personal-test export](#f-024-android-personal-test-export): separate patched project | Latest personal APK built and installed in place | Signing/media/DEX passed; broad AX85 portrait and targeted offline cold-start/media checks passed; full native suite and landscape unverified | 2026-11-17 |
-| F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Five inert Dwani pages with community map before final overview | Compiled and AX85 five-page flow/Back verified; illustrative only | 2026-11-17 |
-| F-026 | [Community sound-map mockup](#f-026-community-sound-map-mockup): Hearing Notion 2.0 > Dwani page 4 | UI concept only; fictional pins and cosmetic upload progress | AX85 progress, sixth demo pin and Continue verified; no real upload/location/service | 2026-11-17 |
+| F-025 | [DHWANI interface mockups](#f-025-dhwani-interface-mockups): Home → DHWANI | Five Dwani pages with visual recording, map-upload and points feedback | Compiled; AX85 recording pulse/start/stop, five-page flow and Back verified; visual-only | 2026-11-17 |
+| F-026 | [Community sound-map mockup](#f-026-community-sound-map-mockup): Hearing Notion 2.0 > Dwani page 4 | UI concept only; upload button, fictional pin and temporary +50 points popup | AX85 upload action, added pin, reward popup/repeat/Back verified; no real upload/location/service | 2026-11-17 |
 | F-027 | [Android headphones launcher icon](#f-027-android-headphones-launcher-icon): Android launcher | Existing Home headphones artwork, charcoal background, legacy/round/adaptive slots | Compiled, APK adaptive layers verified, installed AX85 launcher icon visually confirmed | 2026-11-17 |
 
 ## Feature details
@@ -372,3 +372,13 @@ Five fictional community recording pins and a simulated sixth contribution appea
 ### F-027 Android headphones launcher icon
 
 Uses the existing yellow Home headphones artwork on palette charcoal, with padded transparent foreground and opaque background for Android adaptive masks plus composited legacy/round icons. AndroidPrototypeBuild.Configure applies all supported slots on every personal build. Original artwork, app ID, signing and visitor data are preserved. See [Android deployment](AndroidDeployment.md) and [report](Changes/2026-11-17-005-three-soundscape-and-community-map.md).
+
+### Dwani recording/upload/rewards feedback - 2026-11-17
+
+F-025/F-026 add an optional six-second animated recording control and on-demand map upload followed by a +50 points popup. Buttons use Record audio / Upload soundscape without demo labels, as requested. No acquisition, real upload/location, persistent points or account; existing page scope badges retained. Validation and APK identity: [report](Changes/2026-11-17-009-dwani-record-upload-rewards.md).
+
+| Date | Features | Change | Report |
+| --- | --- | --- | --- |
+| 2026-11-17 | F-025, F-026, F-024, F-019 | Visual recording/upload/rewards and +6 dB startup reference | [2026-11-17-009](Changes/2026-11-17-009-dwani-record-upload-rewards.md) |
+
+F-019 current update: preview-only trim changed from -12 to -6 dB, with the same slider scale/midpoint and 50 ms fades; source WAV and other media gains untouched. Device listening result remains distinct from numerical gain verification.
